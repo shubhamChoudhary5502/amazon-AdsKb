@@ -1,0 +1,27 @@
+# Registered sources. Offline mode reads `sample`; --live fetches `url`.
+# type: official | community | api  (maps to source kind in OKF docs)
+sources:
+  - id: sp-official
+    type: official
+    url: https://advertising.amazon.com/solutions/products/sponsored-products
+    sample: sources/samples/official/sponsored-products.html
+  - id: sb-official
+    type: official
+    url: https://advertising.amazon.com/solutions/products/sponsored-brands
+    sample: sources/samples/official/sponsored-brands.html
+  - id: sd-official
+    type: official
+    url: https://advertising.amazon.com/solutions/products/sponsored-display
+    sample: sources/samples/official/sponsored-display.html
+  - id: targeting-official
+    type: official
+    url: https://advertising.amazon.com/library/guides/campaign-targeting-bidding
+    sample: sources/samples/official/targeting-and-bidding.html
+  - id: acos-blog
+    type: community
+    url: https://www.ppcpractitioner.example/amazon-acos-complete-guide
+    sample: sources/samples/blog/acos-complete-guide.md
+  - id: ads-api-notes
+    type: api
+    url: https://advertising.amazon.com/API/docs/en-us/release-notes/index
+    sample: sources/samples/api/ads-api-release-notes.md
