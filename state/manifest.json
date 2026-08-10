@@ -1,0 +1,44 @@
+{
+  "acos-blog": {
+    "hash": "78a16d98a2955e623519fd38afc3aaad8becb9077dd5552317515cbbabe21e30",
+    "kind": "community",
+    "last_changed": "2026-08-10",
+    "last_checked": "2026-08-10",
+    "url": "https://www.ppcpractitioner.example/amazon-acos-complete-guide"
+  },
+  "ads-api-notes": {
+    "hash": "eaef7e74e02fc58b1f87cdc2ce3d78393ff6781436f791a734213c69d1e0b6cb",
+    "kind": "api",
+    "last_changed": "2026-08-10",
+    "last_checked": "2026-08-10",
+    "url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index"
+  },
+  "sb-official": {
+    "hash": "2b6572be6591ce87d89dda8fb226f579bd328f1a7071cc305d17533bc6c20337",
+    "kind": "official",
+    "last_changed": "2026-08-10",
+    "last_checked": "2026-08-10",
+    "url": "https://advertising.amazon.com/solutions/products/sponsored-brands"
+  },
+  "sd-official": {
+    "hash": "d8199306dd1e591e3d4a12f90c674faf49b76812e58ae62dc533327596fceebe",
+    "kind": "official",
+    "last_changed": "2026-08-10",
+    "last_checked": "2026-08-10",
+    "url": "https://advertising.amazon.com/solutions/products/sponsored-display"
+  },
+  "sp-official": {
+    "hash": "1993a7afbebf22ad8fdc6a5cda1fdc1a79a63052d7c1768e2ffabd4ae8e3d314",
+    "kind": "official",
+    "last_changed": "2026-08-10",
+    "last_checked": "2026-08-10",
+    "url": "https://advertising.amazon.com/solutions/products/sponsored-products"
+  },
+  "targeting-official": {
+    "hash": "e5bb682c7df1ce31aaee8e02813890aa932762ce922c42c070be3626c4f60941",
+    "kind": "official",
+    "last_changed": "2026-08-10",
+    "last_checked": "2026-08-10",
+    "url": "https://advertising.amazon.com/library/guides/campaign-targeting-bidding"
+  }
+}

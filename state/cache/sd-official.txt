@@ -1,0 +1,15 @@
+Sponsored Display - Amazon Ads
+
+
+Sponsored Display
+Sponsored Display is a self-service display advertising product. Ads can
+reach audiences both on Amazon and on third-party destinations off Amazon.
+Targeting and audiences
+Sponsored Display offers contextual targeting, which targets products or
+categories, and audience targeting, which includes views remarketing,
+purchases remarketing, and Amazon audiences built from shopping signals.
+Pricing
+Sponsored Display supports cost-per-click (CPC) bidding and, for
+campaigns optimized for reach, cost per thousand viewable impressions
+(vCPM) bidding.
+Sponsored Display requires Brand Registry for sellers.

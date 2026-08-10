@@ -1,0 +1,14 @@
+{
+  "sponsored-products": {"aliases": ["sp", "sponsored products ads", "product ads"]},
+  "sponsored-brands": {"aliases": ["sb", "headline search ads", "brand ads"]},
+  "sponsored-display": {"aliases": ["sd", "display remarketing"]},
+  "keyword-match-types": {"aliases": ["match types", "broad match", "phrase match", "exact match", "keyword targeting"]},
+  "product-targeting": {"aliases": ["asin targeting", "category targeting"]},
+  "negative-targeting": {"aliases": ["negative keywords", "negative asins"]},
+  "bidding-strategies": {"aliases": ["dynamic bidding", "sp bidding", "bid strategies", "placement adjustments"]},
+  "campaign-structure": {"aliases": ["campaign hierarchy", "ad groups", "portfolios"]},
+  "acos-roas": {"aliases": ["acos", "roas", "tacos", "advertising cost of sales"]},
+  "amazon-ads-api": {"aliases": ["ads api", "amazon advertising api", "api v3"]},
+  "amazon-marketing-stream": {"aliases": ["marketing stream", "ams stream"]},
+  "advertising-eligibility": {"aliases": ["brand registry requirements", "who can advertise"]}
+}
