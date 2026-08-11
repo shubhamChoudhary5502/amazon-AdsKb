@@ -11,10 +11,12 @@ VALID = """---
 okf: "0.1"
 id: test-doc
 title: Test Doc
+description: A minimal valid document used by the parser and validator tests.
 type: concept
 status: active
 created: 2026-08-01
 updated: 2026-08-10
+timestamp: 2026-08-10T00:00:00Z
 confidence: high
 tags: [a, b]
 related: []
@@ -84,6 +86,20 @@ class TestValidator(unittest.TestCase):
         broken = VALID.replace("status: active\n", "")
         errors = okf.validate(write_tmp(broken))
         self.assertTrue(any("missing frontmatter key: status" in e for e in errors))
+    
+    def test_missing_description_fails(self):
+        broken = VALID.replace(
+            "description: A minimal valid document used by the parser "
+            "and validator tests.\n", "")
+        errors = okf.validate(write_tmp(broken))
+        self.assertTrue(any("missing frontmatter key: description" in e
+                            for e in errors))
+
+    def test_timestamp_must_be_datetime(self):
+        broken = VALID.replace("timestamp: 2026-08-10T00:00:00Z",
+                               "timestamp: 2026-08-10")
+        errors = okf.validate(write_tmp(broken))
+        self.assertTrue(any("ISO 8601 datetime" in e for e in errors))
 
 
 class TestBundle(unittest.TestCase):

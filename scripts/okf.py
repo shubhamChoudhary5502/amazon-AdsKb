@@ -10,13 +10,16 @@ import re
 from pathlib import Path
 
 REQUIRED_KEYS = [
-    "okf", "id", "title", "type", "status", "created", "updated",
-    "confidence", "tags", "related", "sources",
+    "okf", "id", "title", "description", "type", "status",
+    "created", "updated", "timestamp", "confidence", "tags",
+    "related", "sources",
 ]
 CONFIDENCE = {"high", "medium", "low"}
 STATUS = {"active", "deprecated"}
 KINDS = {"official", "community", "api"}
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+DATETIME_RE = re.compile(
+    r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})$")
 SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 SOURCE_ID_RE = re.compile(r"^S\d+$")
 CITE_RE = re.compile(r"\[S\d+\]")
@@ -146,6 +149,13 @@ def validate(path, all_slugs=None):
     if DATE_RE.match(str(fm["created"])) and DATE_RE.match(str(fm["updated"])):
         if fm["updated"] < fm["created"]:
             errors.append("updated is earlier than created")
+    if not str(fm["description"]).strip():
+        errors.append("description must not be empty")
+    if not DATETIME_RE.match(str(fm["timestamp"])):
+        errors.append(
+            f"timestamp is not an ISO 8601 datetime: {fm['timestamp']!r}")
+    elif str(fm["timestamp"])[:10] != str(fm["updated"]):
+        errors.append("timestamp date does not match updated")
     if not fm["tags"]:
         errors.append("tags must not be empty")
     if not isinstance(fm["sources"], list) or not fm["sources"]:
