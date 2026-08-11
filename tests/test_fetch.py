@@ -42,6 +42,8 @@ class TestChangeDetection(unittest.TestCase):
     def test_new_then_unchanged_then_changed(self):
         import tempfile
         tmp = Path(tempfile.mkdtemp(dir=fetch.ROOT / "state"))
+        original_cache = fetch.CACHE
+        fetch.CACHE = tmp / "cache"
         try:
             source = self._source(tmp)
             manifest = {}
@@ -51,6 +53,7 @@ class TestChangeDetection(unittest.TestCase):
             self.assertEqual(fetch.process(source, manifest, live=False), "CHANGED")
             self.assertEqual(len(manifest), 1)  # never duplicates entries
         finally:
+            fetch.CACHE = original_cache
             import shutil
             shutil.rmtree(tmp, ignore_errors=True)
 
