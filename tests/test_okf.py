@@ -100,6 +100,12 @@ class TestValidator(unittest.TestCase):
                                "timestamp: 2026-08-10")
         errors = okf.validate(write_tmp(broken))
         self.assertTrue(any("ISO 8601 datetime" in e for e in errors))
+    
+    def test_description_colon_rejected(self):
+        broken = VALID.replace("description: A minimal",
+                               "description: Broken: A minimal")
+        errors = okf.validate(write_tmp(broken))
+        self.assertTrue(any("colon" in e for e in errors))
 
 
 class TestBundle(unittest.TestCase):

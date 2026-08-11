@@ -151,6 +151,9 @@ def validate(path, all_slugs=None):
             errors.append("updated is earlier than created")
     if not str(fm["description"]).strip():
         errors.append("description must not be empty")
+    elif ":" in str(fm["description"]):
+        errors.append("description must not contain a colon, "
+                      "it breaks strict YAML parsers")
     if not DATETIME_RE.match(str(fm["timestamp"])):
         errors.append(
             f"timestamp is not an ISO 8601 datetime: {fm['timestamp']!r}")

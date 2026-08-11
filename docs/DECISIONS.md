@@ -52,10 +52,14 @@ For testing, I chose snapshots instead because they make the runs deterministic 
 
 The tradeoff is that the six fixtures are still hand-made snapshots, so I wouldn't claim they represent six completely independent live sources.
 
-## 9. Offline fixtures instead of live scraping for tests
+## 9. PostToolUse hook instead of PreToolUse
 
-I ran into the practical issue that Amazon blocks a basic `urllib` request with a 403, and some of the pages also depend on JavaScript. Proper live fetching would therefore need something like the Playwright MCP.
+A pre-write hook inspects the content the agent proposes to write. A post-write hook reads the file that actually landed on disk. I went with post because it validates the real result, which matters most for partial edits where the proposed change looks fine on its own but the merged file does not.
 
-For testing, I chose snapshots instead because they make the runs deterministic and mean someone can clone the repo and test it without needing network access.
+The cost showed up in testing. PostToolUse blocks the agent from continuing, but it cannot undo the write, so a rejected document stays on disk and fails bundle validation until someone removes it. The per-file gate does its job, but the bundle is briefly inconsistent. With more time I'd have the hook restore the previous version of the file when it rejects a write, which is what would actually guarantee that an invalid document never lands. This is demonstrated in RUN 3c of docs/run-transcripts.md.
 
-The tradeoff is that the six fixtures are still hand-made snapshots, so I wouldn't claim they represent six completely independent live sources.
+## 10. Turned down a normalisation change the agent proposed mid-run
+
+During RUN 2b, after correctly classifying all 22 restated facts as duplicates, Claude suggested stripping everything after `</html>` during normalisation so the same content wouldn't be re-extracted on every run.
+
+I declined. The churn only existed because I had edited the fixture with `printf >>`, which appends past the closing tag. A real page wouldn't change that way, so the fix would have been tuned to my test method rather than to the actual problem. That's how you end up with a system that only works on your own tests.

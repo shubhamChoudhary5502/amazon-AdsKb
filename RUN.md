@@ -13,9 +13,9 @@ Python 3.9+ only. No pip installs, the deterministic layer is stdlib.
 ## Tests
 
     $ python3 -m unittest discover tests
-    ...................
+    ....................
     ----------------------------------------------------------------------
-    Ran 19 tests in 0.009s
+    Ran 20 tests in 0.009s
     
     OK
 
