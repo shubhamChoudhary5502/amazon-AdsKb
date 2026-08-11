@@ -24,6 +24,9 @@ import urllib.request
 from datetime import date
 from html.parser import HTMLParser
 from pathlib import Path
+import os
+
+
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "state" / "manifest.json"
@@ -69,8 +72,11 @@ def load_sources():
     for raw in SOURCES.read_text().split("\n"):
         line = raw.strip()
         if line.startswith("- id:"):
-            current = {"id": line.split(":", 1)[1].strip()}
-            entries[current["id"]] = current
+            sid = line.split(":", 1)[1].strip()
+            if sid in entries:
+                raise ValueError(f"duplicate source id in sources.yaml: {sid}")
+            current = {"id": sid}
+            entries[sid] = current
         elif current is not None and ":" in line and not line.startswith("#"):
             key, _, value = line.partition(":")
             current[key.strip()] = value.strip()
@@ -91,13 +97,17 @@ def process(source, manifest, live):
                 raw = resp.read().decode("utf-8", errors="replace")
             is_html = source["url"].endswith((".html", "/")) or "<html" in raw[:2000].lower()
         else:
-            sample = ROOT / source["sample"]
-            raw = sample.read_text(encoding="utf-8")
+            sample = (ROOT / source["sample"]).resolve()
+            if not str(sample).startswith(str(ROOT.resolve()) + os.sep):
+                return "ERROR sample path escapes the repo root"
+            raw = sample.read_text(encoding="utf-8", errors="replace")
             is_html = sample.suffix in (".html", ".htm")
     except Exception as exc:
         return f"ERROR {type(exc).__name__}: {exc}"
 
     text = normalize(raw, is_html)
+    if not text.strip():
+        return "ERROR normalized content is empty, refusing to treat as a change"
     digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
     today = date.today().isoformat()
     entry = manifest.get(sid)
@@ -132,7 +142,11 @@ def main():
         print(__doc__, file=sys.stderr)
         return 2
 
-    sources = load_sources()
+    try:
+        sources = load_sources()
+    except ValueError as exc:
+        print(f"ERROR {exc}", file=sys.stderr)
+        return 2
     manifest = load_manifest()
     targets = list(sources.values()) if args[0] == "--all" else []
     if not targets:

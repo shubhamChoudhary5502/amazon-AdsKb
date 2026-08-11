@@ -61,6 +61,54 @@ class TestChangeDetection(unittest.TestCase):
         source = {"id": "t2", "url": "https://example.com", "type": "official",
                   "sample": "does/not/exist.md"}
         self.assertTrue(fetch.process(source, {}, live=False).startswith("ERROR"))
+    
+    def test_empty_source_is_an_error(self):
+        import tempfile, shutil
+        tmp = Path(tempfile.mkdtemp(dir=fetch.ROOT / "state"))
+        original_cache = fetch.CACHE
+        fetch.CACHE = tmp / "cache"
+        try:
+            sample = tmp / "empty.md"
+            sample.write_text("")
+            source = {"id": "t3", "url": "https://example.com", "type": "official",
+                      "sample": str(sample.relative_to(fetch.ROOT))}
+            self.assertTrue(fetch.process(source, {}, live=False).startswith("ERROR"))
+        finally:
+            fetch.CACHE = original_cache
+            shutil.rmtree(tmp, ignore_errors=True)
+
+    def test_sample_path_cannot_escape_root(self):
+        import tempfile, shutil
+        tmp = Path(tempfile.mkdtemp(dir=fetch.ROOT / "state"))
+        original_cache = fetch.CACHE
+        fetch.CACHE = tmp / "cache"
+        try:
+            source = {"id": "t4", "url": "https://example.com", "type": "official",
+                      "sample": "../../../etc/passwd"}
+            self.assertTrue(fetch.process(source, {}, live=False).startswith("ERROR"))
+        finally:
+            fetch.CACHE = original_cache
+            shutil.rmtree(tmp, ignore_errors=True)
+
+class TestSourceRegistry(unittest.TestCase):
+    def test_duplicate_source_id_rejected(self):
+        import tempfile, shutil
+        tmp = Path(tempfile.mkdtemp())
+        registry = tmp / "sources.yaml"
+        registry.write_text(
+            "sources:\n"
+            "  - id: a\n    type: official\n"
+            "    url: https://x.example\n    sample: s.md\n"
+            "  - id: a\n    type: community\n"
+            "    url: https://y.example\n    sample: t.md\n")
+        original = fetch.SOURCES
+        fetch.SOURCES = registry
+        try:
+            with self.assertRaises(ValueError):
+                fetch.load_sources()
+        finally:
+            fetch.SOURCES = original
+            shutil.rmtree(tmp, ignore_errors=True)
 
 
 if __name__ == "__main__":
