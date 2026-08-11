@@ -6,8 +6,8 @@ description: The fixed hierarchy Amazon Ads accounts follow, and where budgets, 
 type: concept
 status: active
 created: 2026-08-10
-updated: 2026-08-10
-timestamp: 2026-08-10T00:00:00Z
+updated: 2026-08-11
+timestamp: 2026-08-11T00:00:00Z
 confidence: medium
 tags: [account-management, structure]
 related: [sponsored-products]
@@ -35,7 +35,7 @@ targets, and ads attach is a prerequisite for every optimization decision.
 
 - Campaigns contain ad groups; ad groups contain the ads and the keyword or product targets that share a common theme. [S1]
 - Daily budgets are set at the campaign level. [S1][S2]
-- Budgets are set at campaign level, and portfolios group campaigns and can carry a budget cap of their own. [S1]
+- Portfolios group campaigns and can carry a budget cap of their own, above the campaign-level budget. [S1]
 ## Relationships
 
 - [Sponsored Products](/concepts/sponsored-products.md): the hierarchy shown here is the one Sponsored Products campaigns use.
