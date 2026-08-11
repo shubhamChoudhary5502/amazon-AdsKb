@@ -35,9 +35,7 @@ targets, and ads attach is a prerequisite for every optimization decision.
 
 - Campaigns contain ad groups; ad groups contain the ads and the keyword or product targets that share a common theme. [S1]
 - Daily budgets are set at the campaign level. [S1][S2]
-- Portfolios group campaigns for organization and budget caps. [S1]
-- Budgets can now be set at portfolio level, not only at campaign level. [S1]
-
+- Budgets are set at campaign level, and portfolios group campaigns and can carry a budget cap of their own. [S1]
 ## Relationships
 
 - [Sponsored Products](/concepts/sponsored-products.md): the hierarchy shown here is the one Sponsored Products campaigns use.
