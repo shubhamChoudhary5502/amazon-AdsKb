@@ -11,8 +11,8 @@ bytes change in `knowledge/`.
 Requirements: Python 3.9+ and Claude Code. No pip installs, the
 deterministic layer is stdlib only.
 
-    git clone <this repo> && cd amazon-ads-kb
-    python3 -m unittest discover tests        # 14 tests, ~0.01s
+    git clone <this repo> && cd amazon-AdsKb
+    python3 -m unittest discover tests        # 16 tests, ~0.01s
     python3 scripts/validate_okf.py knowledge/concepts/   # bundle is valid
     sh scripts/demo_rerun.sh                  # idempotency proof
     claude                                    # then: /ingest all
@@ -42,6 +42,10 @@ deterministic layer is stdlib only.
     knowledge/             the OKF bundle: 12 concepts, index, log
     state/                 manifest (hashes), cache, concept registry
     tests/                 parser, validator, and idempotency tests
+    docs/                  ARCHITECTURE (design), DESIGN (tradeoffs and
+                           how Claude Code was used), DECISIONS (choices
+                           and what each cost), run-transcripts (captured
+                           pipeline runs)
 
 ## How re-run safety works
 
