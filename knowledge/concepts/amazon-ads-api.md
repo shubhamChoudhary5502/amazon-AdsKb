@@ -2,10 +2,12 @@
 okf: "0.1"
 id: amazon-ads-api
 title: Amazon Ads API
+description: The programmatic interface to Amazon Ads, whose version 3 is the current generation tools and agencies build against.
 type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-10
+timestamp: 2026-08-10T00:00:00Z
 confidence: medium
 tags: [api, integration]
 related: [amazon-marketing-stream, sponsored-products]
@@ -34,5 +36,5 @@ base's own live mode would build against.
 
 ## Relationships
 
-- amazon-marketing-stream: the push-based alternative to pull-based report polling, delivered through this API.
-- sponsored-products: the sandbox covers Sponsored Products campaign management operations.
+- [Amazon Marketing Stream](/concepts/amazon-marketing-stream.md): the push-based alternative to pull-based report polling, delivered through this API.
+- [Sponsored Products](/concepts/sponsored-products.md): the sandbox covers Sponsored Products campaign management operations.

@@ -2,10 +2,12 @@
 okf: "0.1"
 id: acos-roas
 title: ACOS, ROAS and TACOS
+description: The three efficiency metrics advertisers steer by, currently resting on a single community source.
 type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-10
+timestamp: 2026-08-10T00:00:00Z
 confidence: low
 tags: [metrics, measurement]
 related: [bidding-strategies]
@@ -43,4 +45,4 @@ run.
 
 ## Relationships
 
-- bidding-strategies: advertisers move between bid strategies to hit ACOS targets.
+- [Bidding strategies](/concepts/bidding-strategies.md): advertisers move between bid strategies to hit ACOS targets.

@@ -2,10 +2,12 @@
 okf: "0.1"
 id: sponsored-products
 title: Sponsored Products
+description: Amazon's core self-service ad product, promoting individual product listings inside the shopping experience.
 type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-10
+timestamp: 2026-08-10T00:00:00Z
 confidence: medium
 tags: [ad-product, ppc, self-service]
 related: [bidding-strategies, keyword-match-types, campaign-structure, advertising-eligibility, amazon-ads-api]
@@ -35,8 +37,8 @@ usually the first ad type an advertiser runs.
 
 ## Relationships
 
-- bidding-strategies: dynamic bidding options apply to Sponsored Products campaigns.
-- keyword-match-types: manual keyword targeting uses these match types.
-- campaign-structure: Sponsored Products campaigns follow the standard campaign and ad group hierarchy.
-- advertising-eligibility: who can run Sponsored Products and what enrollment it needs.
-- amazon-ads-api: campaign management is available programmatically, including a sandbox.
+- [Bidding strategies](/concepts/bidding-strategies.md): dynamic bidding options apply to Sponsored Products campaigns.
+- [Keyword match types](/concepts/keyword-match-types.md): manual keyword targeting uses these match types.
+- [Campaign structure](/concepts/campaign-structure.md): Sponsored Products campaigns follow the standard campaign and ad group hierarchy.
+- [Advertising eligibility](/concepts/advertising-eligibility.md): who can run Sponsored Products and what enrollment it needs.
+- [Amazon Ads API](/concepts/amazon-ads-api.md): campaign management is available programmatically, including a sandbox.

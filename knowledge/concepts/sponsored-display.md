@@ -2,10 +2,12 @@
 okf: "0.1"
 id: sponsored-display
 title: Sponsored Display
+description: Amazon's self-service display product, whose ads can follow shoppers off Amazon to third-party destinations.
 type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-10
+timestamp: 2026-08-10T00:00:00Z
 confidence: medium
 tags: [ad-product, display, remarketing]
 related: [advertising-eligibility]
@@ -35,4 +37,4 @@ third-party destinations.
 
 ## Relationships
 
-- advertising-eligibility: seller access depends on Brand Registry enrollment.
+- [Advertising eligibility](/concepts/advertising-eligibility.md): seller access depends on Brand Registry enrollment.

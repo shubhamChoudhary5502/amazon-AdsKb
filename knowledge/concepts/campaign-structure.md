@@ -2,10 +2,12 @@
 okf: "0.1"
 id: campaign-structure
 title: Campaign structure
+description: The fixed hierarchy Amazon Ads accounts follow, and where budgets, targets, and ads attach.
 type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-10
+timestamp: 2026-08-10T00:00:00Z
 confidence: medium
 tags: [account-management, structure]
 related: [sponsored-products]
@@ -38,4 +40,4 @@ targets, and ads attach is a prerequisite for every optimization decision.
 
 ## Relationships
 
-- sponsored-products: the hierarchy shown here is the one Sponsored Products campaigns use.
+- [Sponsored Products](/concepts/sponsored-products.md): the hierarchy shown here is the one Sponsored Products campaigns use.

@@ -2,10 +2,12 @@
 okf: "0.1"
 id: negative-targeting
 title: Negative targeting
+description: The exclusion layer that stops ads from matching queries or products that waste spend.
 type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-10
+timestamp: 2026-08-10T00:00:00Z
 confidence: medium
 tags: [targeting, efficiency]
 related: [keyword-match-types, product-targeting]
@@ -32,5 +34,5 @@ up automatic and broad-match campaigns.
 
 ## Relationships
 
-- keyword-match-types: negative keyword forms mirror phrase and exact match.
-- product-targeting: the exclusion counterpart to positive ASIN and category targets.
+- [Keyword match types](/concepts/keyword-match-types.md): negative keyword forms mirror phrase and exact match.
+- [Product targeting](/concepts/product-targeting.md): the exclusion counterpart to positive ASIN and category targets.

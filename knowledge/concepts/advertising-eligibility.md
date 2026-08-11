@@ -2,10 +2,12 @@
 okf: "0.1"
 id: advertising-eligibility
 title: Advertising eligibility
+description: Who can run which ad product, and where Brand Registry sits as the gate.
 type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-10
+timestamp: 2026-08-10T00:00:00Z
 confidence: medium
 tags: [requirements, brand-registry]
 related: [sponsored-products, sponsored-brands, sponsored-display]
@@ -43,6 +45,6 @@ answer differs per product.
 
 ## Relationships
 
-- sponsored-products: the no-Brand-Registry entry point.
-- sponsored-brands: gated by Brand Registry.
-- sponsored-display: gated by Brand Registry for sellers.
+- [Sponsored Products](/concepts/sponsored-products.md): the no-Brand-Registry entry point.
+- [Sponsored Brands](/concepts/sponsored-brands.md): gated by Brand Registry.
+- [Sponsored Display](/concepts/sponsored-display.md): gated by Brand Registry for sellers.

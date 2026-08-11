@@ -2,10 +2,12 @@
 okf: "0.1"
 id: product-targeting
 title: Product targeting
+description: Placing ads against specific products or whole categories instead of shopper queries.
 type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-10
+timestamp: 2026-08-10T00:00:00Z
 confidence: medium
 tags: [targeting]
 related: [negative-targeting]
@@ -32,4 +34,4 @@ detail pages.
 
 ## Relationships
 
-- negative-targeting: negative product targeting excludes ASINs or brands from these campaigns.
+- [Negative targeting](/concepts/negative-targeting.md): negative product targeting excludes ASINs or brands from these campaigns.

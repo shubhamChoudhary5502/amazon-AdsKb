@@ -2,10 +2,12 @@
 okf: "0.1"
 id: sponsored-brands
 title: Sponsored Brands
+description: A cost-per-click ad product that showcases a brand and a selection of its products rather than a single listing.
 type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-10
+timestamp: 2026-08-10T00:00:00Z
 confidence: medium
 tags: [ad-product, ppc, branding]
 related: [advertising-eligibility]
@@ -35,4 +37,4 @@ upper-funnel option inside the self-service console.
 
 ## Relationships
 
-- advertising-eligibility: Brand Registry enrollment is the gate for this product.
+- [Advertising eligibility](/concepts/advertising-eligibility.md): Brand Registry enrollment is the gate for this product.

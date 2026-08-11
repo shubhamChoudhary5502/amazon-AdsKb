@@ -2,10 +2,12 @@
 okf: "0.1"
 id: bidding-strategies
 title: Bidding strategies
+description: Sponsored Products bidding strategies plus placement-level bid adjustments that decide how much of the stated bid enters each auction.
 type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-10
+timestamp: 2026-08-10T00:00:00Z
 confidence: medium
 tags: [bidding, optimization]
 related: [sponsored-products, acos-roas]
@@ -48,5 +50,5 @@ stated bid actually enters each auction.
 
 ## Relationships
 
-- sponsored-products: these strategies apply to Sponsored Products campaigns.
-- acos-roas: bid strategy is the main lever advertisers use to steer ACOS.
+- [Sponsored Products](/concepts/sponsored-products.md): these strategies apply to Sponsored Products campaigns.
+- [ACOS, ROAS and TACOS](/concepts/acos-roas.md): bid strategy is the main lever advertisers use to steer ACOS.

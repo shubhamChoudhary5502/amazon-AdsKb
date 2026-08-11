@@ -2,10 +2,12 @@
 okf: "0.1"
 id: amazon-marketing-stream
 title: Amazon Marketing Stream
+description: Marketing Stream replaces report polling with push delivery for near real time Amazon Ads data.
 type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-10
+timestamp: 2026-08-10T00:00:00Z
 confidence: medium
 tags: [api, data, reporting]
 related: [amazon-ads-api]
@@ -34,4 +36,4 @@ data.
 
 ## Relationships
 
-- amazon-ads-api: Stream is provisioned and accessed through the API.
+- [Amazon Ads API](/concepts/amazon-ads-api.md): Stream is provisioned and accessed through the API.
