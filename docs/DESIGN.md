@@ -84,6 +84,10 @@ in the bookkeeping.
   human approval step, instead of the registry being hand-edited.
 - Fuzzy alias matching (normalized edit distance) as a pre-filter before
   the validator's semantic check.
+- Relation-aware classification: a new fact adjacent to an existing one
+  (portfolio budgets next to campaign budgets) is currently classified
+  new and appended, when it should be recognised as extending the
+  existing line.
 - Contradiction sweep: a periodic agent pass that re-reads all docs and
   looks for cross-document conflicts, not just within-merge ones.
 - Live-mode hardening: retries, rate limiting, robots.txt respect, and
@@ -93,14 +97,60 @@ in the bookkeeping.
 
 ## How Claude Code was used to build this
 
-- Subagents, skills, hooks, and a slash command are the architecture, not
-  decoration: the pipeline stages are subagents, shared policy is skills,
-  and the quality gate is a hook. No orchestration framework.
-- During development, Claude Code drafted the deterministic scripts and
-  the first version of each policy file; every script was then reviewed,
-  and the validator was deliberately broken (citation stripped from a doc)
-  to confirm the hook actually blocks, rather than trusting that it would.
-- The test suite exists so the human does not have to trust the agent's
-  self-report: the shipped bundle is itself a test fixture, and the
-  idempotency claim is a script any reviewer can run, not a sentence in
-  this document.
+I used Claude Code as the primary builder and treated my own role as
+direction, review, and verification. Most of the initial scaffolding came
+from it: the folder structure, first drafts of the scripts, the four agent
+prompts, and the three skills. But I didn't just accept everything blindly.
+I read through CLAUDE.md and all the agent files before running anything,
+because during the call I need to be able to explain and defend every rule
+in them, rather than point at them and say Claude wrote it.
+
+The architecture is not decoration. Pipeline stages are subagents, shared
+policy lives in skills, the quality gate is a hook, and there is no
+orchestration framework anywhere. The merger is the only agent with write
+access to knowledge/, so every write passes through the validator.
+
+The environment was my own mess to deal with. I set up WSL fresh on Windows
+and hit an issue where my old Windows npm install of Claude Code was
+shadowing the Linux one after an auto-update broke the nvm path. I fixed it
+with hash -r and cleaning up PATH, and learned the hard way not to launch
+Claude from a /mnt/c path. That lesson came back a second time and cost me
+more: I ended up with two copies of this repo, one holding the git history
+and the remote, the other holding a session's worth of uncommitted work.
+Reconciling them ate an hour. Untracked work in a second directory is work
+you do not have.
+
+Three things broke in ways that reading the code would not have caught.
+
+The validation hook was silently doing nothing. settings.json invoked it as
+python3 scripts/hook_validate.py, a path resolved against the session working
+directory rather than the project root. The moment an agent cd'd into
+knowledge/concepts, the hook failed to start and the write went through
+unvalidated. I only saw it because the error surfaced in a transcript. Fixed
+by anchoring the command to $CLAUDE_PROJECT_DIR. A quality gate that fails
+open is worse than no gate, because you stop looking.
+
+The authoring skill drifted from the validator. I added description and
+timestamp to REQUIRED_KEYS but did not update okf-format/SKILL.md, so anyone
+authoring a doc from the skill alone would have written an invalid one. The
+agent flagged the mismatch on the next run rather than working around it.
+
+Early on, Claude called log_run.py with no arguments. The script rejected it
+with exit code 2 and Claude corrected itself and retried properly. I liked
+seeing that, because it is the deterministic layer catching the agent instead
+of the agent being trusted.
+
+Testing also surfaced a real gap in the validator's judgment. When a source
+added a fact about portfolio-level budgets, it was classified new rather than
+recognised as related to the existing campaign-level budget line. Worth
+separating from a case it does handle well: a later run where the same source
+gained two reworded restatements produced 22 extracted facts, all 22
+classified duplicate, and zero merges. Restatement is handled. Relating a
+genuinely new fact to an adjacent existing one is not.
+
+Every one of these was caught because a script or a transcript disagreed with
+what the agent reported, not because I read the code carefully. That is the
+whole argument for the deterministic layer. The tests, demo_rerun.sh, and
+docs/run-transcripts.md exist so that nobody, including me, has to take the
+agent's word for how this system behaves. If a claim in this repo matters,
+there should be something a reviewer can run that proves it.
