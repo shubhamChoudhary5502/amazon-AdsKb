@@ -45,8 +45,8 @@ the script instead.
    and citations skills. Duplicates are dropped, never re-written.
 5. **Publish** - run `python3 scripts/validate_okf.py knowledge/concepts/`
    (the hook also enforces this on every write), then
-   `python3 scripts/log_run.py` to append the run summary to
-   `knowledge/CHANGELOG.md`, then rebuild `knowledge/index.md` via
+   `python3 scripts/log_run.py "Update: <what changed>"` to prepend the run
+   summary to `knowledge/log.md`, then rebuild `knowledge/index.md` via
    `python3 scripts/build_index.py`.
 
 ## Hard rules
