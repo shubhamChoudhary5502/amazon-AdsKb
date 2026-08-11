@@ -20,7 +20,7 @@ Deterministic work is done by scripts. You never do it by hand:
 | Fetch, normalize, hash        | scripts | testable, reproducible               |
 | Change detection (hash diff)  | scripts | must be exact, not a judgment call   |
 | OKF schema validation         | scripts | a doc is valid or it is not          |
-| Manifest and changelog writes | scripts | append-only bookkeeping              |
+| Manifest and log writes       | scripts | dated, newest-first bookkeeping      |
 | Deciding what a concept is    | you     | fuzzy, needs semantics               |
 | Extracting facts from prose   | you     | fuzzy                                |
 | Judging duplicate vs distinct | you     | fuzzy                                |

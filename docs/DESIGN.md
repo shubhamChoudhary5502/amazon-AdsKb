@@ -6,7 +6,7 @@ The brief asks for the line to be picked and explained. The line here is:
 anything with a right answer is code, anything needing meaning is Claude.
 
 Concretely, code owns fetch, normalize, hash, change detection, schema
-validation, citation integrity, link symmetry, index and changelog. Claude
+validation, citation integrity, link symmetry, index and log. Claude
 owns concept identity, fact extraction, duplicate judgment, and conflict
 handling. The enforcement is structural, not aspirational: the merger is
 the only agent with write access to knowledge/, and a PostToolUse hook

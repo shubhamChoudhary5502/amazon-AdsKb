@@ -36,10 +36,10 @@ deterministic layer is stdlib only.
                            concepts/ is schema-validated, exit 2 blocks
     .claude/commands/      /ingest slash command
     scripts/               deterministic layer (fetch, hash, validate,
-                           index, changelog), stdlib only
+                           index, log), stdlib only
     sources/               source registry + offline snapshots (3 types:
                            official HTML, community blog, API notes)
-    knowledge/             the OKF bundle: 12 concepts, index, changelog
+    knowledge/             the OKF bundle: 12 concepts, index, log
     state/                 manifest (hashes), cache, concept registry
     tests/                 parser, validator, and idempotency tests
 
