@@ -15,10 +15,12 @@ with `scripts/validate_okf.py`, so deviations will be rejected on write.
     okf: "0.1"
     id: sponsored-products        # must equal the filename minus .md
     title: Sponsored Products
+    description: One sentence summarizing the concept, no colons, unquoted.
     type: concept
     status: active                # active | deprecated
     created: 2026-08-10           # ISO date, never changes after creation
     updated: 2026-08-10           # ISO date, bump on every content change
+    timestamp: 2026-08-10T00:00:00Z   # ISO 8601, date part must equal `updated`
     confidence: high              # high | medium | low, per citations skill
     tags: [ad-product, ppc]       # at least one
     related: [keyword-match-types]  # slugs of other docs, may be empty []
@@ -45,6 +47,10 @@ with `scripts/validate_okf.py`, so deviations will be rejected on write.
 
 ## Rules
 
+- `description` and `timestamp` are OKF v0.1 recommended fields (spec 4.1).
+  `timestamp` is the spec's last-modified field; `created` and `updated` are
+  this bundle's producer extensions. The validator enforces that the
+  timestamp's date part matches `updated` so the two cannot drift.
 - `related` must be symmetric: if A lists B, B must list A.
 - No prose outside the sections above. No HTML. Plain markdown only.
 - Keep docs under roughly 80 lines. If it grows past that, the concept
