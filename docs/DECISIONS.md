@@ -51,3 +51,11 @@ I ran into the practical issue that Amazon blocks a basic `urllib` request with 
 For testing, I chose snapshots instead because they make the runs deterministic and mean someone can clone the repo and test it without needing network access.
 
 The tradeoff is that the six fixtures are still hand-made snapshots, so I wouldn't claim they represent six completely independent live sources.
+
+## 9. Offline fixtures instead of live scraping for tests
+
+I ran into the practical issue that Amazon blocks a basic `urllib` request with a 403, and some of the pages also depend on JavaScript. Proper live fetching would therefore need something like the Playwright MCP.
+
+For testing, I chose snapshots instead because they make the runs deterministic and mean someone can clone the repo and test it without needing network access.
+
+The tradeoff is that the six fixtures are still hand-made snapshots, so I wouldn't claim they represent six completely independent live sources.

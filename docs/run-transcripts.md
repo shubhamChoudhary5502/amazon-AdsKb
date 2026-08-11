@@ -224,3 +224,51 @@ Two notes from the scout worth keeping:
 - `python3 scripts/fetch.py --all` and absolute-path invocations are blocked by the permission config; only the cwd-relative per-source form is allowed. If you want single-command runs, that permission entry needs widening.
 - Sources were fetched sequentially rather than in parallel, which is also the safer choice here: each `fetch.py` run does a full read-modify-write of `state/manifest.json`, so concurrent runs could drop each other's updates.
 
+### RUN 3c: hook blocks an invalid write, with write pre-approved
+The gate fires. Write lands, PostToolUse runs hook_validate.py via $CLAUDE_PROJECT_DIR, and blocks with one specific error rather than a blanket rejection. Also surfaced a real limitation: PostToolUse cannot undo the write, so the rejected file stays on disk and fails bundle validation until removed.
+
+Frontmatter schema is clear. Writing the deliberately-invalid doc now, everything valid except the omitted sources key.
+
+Write(knowledge/concepts/test-bad.md)
+
+    ---
+    okf: "0.1"
+    id: test-bad
+    title: Test Bad
+    description: Deliberately invalid test document used to verify the OKF validation hook rejects a doc with no sources.
+    type: concept
+    status: active
+    created: 2026-08-11
+    updated: 2026-08-11
+    timestamp: 2026-08-11T00:00:00Z
+    ...
+
+    PostToolUse:Write hook returned blocking error
+    [python3 "$CLAUDE_PROJECT_DIR/scripts/hook_validate.py"]: OKF validation failed, fix before continuing:
+      - missing frontmatter key: sources
+
+    $ ls -la knowledge/concepts/test-bad.md
+    -rw-r--r-- 1 sk234 sk234 710 Aug 11 14:18 knowledge/concepts/test-bad.md
+
+    $ python3 scripts/validate_okf.py knowledge/concepts/test-bad.md
+    knowledge/concepts/test-bad.md: missing frontmatter key: sources
+    exit=1
+
+    $ rm knowledge/concepts/test-bad.md && python3 scripts/validate_okf.py knowledge/concepts/
+    OK
+    exit=0
+
+The hook works. Write created the file on disk, then the PostToolUse hook ran
+scripts/hook_validate.py and blocked. Everything else in the frontmatter
+passed, so it flagged only the omitted key: the check is specific, not a
+blanket rejection. validate_okf.py agreed independently in both single-file
+and bundle mode.
+
+One thing worth knowing: the hook is PostToolUse, so it blocks the agent from
+continuing but does not undo the write. test-bad.md stayed on disk and, until
+removed, made the whole bundle fail validation. A passing per-file gate, but a
+poisoned bundle. For the guarantee to be "an invalid doc never lands", the
+hook would need to delete or restore the file it rejects, not just report.
+
+test-bad.md was removed, bundle validation is back to OK, and git status is
+clean.

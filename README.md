@@ -90,3 +90,8 @@ of each: see `knowledge/concepts/bidding-strategies.md` (conflict) and
 - The community fixture cites a `.example` domain. That TLD is reserved and
   cannot resolve, chosen deliberately so a synthetic snapshot can never be
   mistaken for a real citation.
+- The validation hook is `PostToolUse`, so it blocks the agent from continuing
+  but cannot undo the write that triggered it. A rejected document stays on
+  disk and fails bundle validation until it is removed. The per-file gate
+  holds; the bundle-level guarantee needs the hook to restore or delete the
+  file it rejects.
