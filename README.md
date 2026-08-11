@@ -84,3 +84,9 @@ of each: see `knowledge/concepts/bidding-strategies.md` (conflict) and
   Semantic near-misses rely on the validator agent reading the registry.
 - `last_checked` in the manifest moves on every run by design, so `state/`
   is not byte-stable, only `knowledge/` is. See DESIGN.md for why.
+- Concurrent per-source `fetch.py` runs can lose manifest entries, since each
+  run does a full read-modify-write of `state/manifest.json`. Use `--all`,
+  which runs in one process. A file lock is the fix at scale.
+- The community fixture cites a `.example` domain. That TLD is reserved and
+  cannot resolve, chosen deliberately so a synthetic snapshot can never be
+  mistaken for a real citation.
