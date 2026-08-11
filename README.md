@@ -12,7 +12,7 @@ Requirements: Python 3.9+ and Claude Code. No pip installs, the
 deterministic layer is stdlib only.
 
     git clone <this repo> && cd amazon-AdsKb
-    python3 -m unittest discover tests        # 16 tests, ~0.01s
+    python3 -m unittest discover tests        # 20 tests, ~0.01s
     python3 scripts/validate_okf.py knowledge/concepts/   # bundle is valid
     sh scripts/demo_rerun.sh                  # idempotency proof
     claude                                    # then: /ingest all
