@@ -9,8 +9,8 @@ created: 2026-08-10
 updated: 2026-08-12
 timestamp: 2026-08-12T00:00:00Z
 confidence: high
-tags: [ad-product, ppc, branding]
-related: [advertising-eligibility, amazon-ads-api, acos-roas, amazon-marketing-stream, brand-stores, new-to-brand-metrics, sponsored-brands-video, bidding-strategies, campaign-structure, targeting]
+tags: [ad-product, ppc, branding, video]
+related: [advertising-eligibility, amazon-ads-api, acos-roas, amazon-marketing-stream, brand-stores, new-to-brand-metrics, bidding-strategies, campaign-structure, targeting]
 sources:
   - id: S1
     url: https://advertising.amazon.com/solutions/products/sponsored-brands
@@ -30,7 +30,9 @@ sources:
 
 Sponsored Brands is a cost-per-click ad product that showcases a brand and
 a selection of its products rather than a single listing. It is the main
-upper-funnel option inside the self-service console.
+upper-funnel option inside the self-service console. Sponsored Brands video
+is a powerful storytelling tool that uses rich autoplay video content to help
+drive brand recognition for new brands and enhance reach for existing brands.
 
 ## Key facts
 
@@ -76,6 +78,16 @@ upper-funnel option inside the self-service console.
 - Sponsored Brands products and features may not be available in all marketplaces. [S2]
 - Sponsored Brands ads are reviewed within 72 hours after submission. [S2]
 - Sponsored Brands allows uploading creative as static image or video that features a product or brand. [S2]
+- Sponsored Brands provides Video Generator in Creative tools tab to assist with building video creative. [S2]
+- Sponsored Brands offers video creative production and editing services through Amazon. [S2]
+- Sponsored Brands provides video as added value with qualifying campaigns or as affordable at-cost fee-based services. [S2]
+- Sponsored Brands video is a powerful storytelling tool to initiate, cultivate, and maintain relationships with shoppers. [S2]
+- Sponsored Brands video enables featuring multiple products and linking to Brand Stores. [S2]
+- Sponsored Brands video provides exclusive access to high-visibility placements. [S2]
+- Sponsored Brands video enables featuring up to three products within ads when linking to Brand Stores. [S2]
+- Sponsored Brands video ads could appear above, in the middle, or at the bottom of Amazon search results. [S2]
+- Sponsored Brands video enables promoting eye-catching video with flexibility of showcasing up to three products. [S2]
+- Sponsored Brands video enables driving traffic to Brand Store to explore full range of product offerings in dedicated brand environment. [S2]
 - Sponsored Brands reserve share of voice enables reserving Top-of-Search placements for branded keywords at fixed upfront price. [S2]
 - Sponsored Brands reserve share of voice ensures consistent visibility when shoppers search for your brand. [S2]
 - Sponsored Brands branded search metrics now better identify when advertising influences shoppers to search for brand names, trademarks, and common variations like abbreviations. [S2]
@@ -97,6 +109,7 @@ upper-funnel option inside the self-service console.
 - Creating Sponsored Brands campaign involves submitting ad for review. [S2]
 - Sponsored Brands provides Amazon Ads Academy with courses for Sponsored Brands. [S2]
 - Sponsored Brands provides guides for getting started with Sponsored Brands. [S2]
+- Sponsored Brands provides guide for getting started with Sponsored Brands video ads. [S2]
 - Sponsored Brands provides guide for setting up Sponsored Brands reserve share of voice. [S2]
 
 ## Relationships
@@ -104,7 +117,6 @@ upper-funnel option inside the self-service console.
 - [Advertising eligibility](/concepts/advertising-eligibility.md): Brand Registry enrollment is the gate for this product.
 - [Brand Stores](/concepts/brand-stores.md): campaigns drive traffic to brand destinations.
 - [New-to-brand metrics](/concepts/new-to-brand-metrics.md): measure first-time customer acquisition.
-- [Sponsored Brands video](/concepts/sponsored-brands-video.md): video ad format within Sponsored Brands.
 - [Bidding strategies](/concepts/bidding-strategies.md): supports CPC, vCPM, and fixed pricing models.
 - [Campaign structure](/concepts/campaign-structure.md): campaign organization and goals.
 - [Amazon Ads API](/concepts/amazon-ads-api.md): programmatic campaign management and reporting available.

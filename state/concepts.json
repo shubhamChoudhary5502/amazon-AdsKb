@@ -1,6 +1,6 @@
 {
   "sponsored-products": {"aliases": ["sp", "sponsored products ads", "product ads"]},
-  "sponsored-brands": {"aliases": ["sb", "headline search ads", "brand ads"]},
+  "sponsored-brands": {"aliases": ["sb", "headline search ads", "brand ads", "sponsored-brands-video", "sb video", "sponsored brands video ads", "video ads"]},
   "sponsored-display": {"aliases": ["sd", "display remarketing"]},
   "keyword-match-types": {"aliases": ["match types", "broad match", "phrase match", "exact match", "keyword targeting"]},
   "product-targeting": {"aliases": ["asin targeting", "category targeting"]},
@@ -13,6 +13,5 @@
   "advertising-eligibility": {"aliases": ["brand registry requirements", "who can advertise"]},
   "targeting": {"aliases": ["keyword targeting", "product targeting", "audience targeting"]},
   "brand-stores": {"aliases": ["amazon stores", "brand store", "stores"]},
-  "new-to-brand-metrics": {"aliases": ["ntb", "new to brand", "brand new metrics"]},
-  "sponsored-brands-video": {"aliases": ["sb video", "sponsored brands video ads", "video ads"]}
+  "new-to-brand-metrics": {"aliases": ["ntb", "new to brand", "brand new metrics"]}
 }

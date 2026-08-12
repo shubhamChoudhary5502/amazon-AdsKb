@@ -1,6 +1,6 @@
 # Amazon Ads knowledge bundle - index
 
-16 concepts. Sources column is official-or-api / total.
+15 concepts. Sources column is official-or-api / total.
 
 | Concept | Confidence | Updated | Sources | Tags |
 |---|---|---|---|---|
@@ -15,8 +15,7 @@
 | [Negative targeting](concepts/negative-targeting.md) | high | 2026-08-12 | 1/1 | targeting, optimization, exclusions |
 | [New-to-brand metrics](concepts/new-to-brand-metrics.md) | high | 2026-08-12 | 1/1 | metrics, brand-growth, attribution |
 | [Product targeting](concepts/product-targeting.md) | high | 2026-08-12 | 1/1 | targeting, products, asin |
-| [Sponsored Brands video](concepts/sponsored-brands-video.md) | high | 2026-08-12 | 1/1 | video, creative, sponsored-brands |
-| [Sponsored Brands](concepts/sponsored-brands.md) | high | 2026-08-12 | 2/2 | ad-product, ppc, branding |
+| [Sponsored Brands](concepts/sponsored-brands.md) | high | 2026-08-12 | 2/2 | ad-product, ppc, branding, video |
 | [Sponsored Display](concepts/sponsored-display.md) | high | 2026-08-12 | 2/2 | ad-product, display, remarketing |
 | [Sponsored Products](concepts/sponsored-products.md) | high | 2026-08-12 | 3/3 | ad-product, ppc, self-service |
 | [Targeting](concepts/targeting.md) | high | 2026-08-12 | 2/2 | targeting, keywords, products |

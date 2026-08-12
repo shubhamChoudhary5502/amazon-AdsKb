@@ -10,7 +10,7 @@ updated: 2026-08-12
 timestamp: 2026-08-12T15:11:53Z
 confidence: high
 tags: [stores, brand, destination]
-related: [sponsored-brands, new-to-brand-metrics, sponsored-brands-video, advertising-eligibility]
+related: [sponsored-brands, new-to-brand-metrics, advertising-eligibility]
 sources:
   - id: S1
     url: https://advertising.amazon.com/solutions/products/sponsored-brands
