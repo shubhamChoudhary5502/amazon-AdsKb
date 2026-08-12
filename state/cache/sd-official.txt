@@ -1,65 +1,15 @@
-Sponsored Display - Now part of Amazon Ads display ads offering
+Sponsored Display - Amazon Ads
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Sponsored Display Sponsored Display is now known as display ads We're introducing a single ad platform that connects your display campaigns with customers across Amazon properties including Twitch, Fire TV, and Echo Show, as well as premium placements across the open internet. Reach relevant audiences with display ads Frequently asked questions, answered What happened to Sponsored Display? Sponsored Display is now a part of Amazon's wider display ads offering within our new centralized hub that unifies access to all Amazon Ads products, bringing together sponsored ads and Amazon DSP workflows into a single workspace. This new direction delivers the simplicity you want while preserving all the powerful advertising features you've come to rely on. What happens to existing Sponsored Display campaigns? Existing Sponsored Display campaigns will continue to run uninterrupted. You can access your existing Sponsored Display campaigns through Campaign Manager in the Ads Console. What is the alternative to Sponsored Display? The alternative to Sponsored Display is now display ads. To create new display campaigns, go to “Campaigns,” click “Create Campaign,” and then click “Display.” What is display advertising? Display ads are flexible ad formats that can help your brand reach relevant audiences wherever they spend time using Amazon-generated creative or your own creative assets. Learn more about display advertising.
+Sponsored Display
+Sponsored Display is a self-service display advertising product. Ads can
+reach audiences both on Amazon and on third-party destinations off Amazon.
+Targeting and audiences
+Sponsored Display offers contextual targeting, which targets products or
+categories, and audience targeting, which includes views remarketing,
+purchases remarketing, and Amazon audiences built from shopping signals.
+Pricing
+Sponsored Display supports cost-per-click (CPC) bidding and, for
+campaigns optimized for reach, cost per thousand viewable impressions
+(vCPM) bidding.
+Sponsored Display requires Brand Registry for sellers.

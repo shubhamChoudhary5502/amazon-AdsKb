@@ -1,0 +1,441 @@
+{
+  "version": "1.0",
+  "run_id": "20260812-163904-52dd7bdf",
+  "validated_at": "2026-08-12T16:42:54.715062Z",
+  "extraction_files": [
+    "state/extracts/20260812-163904-52dd7bdf/sp-official-20260812164157.json",
+    "state/extracts/20260812-163904-52dd7bdf/ads-api-notes-20260812164154.json",
+    "state/extracts/20260812-163904-52dd7bdf/ppc-community-20260812164155.json"
+  ],
+  "validation_results": {
+    "new": [
+      {
+        "fact": "Sponsored Products use cost-per-click (CPC) pricing model",
+        "concept": "sponsored-products",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "cost-per-click (CPC) ads",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Sponsored Products promote individual product listings on Amazon",
+        "concept": "sponsored-products",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "promote individual product listings on Amazon",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Advertisers only pay when shoppers click their Sponsored Products ad",
+        "concept": "sponsored-products",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "pay only when shoppers click your ad",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Sponsored Products ads appear in shopping results and on product detail pages",
+        "concept": "sponsored-products",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "Ads appear in shopping results and on product detail pages",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Sponsored Products ads are created from existing product listings",
+        "concept": "sponsored-products",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "created from your existing product listings",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Sponsored Products do not require custom ad copy or images",
+        "concept": "sponsored-products",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "no custom ad copy or images are required",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Sponsored Products are available to professional sellers and vendors",
+        "concept": "advertising-eligibility",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "Available to professional sellers, vendors",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Sponsored Products are available to book vendors and authors",
+        "concept": "advertising-eligibility",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "book vendors, and authors",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Brand Registry enrollment is not required for Sponsored Products",
+        "concept": "advertising-eligibility",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "Brand Registry enrollment is not required",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Sponsored Products manual targeting allows selecting keywords or products",
+        "concept": "targeting",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "select keywords or products yourself",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Sponsored Products campaigns use a daily budget",
+        "concept": "bidding-strategies",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "Campaigns set a daily budget",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Sponsored Products advertisers control maximum cost-per-click bid",
+        "concept": "bidding-strategies",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "control the maximum cost-per-click bid",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "The Amazon Ads API uses OAuth 2.0 via Login with Amazon for authorization.",
+        "concept": "amazon-ads-api",
+        "source_id": "ads-api-notes",
+        "source_url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index",
+        "source_type": "api",
+        "quote": "uses OAuth 2.0 via Login with Amazon for authorization",
+        "extracted_at": "2026-08-12T16:41:54.403832Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "API access requires an approved developer application.",
+        "concept": "amazon-ads-api",
+        "source_id": "ads-api-notes",
+        "source_url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index",
+        "source_type": "api",
+        "quote": "API access requires an approved developer application",
+        "extracted_at": "2026-08-12T16:41:54.403832Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Reporting in version 3 is asynchronous.",
+        "concept": "amazon-ads-api",
+        "source_id": "ads-api-notes",
+        "source_url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index",
+        "source_type": "api",
+        "quote": "Reporting in version 3 is asynchronous",
+        "extracted_at": "2026-08-12T16:41:54.403832Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "The asynchronous reporting process involves requesting a report, polling its status, then downloading the generated file.",
+        "concept": "amazon-ads-api",
+        "source_id": "ads-api-notes",
+        "source_url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index",
+        "source_type": "api",
+        "quote": "you request a report, poll its status, then download the generated file",
+        "extracted_at": "2026-08-12T16:41:54.403832Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Amazon Marketing Stream delivers campaign metrics and console change events as push-based messages.",
+        "concept": "amazon-marketing-stream",
+        "source_id": "ads-api-notes",
+        "source_url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index",
+        "source_type": "api",
+        "quote": "delivers campaign metrics and console change events as push-based messages",
+        "extracted_at": "2026-08-12T16:41:54.403832Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Stream uses Amazon SQS as the destination for messages delivered to an advertiser's AWS account.",
+        "concept": "amazon-marketing-stream",
+        "source_id": "ads-api-notes",
+        "source_url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index",
+        "source_type": "api",
+        "quote": "using Amazon SQS as the destination",
+        "extracted_at": "2026-08-12T16:41:54.403832Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "The sandbox environment allows testing without spending real money.",
+        "concept": "amazon-ads-api",
+        "source_id": "ads-api-notes",
+        "source_url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index",
+        "source_type": "api",
+        "quote": "testing Sponsored Products campaign management operations without spending real money",
+        "extracted_at": "2026-08-12T16:41:54.403832Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "ACOS example: spending 200 rupees to get 1000 rupees of attributed sales results in 20% ACOS",
+        "concept": "acos-roas",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "Spend 200 rupees, get 1000 rupees of attributed sales, and your ACOS is 20%",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "A good ACOS for most established products is under 30%",
+        "concept": "acos-roas",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "a good ACOS for most established products sits under 30%",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Launch campaigns often run higher ACOS on purpose compared to established products",
+        "concept": "acos-roas",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "launch campaigns often run much hotter on purpose",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Dynamic bids up and down can raise bids by up to 100% for top of search placement",
+        "concept": "bidding-strategies",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "top of search allows up to 100%",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Dynamic bids up and down can raise bids by up to 50% for other placements",
+        "concept": "bidding-strategies",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "That cap is 50% for other placements",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Practitioners observe only up to 50% bid boosts even for top of search placement in testing",
+        "concept": "bidding-strategies",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "we have only ever observed boosts up to 50% even on top of search",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Recommended bidding strategy: start with dynamic down only while gathering data",
+        "concept": "bidding-strategies",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "start with dynamic down only while you gather data",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Graduate winning campaigns to dynamic up and down bidding after data collection",
+        "concept": "bidding-strategies",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "graduate winners to up and down",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      },
+      {
+        "fact": "Keep exact match keywords in separate campaigns so budget flows to proven converters",
+        "concept": "campaign-structure",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "Keep exact match keywords in their own campaigns so budget flows to proven converters",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "new",
+        "reason": "no_match_found"
+      }
+    ],
+    "changed": [
+      {
+        "fact": "A sandbox environment is available for testing Sponsored Products campaign management operations.",
+        "concept": "amazon-ads-api",
+        "source_id": "ads-api-notes",
+        "source_url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index",
+        "source_type": "api",
+        "quote": "A sandbox environment is available for testing Sponsored Products campaign management operations",
+        "extracted_at": "2026-08-12T16:41:54.403832Z",
+        "classification": "changed",
+        "existing_line": "- A sandbox environment allows testing Sponsored Products campaign management without real spend. [S1]",
+        "overlap_ratio": 0.6666666666666666
+      },
+      {
+        "fact": "TACOS is a better health metric for brands because it captures organic lift from advertising",
+        "concept": "acos-roas",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "It is the better health metric for a brand because it captures the organic lift that ads create",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "changed",
+        "existing_line": "- Source S1 argues TACOS is the better brand health metric because it captures organic lift from ads. [S1]",
+        "overlap_ratio": 0.6470588235294118
+      }
+    ],
+    "duplicate": [
+      {
+        "fact": "Requests are scoped to a profile, which represents an advertiser account in a specific marketplace.",
+        "concept": "amazon-ads-api",
+        "source_id": "ads-api-notes",
+        "source_url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index",
+        "source_type": "api",
+        "quote": "Requests are scoped to a profile, which represents an advertiser account in a specific marketplace",
+        "extracted_at": "2026-08-12T16:41:54.403832Z",
+        "classification": "duplicate",
+        "existing_line": "- Requests are scoped to a profile, which represents an advertiser account in a specific marketplace. [S1]",
+        "match_type": "exact"
+      },
+      {
+        "fact": "ACOS (advertising cost of sales) is ad spend divided by ad-attributed sales, expressed as a percentage",
+        "concept": "acos-roas",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "ACOS, or advertising cost of sales, is ad spend divided by ad-attributed sales, expressed as a percentage",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "duplicate",
+        "existing_line": "- ACOS (advertising cost of sales) is ad spend divided by ad-attributed sales, expressed as a percentage. [S1]",
+        "match_type": "overlap",
+        "overlap_ratio": 0.9375
+      },
+      {
+        "fact": "TACOS (total advertising cost of sales) divides ad spend by total revenue including organic sales",
+        "concept": "acos-roas",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "TACOS, total advertising cost of sales, divides ad spend by TOTAL revenue including organic",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "duplicate",
+        "existing_line": "- TACOS (total advertising cost of sales) divides ad spend by total revenue including organic sales. [S1]",
+        "match_type": "overlap",
+        "overlap_ratio": 0.9333333333333333
+      }
+    ],
+    "conflict": [
+      {
+        "fact": "Sponsored Products automatic targeting matches ads to shopping queries and products",
+        "concept": "targeting",
+        "source_id": "sp-official",
+        "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+        "source_type": "official",
+        "quote": "Amazon matches your ads to shopping queries and products",
+        "extracted_at": "2026-08-12T16:41:57.361409Z",
+        "classification": "conflict",
+        "conflicting_line": "description: How Amazon ads match to shopping context through keywords and product attributes.",
+        "overlap_ratio": 0.3076923076923077
+      },
+      {
+        "fact": "Stream provides near real time hourly metrics instead of pull-based report polling.",
+        "concept": "amazon-marketing-stream",
+        "source_id": "ads-api-notes",
+        "source_url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index",
+        "source_type": "api",
+        "quote": "Stream provides near real time hourly metrics instead of pull-based report polling",
+        "extracted_at": "2026-08-12T16:41:54.403832Z",
+        "classification": "conflict",
+        "conflicting_line": "- Provides near real time hourly metrics, in contrast to pull-based report polling. [S1]",
+        "overlap_ratio": 0.6666666666666666
+      },
+      {
+        "fact": "ROAS is the inverse of ACOS: attributed sales divided by spend",
+        "concept": "acos-roas",
+        "source_id": "ppc-community",
+        "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+        "source_type": "community",
+        "quote": "ROAS is simply the inverse: attributed sales divided by spend",
+        "extracted_at": "2026-08-12T16:41:55.247072Z",
+        "classification": "conflict",
+        "conflicting_line": "- ACOS (advertising cost of sales) is ad spend divided by ad-attributed sales, expressed as a percentage. [S1]",
+        "overlap_ratio": 0.3125
+      }
+    ],
+    "rejected": []
+  },
+  "summary": {
+    "total_facts": 36,
+    "new_count": 28,
+    "changed_count": 2,
+    "duplicate_count": 3,
+    "conflict_count": 3,
+    "rejected_count": 0
+  },
+  "validator_metadata": {
+    "validator_agent": "validate_extraction.py",
+    "validation_duration_ms": 0,
+    "concepts_checked": 15,
+    "documents_updated": 0
+  }
+}

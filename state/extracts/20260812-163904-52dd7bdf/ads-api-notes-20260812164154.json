@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "run_id": "20260812-163904-52dd7bdf",
+  "extracted_at": "2026-08-12T16:41:54.403832Z",
+  "source_id": "ads-api-notes",
+  "source_type": "api",
+  "source_url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index",
+  "cache_file": "/home/sk234/projects/amazon-ads-kb/state/cache/ads-api-notes.txt",
+  "content_hash": "eaef7e74e02fc58b1f87cdc2ce3d78393ff6781436f791a734213c69d1e0b6cb",
+  "facts": [
+    {
+      "fact": "The Amazon Ads API uses OAuth 2.0 via Login with Amazon for authorization.",
+      "concept": "amazon-ads-api",
+      "quote": "uses OAuth 2.0 via Login with Amazon for authorization",
+      "extracted_at": "2026-08-12T16:41:54.403832Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "API access requires an approved developer application.",
+      "concept": "amazon-ads-api",
+      "quote": "API access requires an approved developer application",
+      "extracted_at": "2026-08-12T16:41:54.403832Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Requests are scoped to a profile, which represents an advertiser account in a specific marketplace.",
+      "concept": "amazon-ads-api",
+      "quote": "Requests are scoped to a profile, which represents an advertiser account in a specific marketplace",
+      "extracted_at": "2026-08-12T16:41:54.403832Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Reporting in version 3 is asynchronous.",
+      "concept": "amazon-ads-api",
+      "quote": "Reporting in version 3 is asynchronous",
+      "extracted_at": "2026-08-12T16:41:54.403832Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "The asynchronous reporting process involves requesting a report, polling its status, then downloading the generated file.",
+      "concept": "amazon-ads-api",
+      "quote": "you request a report, poll its status, then download the generated file",
+      "extracted_at": "2026-08-12T16:41:54.403832Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon Marketing Stream delivers campaign metrics and console change events as push-based messages.",
+      "concept": "amazon-marketing-stream",
+      "quote": "delivers campaign metrics and console change events as push-based messages",
+      "extracted_at": "2026-08-12T16:41:54.403832Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Stream uses Amazon SQS as the destination for messages delivered to an advertiser's AWS account.",
+      "concept": "amazon-marketing-stream",
+      "quote": "using Amazon SQS as the destination",
+      "extracted_at": "2026-08-12T16:41:54.403832Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Stream provides near real time hourly metrics instead of pull-based report polling.",
+      "concept": "amazon-marketing-stream",
+      "quote": "Stream provides near real time hourly metrics instead of pull-based report polling",
+      "extracted_at": "2026-08-12T16:41:54.403832Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "A sandbox environment is available for testing Sponsored Products campaign management operations.",
+      "concept": "amazon-ads-api",
+      "quote": "A sandbox environment is available for testing Sponsored Products campaign management operations",
+      "extracted_at": "2026-08-12T16:41:54.403832Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "The sandbox environment allows testing without spending real money.",
+      "concept": "amazon-ads-api",
+      "quote": "testing Sponsored Products campaign management operations without spending real money",
+      "extracted_at": "2026-08-12T16:41:54.403832Z",
+      "confidence": "high"
+    }
+  ],
+  "extraction_metadata": {}
+}

@@ -7,7 +7,7 @@ type: concept
 status: active
 created: 2026-08-12
 updated: 2026-08-12
-timestamp: 2026-08-12T15:11:53Z
+timestamp: 2026-08-12T16:42:54Z
 confidence: high
 tags: [targeting, keywords, products]
 related: [keyword-match-types, product-targeting, negative-targeting, campaign-structure, sponsored-brands, sponsored-products]
@@ -22,6 +22,11 @@ sources:
     kind: official
     fetched: 2026-08-12
     snapshot: state/cache/sb-official.txt
+  - id: S3
+    url: https://advertising.amazon.com/solutions/products/sponsored-products
+    kind: official
+    fetched: 2026-08-12
+    snapshot: state/cache/sp-official.txt
 ---
 
 # Targeting
@@ -32,6 +37,7 @@ Targeting defines the context in which ads appear by matching keywords to custom
 
 ## Key facts
 
+- Sponsored Products manual targeting allows selecting keywords or products. [S3]
 - Targeting defines the context in which ads appear by matching keywords to customer shopping queries. [S1]
 - Customer shopping queries are words and phrases Amazon customers use to look for products. [S1]
 - Sponsored Brands reaches shoppers who matter most through precise keyword and product targeting. [S2]

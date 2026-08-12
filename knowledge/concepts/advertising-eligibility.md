@@ -7,7 +7,7 @@ type: concept
 status: active
 created: 2026-08-12
 updated: 2026-08-12
-timestamp: 2026-08-12T15:11:53Z
+timestamp: 2026-08-12T16:42:54Z
 confidence: high
 tags: [eligibility, requirements, restrictions]
 related: [sponsored-products, sponsored-brands, sponsored-display, brand-stores]
@@ -32,6 +32,9 @@ Advertising eligibility determines who can advertise on Amazon and which product
 
 ## Key facts
 
+- Sponsored Products are available to professional sellers and vendors. [S2]
+- Sponsored Products are available to book vendors and authors. [S2]
+- Brand Registry enrollment is not required for Sponsored Products. [S2]
 - Sponsored Brands is available for vendors, book vendors, Kindle Direct Publishing authors, agencies, and professional sellers enrolled in Amazon Brand Registry. [S1]
 - Sponsored Brands is not eligible for adult products, used products, refurbished products, and products in closed categories. [S1]
 - Products must be eligible for the Featured Offer to be advertised with Sponsored Products. [S2]

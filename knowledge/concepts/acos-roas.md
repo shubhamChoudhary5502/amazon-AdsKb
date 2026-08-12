@@ -6,8 +6,8 @@ description: The three efficiency metrics advertisers steer by, currently restin
 type: concept
 status: active
 created: 2026-08-10
-updated: 2026-08-10
-timestamp: 2026-08-10T00:00:00Z
+updated: 2026-08-12
+timestamp: 2026-08-12T16:42:54Z
 confidence: low
 tags: [metrics, measurement]
 related: [bidding-strategies, sponsored-brands, new-to-brand-metrics]
@@ -36,7 +36,11 @@ run.
 
 ## Community claims
 
+- ACOS example: spending 200 rupees to get 1000 rupees of attributed sales results in 20% ACOS. [S1]
+- A good ACOS for most established products is under 30%. [S1]
+- Launch campaigns often run higher ACOS on purpose compared to established products. [S1]
 - Source S1 claims a "good" ACOS for established products sits under 30%, with launch campaigns deliberately running higher. [S1]
+- TACOS is a better health metric for brands because it captures organic lift from advertising. [S1]
 - Source S1 argues TACOS is the better brand health metric because it captures organic lift from ads. [S1]
 
 ## Conflicts and notes

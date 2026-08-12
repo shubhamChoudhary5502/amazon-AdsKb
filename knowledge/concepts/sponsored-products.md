@@ -7,7 +7,7 @@ type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-12
-timestamp: 2026-08-12T00:00:00Z
+timestamp: 2026-08-12T16:42:54Z
 confidence: high
 tags: [ad-product, ppc, self-service]
 related: [bidding-strategies, keyword-match-types, campaign-structure, advertising-eligibility, amazon-ads-api, amazon-marketing-stream, product-targeting, negative-targeting, targeting]
@@ -39,6 +39,12 @@ usually the first ad type an advertiser runs.
 
 ## Key facts
 
+- Sponsored Products use cost-per-click (CPC) pricing model. [S2]
+- Sponsored Products promote individual product listings on Amazon. [S2]
+- Advertisers only pay when shoppers click their Sponsored Products ad. [S2]
+- Sponsored Products ads appear in shopping results and on product detail pages. [S2]
+- Sponsored Products ads are created from existing product listings. [S2]
+- Sponsored Products do not require custom ad copy or images. [S2]
 - Pricing is cost-per-click: the advertiser pays only when a shopper clicks the ad. [S1][S2]
 - Ads appear in shopping results and on product detail pages, as well as on Amazon-owned sites and third-party destinations. [S1][S2]
 - Ads are generated from the existing product listing, so no custom copy or images are required. [S1]

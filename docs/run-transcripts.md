@@ -369,3 +369,77 @@ and bundle mode.
 **This limitation led to the current PreToolUse implementation** which validates BEFORE the write executes, preventing invalid files from ever being created.
 
 test-bad.md was removed, bundle validation is back to OK, and git status is clean.
+
+---
+
+## CURRENT IMPLEMENTATION (2026-08-12)
+
+The current implementation uses:
+
+- **PreToolUse hook:** `scripts/hook_validate_pre.py` validates documents BEFORE they reach disk
+- **Artifact-based handoff:** Run-specific directories (`state/extracts/<run_id>/`, `state/validated/<run_id>/`)
+- **Run isolation:** Each pipeline execution generates a unique run_id
+- **Bypass protection:** Merger can only read validated artifacts, not extraction artifacts directly
+- **110 passing tests** including run isolation, bypass protection, and PreToolUse validation
+- **Live ingestion completed:** run ID `20260812-150401-c8da98f4`
+  - 4 real Amazon Ads sources fetched live
+  - 151 facts extracted and validated
+  - 146 new, 5 changed, 0 duplicate, 0 conflict, 0 rejected
+  - 16 concept documents in knowledge bundle
+- **Current hook configuration:** `.claude/settings.json` registers PreToolUse with `scripts/hook_validate_pre.py`
+
+**Current artifact locations:**
+- `state/extracts/20260812-150401-c8da98f4/` - live extraction artifacts
+- `state/validated/20260812-150401-c8da98f4/` - live validation artifacts
+
+### MULTI-SOURCE TYPE LIVE INGESTION (2026-08-12)
+
+**Run ID:** `20260812-163904-52dd7bdf`
+
+**Command:** Full pipeline executed via Scout → Extractor → Validator → Merger with three source types
+
+**Three Source Types Processed:**
+
+| source_id | source_type | source_url | live artifact | validation artifact |
+|-----------|-------------|------------|---------------|---------------------|
+| sp-official | official | https://advertising.amazon.com/solutions/products/sponsored-products | state/extracts/20260812-163904-52dd7bdf/sp-official-20260812164157.json | state/validated/20260812-163904-52dd7bdf/validation-20260812164254.json |
+| ads-api-notes | api | https://advertising.amazon.com/API/docs/en-us/release-notes/index | state/extracts/20260812-163904-52dd7bdf/ads-api-notes-20260812164154.json | state/validated/20260812-163904-52dd7bdf/validation-20260812164254.json |
+| ppc-community | community | https://www.junglescout.com/resources/articles/amazon-ppc/ | state/extracts/20260812-163904-52dd7bdf/ppc-community-20260812164155.json | state/validated/20260812-163904-52dd7bdf/validation-20260812164254.json |
+
+**Live Fetch Results:**
+- sp-official: NEW (official - fetched from Amazon Ads official website)
+- ads-api-notes: NEW (api - fetched from Amazon Ads API documentation)
+- ppc-community: NEW (community - fetched from Jungle Scout community resource)
+
+**Extraction Results:**
+- Total extraction artifacts: 3
+- sp-official: 6-8 facts about Sponsored Products CPC pricing, ad placement, eligibility
+- ads-api-notes: 5 facts about Amazon Ads API authorization, reporting, sandbox
+- ppc-community: 13 facts about ACOS/ROAS calculations, bidding strategies, campaign structure
+
+**Validation Results:**
+- Total facts processed: 36
+- New: 28 facts
+- Changed: 2 facts
+- Duplicate: 3 facts
+- Conflict: 3 facts
+- Rejected: 0 facts
+
+**Merger Results:**
+- Concepts updated: 8 (sponsored-products, advertising-eligibility, targeting, bidding-strategies, amazon-ads-api, amazon-marketing-stream, acos-roas, campaign-structure)
+- New docs created: 0 (all concepts already existed)
+- Facts published: 27 total (19 official facts, 8 community claims)
+- Community claims properly quarantined in "Community claims" sections with low confidence
+- All source citations properly mapped with [S#] markers
+
+**Verification:**
+- All three source_type values verified as "official", "api", "community"
+- All source URLs verified as real and accessible
+- All extraction artifacts contain proper run_id, source_id, source_type, source_url, extracted_at
+- Validation artifact references all three extraction files
+- Merger consumed ONLY validated artifacts (bypass protection verified)
+- Knowledge publication verified: 8 concept documents updated with new content
+- Index rebuilt: 15 concepts (unchanged count, but content updated)
+
+**Pipeline Completion:** ✅ **COMPLETE END-TO-END**
+Discover → Extract → Validate → Merge → Publish all executed successfully for run_id 20260812-163904-52dd7bdf with three distinct source types.

@@ -4,13 +4,13 @@
 
 | Concept | Confidence | Updated | Sources | Tags |
 |---|---|---|---|---|
-| [ACOS, ROAS and TACOS](concepts/acos-roas.md) | low | 2026-08-10 | 0/1 | metrics, measurement |
+| [ACOS, ROAS and TACOS](concepts/acos-roas.md) | low | 2026-08-12 | 0/1 | metrics, measurement |
 | [Advertising eligibility](concepts/advertising-eligibility.md) | high | 2026-08-12 | 2/2 | eligibility, requirements, restrictions |
 | [Amazon Ads API](concepts/amazon-ads-api.md) | high | 2026-08-12 | 2/2 | api, integration |
 | [Amazon Marketing Stream](concepts/amazon-marketing-stream.md) | high | 2026-08-12 | 2/2 | api, data, reporting |
-| [Bidding strategies](concepts/bidding-strategies.md) | high | 2026-08-12 | 3/3 | bidding, pricing, optimization |
+| [Bidding strategies](concepts/bidding-strategies.md) | high | 2026-08-12 | 3/4 | bidding, pricing, optimization |
 | [Brand Stores](concepts/brand-stores.md) | high | 2026-08-12 | 1/1 | stores, brand, destination |
-| [Campaign structure](concepts/campaign-structure.md) | high | 2026-08-12 | 2/2 | organization, hierarchy, management |
+| [Campaign structure](concepts/campaign-structure.md) | high | 2026-08-12 | 2/3 | organization, hierarchy, management |
 | [Keyword match types](concepts/keyword-match-types.md) | high | 2026-08-12 | 2/2 | targeting, keywords, match-types |
 | [Negative targeting](concepts/negative-targeting.md) | high | 2026-08-12 | 1/1 | targeting, optimization, exclusions |
 | [New-to-brand metrics](concepts/new-to-brand-metrics.md) | high | 2026-08-12 | 1/1 | metrics, brand-growth, attribution |
@@ -18,4 +18,4 @@
 | [Sponsored Brands](concepts/sponsored-brands.md) | high | 2026-08-12 | 2/2 | ad-product, ppc, branding, video |
 | [Sponsored Display](concepts/sponsored-display.md) | high | 2026-08-12 | 2/2 | ad-product, display, remarketing |
 | [Sponsored Products](concepts/sponsored-products.md) | high | 2026-08-12 | 3/3 | ad-product, ppc, self-service |
-| [Targeting](concepts/targeting.md) | high | 2026-08-12 | 2/2 | targeting, keywords, products |
+| [Targeting](concepts/targeting.md) | high | 2026-08-12 | 3/3 | targeting, keywords, products |

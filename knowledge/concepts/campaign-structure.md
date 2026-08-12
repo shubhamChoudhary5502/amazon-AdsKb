@@ -7,7 +7,7 @@ type: concept
 status: active
 created: 2026-08-12
 updated: 2026-08-12
-timestamp: 2026-08-12T15:11:53Z
+timestamp: 2026-08-12T16:42:54Z
 confidence: high
 tags: [organization, hierarchy, management]
 related: [sponsored-products, sponsored-brands, sponsored-display, targeting, bidding-strategies, keyword-match-types, product-targeting, negative-targeting]
@@ -22,6 +22,11 @@ sources:
     kind: official
     fetched: 2026-08-12
     snapshot: state/cache/sp-official.txt
+  - id: S3
+    url: https://www.junglescout.com/resources/articles/amazon-ppc/
+    kind: community
+    fetched: 2026-08-12
+    snapshot: state/cache/ppc-community.txt
 ---
 
 # Campaign structure
@@ -36,6 +41,7 @@ Campaign structure refers to how campaigns and ad groups are organized to manage
 - Campaign strategies include expand, promote, protect, conquest, upsell, and cross-sell. [S1]
 - Ad groups can contain a maximum of 1,000 products. [S1]
 - Different targeting strategies should not be mixed within the same campaign and ad group. [S1]
+- Keep exact match keywords in separate campaigns so budget flows to proven converters. [S3]
 - Sponsored Products creation steps include registering, adding products, defining targeting and bidding, choosing settings, and launching. [S2]
 
 ## Relationships

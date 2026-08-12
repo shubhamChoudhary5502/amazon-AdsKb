@@ -7,7 +7,7 @@ type: concept
 status: active
 created: 2026-08-12
 updated: 2026-08-12
-timestamp: 2026-08-12T15:11:53Z
+timestamp: 2026-08-12T16:42:54Z
 confidence: high
 tags: [bidding, pricing, optimization]
 related: [sponsored-products, sponsored-brands, sponsored-display, campaign-structure, acos-roas]
@@ -27,6 +27,11 @@ sources:
     kind: official
     fetched: 2026-08-12
     snapshot: state/cache/sp-official.txt
+  - id: S4
+    url: https://www.junglescout.com/resources/articles/amazon-ppc/
+    kind: community
+    fetched: 2026-08-12
+    snapshot: state/cache/ppc-community.txt
 ---
 
 # Bidding strategies
@@ -37,6 +42,8 @@ Bidding strategies determine how advertisers pay for ad placements and optimize 
 
 ## Key facts
 
+- Sponsored Products campaigns use a daily budget. [S3]
+- Sponsored Products advertisers control maximum cost-per-click bid. [S3]
 - Dynamic bidding up and down is recommended to help maximize automatic campaign performance. [S1]
 - Dynamic down only bidding is recommended for optimizing based on return on ad spend. [S1]
 - Sponsored Brands supports multiple pricing models: cost-per-click (CPC), cost per 1,000 viewable impressions (vCPM), and fixed upfront pricing with reserve share of voice. [S2]
@@ -50,6 +57,14 @@ Bidding strategies determine how advertisers pay for ad placements and optimize 
 - Sponsored Products uses daily budgets that are the amount willing to spend on a campaign over a calendar month. [S3]
 - Sponsored Products daily budgets are not paced throughout the day and can be spent quickly if there is high demand. [S3]
 - Sponsored Products daily budgets can be increased or decreased once ads are live. [S3]
+
+## Community claims
+
+- Dynamic bids up and down can raise bids by up to 100% for top of search placement. [S4]
+- Dynamic bids up and down can raise bids by up to 50% for other placements. [S4]
+- Practitioners observe only up to 50% bid boosts even for top of search placement in testing. [S4]
+- Recommended bidding strategy: start with dynamic down only while gathering data. [S4]
+- Graduate winning campaigns to dynamic up and down bidding after data collection. [S4]
 
 ## Relationships
 

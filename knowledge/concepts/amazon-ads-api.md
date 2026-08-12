@@ -7,7 +7,7 @@ type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-12
-timestamp: 2026-08-12T00:00:00Z
+timestamp: 2026-08-12T16:42:54Z
 confidence: high
 tags: [api, integration]
 related: [amazon-marketing-stream, sponsored-products, sponsored-brands, sponsored-display]
@@ -34,10 +34,15 @@ base's own live mode would build against.
 
 ## Key facts
 
+- The Amazon Ads API uses OAuth 2.0 via Login with Amazon for authorization. [S2]
+- API access requires an approved developer application. [S2]
+- Reporting in version 3 is asynchronous. [S2]
+- The asynchronous reporting process involves requesting a report, polling its status, then downloading the generated file. [S2]
+- The sandbox environment allows testing without spending real money. [S2]
+- A sandbox environment is available for testing Sponsored Products campaign management operations. [S1]
 - Authorization uses OAuth 2.0 via Login with Amazon, and access requires an approved developer application. [S1]
 - Requests are scoped to a profile, which represents an advertiser account in a specific marketplace. [S1]
 - Version 3 reporting is asynchronous: request a report, poll status, download the file. [S1]
-- A sandbox environment allows testing Sponsored Products campaign management without real spend. [S1]
 
 ## Relationships
 

@@ -1,0 +1,104 @@
+{
+  "version": "1.0",
+  "run_id": "20260812-163904-52dd7bdf",
+  "extracted_at": "2026-08-12T16:41:57.361409Z",
+  "source_id": "sp-official",
+  "source_type": "official",
+  "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+  "cache_file": "/home/sk234/projects/amazon-ads-kb/state/cache/sp-official.txt",
+  "content_hash": "1993a7afbebf22ad8fdc6a5cda1fdc1a79a63052d7c1768e2ffabd4ae8e3d314",
+  "facts": [
+    {
+      "fact": "Sponsored Products use cost-per-click (CPC) pricing model",
+      "concept": "sponsored-products",
+      "quote": "cost-per-click (CPC) ads",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products promote individual product listings on Amazon",
+      "concept": "sponsored-products",
+      "quote": "promote individual product listings on Amazon",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Advertisers only pay when shoppers click their Sponsored Products ad",
+      "concept": "sponsored-products",
+      "quote": "pay only when shoppers click your ad",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products ads appear in shopping results and on product detail pages",
+      "concept": "sponsored-products",
+      "quote": "Ads appear in shopping results and on product detail pages",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products ads are created from existing product listings",
+      "concept": "sponsored-products",
+      "quote": "created from your existing product listings",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products do not require custom ad copy or images",
+      "concept": "sponsored-products",
+      "quote": "no custom ad copy or images are required",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products are available to professional sellers and vendors",
+      "concept": "advertising-eligibility",
+      "quote": "Available to professional sellers, vendors",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products are available to book vendors and authors",
+      "concept": "advertising-eligibility",
+      "quote": "book vendors, and authors",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Brand Registry enrollment is not required for Sponsored Products",
+      "concept": "advertising-eligibility",
+      "quote": "Brand Registry enrollment is not required",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products automatic targeting matches ads to shopping queries and products",
+      "concept": "targeting",
+      "quote": "Amazon matches your ads to shopping queries and products",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products manual targeting allows selecting keywords or products",
+      "concept": "targeting",
+      "quote": "select keywords or products yourself",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products campaigns use a daily budget",
+      "concept": "bidding-strategies",
+      "quote": "Campaigns set a daily budget",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products advertisers control maximum cost-per-click bid",
+      "concept": "bidding-strategies",
+      "quote": "control the maximum cost-per-click bid",
+      "extracted_at": "2026-08-12T16:41:57.361409Z",
+      "confidence": "high"
+    }
+  ],
+  "extraction_metadata": {}
+}

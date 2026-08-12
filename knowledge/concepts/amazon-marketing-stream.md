@@ -7,7 +7,7 @@ type: concept
 status: active
 created: 2026-08-10
 updated: 2026-08-12
-timestamp: 2026-08-12T00:00:00Z
+timestamp: 2026-08-12T16:42:54Z
 confidence: high
 tags: [api, data, reporting]
 related: [amazon-ads-api, sponsored-products, sponsored-brands, sponsored-display]
@@ -34,6 +34,8 @@ data.
 
 ## Key facts
 
+- Amazon Marketing Stream delivers campaign metrics and console change events as push-based messages. [S2]
+- Stream uses Amazon SQS as the destination for messages delivered to an advertiser's AWS account. [S2]
 - Delivers campaign metrics and console change events as push-based messages to the advertiser's AWS account. [S1]
 - Uses Amazon SQS as the delivery destination. [S1]
 - Provides near real time hourly metrics, in contrast to pull-based report polling. [S1]
