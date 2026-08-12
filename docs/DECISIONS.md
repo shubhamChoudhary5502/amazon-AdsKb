@@ -52,13 +52,92 @@ For testing, I chose snapshots instead because they make the runs deterministic 
 
 The tradeoff is that the six fixtures are still hand-made snapshots, so I wouldn't claim they represent six completely independent live sources.
 
-## 9. PostToolUse hook instead of PreToolUse
+## 9. PostToolUse hook instead of PreToolUse (SUPERSEDED)
+
+**DECISION SUPERSEDED - See Decision #9A for current implementation**
 
 A pre-write hook inspects the content the agent proposes to write. A post-write hook reads the file that actually landed on disk. I went with post because it validates the real result, which matters most for partial edits where the proposed change looks fine on its own but the merged file does not.
 
 The cost showed up in testing. PostToolUse blocks the agent from continuing, but it cannot undo the write, so a rejected document stays on disk and fails bundle validation until someone removes it. The per-file gate does its job, but the bundle is briefly inconsistent. With more time I'd have the hook restore the previous version of the file when it rejects a write, which is what would actually guarantee that an invalid document never lands. This is demonstrated in RUN 3c of docs/run-transcripts.md.
 
-## 10. Turned down a normalisation change the agent proposed mid-run
+**Why this was superseded:** The implementation was subsequently changed to PreToolUse because:
+- PreToolUse validates BEFORE the write executes, preventing invalid files from ever being created
+- No cleanup or rollback mechanism required
+- True atomic behavior at the tool level
+- Invalid writes are blocked before file creation
+
+The current implementation uses `scripts/hook_validate_pre.py` as registered in `.claude/settings.json`.
+
+## 9A. Use PreToolUse for knowledge write validation (CURRENT)
+
+**CURRENT IMPLEMENTATION - Supersedes Decision #9**
+
+The implementation now uses PreToolUse validation instead of PostToolUse. The PreToolUse hook (`scripts/hook_validate_pre.py`) validates documents BEFORE they reach disk.
+
+**Why PreToolUse is now preferred:**
+- Validates the proposed content before the write executes
+- Invalid Write operations are blocked (target file is never created)
+- Invalid Edit operations are blocked (existing file remains unchanged)
+- No cleanup required for rejected writes
+- Atomic behavior: invalid documents never reach disk
+- Clear error messages before write attempts
+
+**Current hook configuration:** `.claude/settings.json` registers:
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/scripts/hook_validate_pre.py\""
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+**Test coverage:** `tests/test_hook_validate.py` verifies current PreToolUse behavior including:
+- Invalid writes are blocked before file creation
+- Original files remain unchanged on invalid edit attempts
+- Valid writes and edits proceed normally
+- Hook fails gracefully with malformed input
+- Hook ignores non-knowledge files
+
+The old PostToolUse script (`scripts/hook_validate.py`) may still exist for historical reference but is not the active hook.
+
+## 10. Artifact-based handoff vs conversational context passing (CURRENT)
+
+**CURRENT IMPLEMENTATION**
+
+The pipeline uses artifact-based handoff between stages instead of conversational context passing. Each stage persists artifacts to run-specific directories:
+
+- Scout generates unique `run_id`
+- Extractor persists to `state/extracts/<run_id>/`
+- Validator consumes ONLY from `state/extracts/<run_id>/`, persists to `state/validated/<run_id>/`
+- Merger consumes ONLY from `state/validated/<run_id>/` (bypass protection enforced)
+
+**Why artifact-based handoff is preferred:**
+- Complete provenance tracking for every fact
+- Run isolation prevents cross-contamination
+- Historical runs can be audited and debugged
+- Clear stage boundaries enforced by scripts
+- Bypass protection prevents merger from reading extracts directly
+- Reproducible pipeline execution
+
+**Stage boundaries:**
+- `persist_extraction.py` ensures proper artifact storage with run_id, source metadata, timestamps
+- `validate_extraction.py` ensures only current run's artifacts are processed
+- `load_validation_results.py` ensures merger can only access validated facts
+- Merger prohibited from reading `state/extracts/` directly
+
+**Verification:** 110 passing tests include explicit tests for run isolation, bypass protection, and artifact handoff. Live run `20260812-150401-c8da98f4` demonstrates the system with 151 real facts.
+
+## 11. Turned down a normalisation change the agent proposed mid-run
 
 During RUN 2b, after correctly classifying all 22 restated facts as duplicates, Claude suggested stripping everything after `</html>` during normalisation so the same content wouldn't be re-extracted on every run.
 

@@ -5,22 +5,120 @@
 The brief asks for the line to be picked and explained. The line here is:
 anything with a right answer is code, anything needing meaning is Claude.
 
-Concretely, code owns fetch, normalize, hash, change detection, schema
-validation, citation integrity, link symmetry, index and log. Claude
-owns concept identity, fact extraction, duplicate judgment, and conflict
-handling. The enforcement is structural, not aspirational: the merger is
-the only agent with write access to knowledge/, and a PostToolUse hook
-runs the schema validator on every one of its writes, blocking on failure.
-Claude physically cannot publish an uncited or malformed fact.
+Concretely, code owns fetch, normalize, hash, change detection, artifact
+persistence, validation classification, schema validation, citation integrity,
+link symmetry, index and log. Claude owns concept identity, fact extraction,
+duplicate judgment, and conflict handling. The enforcement is structural,
+not aspirational: the merger is the only agent with write access to knowledge/,
+and a PreToolUse hook runs the schema validator on every write, blocking on
+failure BEFORE the write executes. Claude physically cannot publish an uncited
+or malformed fact.
 
 Why this line and not further toward code? Section-similarity scoring or
 embedding-based dedup could move duplicate detection into code. It was
 considered and rejected for this scope: it adds a dependency and a tuning
 problem, while "would a practitioner expect these facts on one page" is
-exactly the judgment LLMs are good at, and the failure mode (an extra
-merge review) is cheap. Why not further toward Claude? Letting the agent
-eyeball "has this page changed" invites drift and burns tokens on
-unchanged sources. Hashes are free and exact.
+exactly the judgment LLMs are good at, and the failure mode (an extra merge
+review) is cheap. Why not further toward Claude? Letting the agent eyeball
+"has this page changed" invites drift and burns tokens on unchanged sources.
+Hashes are free and exact.
+
+## CURRENT DESIGN: Artifact-based pipeline with run isolation
+
+**Current implementation uses artifact-based handoff between pipeline stages.**
+
+The pipeline uses run-specific artifact directories to ensure isolation and
+auditability:
+
+- Scout generates a unique run_id (format: `YYYYMMDD-HHMMSS-<random>`)
+- Extractor persists to `state/extracts/<run_id>/`
+- Validator consumes ONLY from `state/extracts/<run_id>/`, persists to `state/validated/<run_id>/`
+- Merger consumes ONLY from `state/validated/<run_id>/` (bypass protection enforced)
+
+**Run isolation benefits:**
+- Concurrent runs cannot cross-contaminate
+- Historical runs can be audited and debugged
+- Failed runs don't affect other runs
+- Clear provenance for every fact
+
+**Stage boundaries enforced by scripts:**
+- `persist_extraction.py` ensures extraction artifacts are properly stored
+- `validate_extraction.py` ensures only current run's artifacts are processed
+- `load_validation_results.py` ensures merger can only access validated facts
+- Merger cannot read `state/extracts/` directly (bypass protection)
+
+**Knowledge write protection:** PreToolUse hook (`scripts/hook_validate_pre.py`)
+validates documents BEFORE they reach disk. Invalid Write/Edit operations are
+blocked before file creation, preventing invalid documents from ever being written.
+
+**Verified results:** 110 passing tests, live ingestion run `20260812-150401-c8da98f4`
+with 151 facts extracted and validated.
+
+## PREVIOUS DESIGN: Conversational handoff (SUPERSEDED)
+
+**The original implementation used conversational context passing between agents.**
+
+In the previous design:
+- Agents returned facts through conversational context
+- No artifact persistence between stages
+- Run isolation was not enforced
+- No bypass protection between validator and merger
+
+**Migration to artifact-based design:**
+The conversational approach was superseded because:
+- No provenance tracking for facts
+- Difficult to debug failures
+- No audit trail for inspections
+- Risk of facts being lost or modified in transit
+- No protection against merger bypass
+
+The current artifact-based design provides:
+- Complete provenance for every fact
+- Reproducible pipeline execution
+- Clear audit trail
+- Enforced stage boundaries
+- Bypass protection
+
+## CURRENT DESIGN: PreToolUse write validation
+
+**Current implementation uses PreToolUse hook for knowledge write protection.**
+
+The PreToolUse hook (`scripts/hook_validate_pre.py`) is registered in
+`.claude/settings.json` and validates documents BEFORE they reach disk:
+
+- Invalid Write operations are blocked (target file is never created)
+- Invalid Edit operations are blocked (existing file remains unchanged)
+- Valid operations proceed normally
+- Validation happens before file creation, not after
+
+**PreToolUse benefits:**
+- Invalid documents never reach disk
+- No cleanup required for failed writes
+- Clear error messages before write attempts
+- Atomic behavior at the tool level
+
+## PREVIOUS DESIGN: PostToolUse write validation (SUPERSEDED)
+
+**The original implementation used a PostToolUse hook for write validation.**
+
+The PostToolUse approach had a critical limitation: it could only detect and
+reject invalid documents AFTER they had already been written to disk. This
+meant:
+- Invalid files were created and then had to be cleaned up
+- No atomic guarantee - a crash could leave invalid files
+- Rollback mechanism required for failed writes
+- Risk of invalid files persisting if cleanup failed
+
+**Migration to PreToolUse:**
+The implementation was changed from PostToolUse to PreToolUse because:
+- PreToolUse validates BEFORE the write executes
+- Invalid writes are blocked before file creation
+- No cleanup or rollback required
+- True atomic behavior at the tool level
+- Clear separation between valid and invalid states
+
+The old PostToolUse script (`scripts/hook_validate.py`) may still exist in the
+codebase for historical reference, but the active hook is `scripts/hook_validate_pre.py`.
 
 ## What counts as the same topic
 
@@ -54,6 +152,11 @@ footers, scripts, and whitespace means a CMS re-render or a tracking
 parameter does not masquerade as a content change. There is a test
 asserting whitespace edits do not move the hash.
 
+**Manifest concurrency protection:** The current implementation uses file
+locking (`scripts/fetch.py`) to prevent race conditions during concurrent
+manifest updates. The lock is held during the entire read-modify-write
+sequence and released automatically even if an exception occurs.
+
 ## Provenance and the hallucination problem
 
 The rule is blunt: no source id, no sentence. It is enforced twice, once
@@ -68,6 +171,12 @@ weakness on purpose: acos-roas.md rests on one community source, so its
 confidence is capped at low and flagged for corroboration, rather than
 being quietly promoted because "everyone knows the formula".
 
+**Artifact provenance tracking:**
+The current artifact-based design provides complete provenance:
+- Every extraction artifact includes: run_id, source_id, source_type, source_url, content_hash, extracted_at
+- Every validation artifact includes: run_id, validated_at, extraction_files, classification results
+- Every fact can be traced back to its source URL and extraction timestamp
+
 ## Idempotency contract, precisely stated
 
 Re-running with no upstream changes leaves knowledge/ byte-identical.
@@ -76,6 +185,10 @@ because "when did we last look" is audit information worth keeping. The
 alternative, freezing state too, would have made the system look purer in
 a demo while destroying the audit trail. Contract on the output, honesty
 in the bookkeeping.
+
+**Run isolation also means:** Re-running the same sources with the same
+content generates NEW run artifacts but leaves knowledge/ identical.
+The old run artifacts remain available for audit and debugging.
 
 ## What I would improve with more time
 
@@ -94,6 +207,8 @@ in the bookkeeping.
   content-type detection beyond the current heuristic.
 - OKF conformance against the published spec test suite, if one exists.
   The validator enforces this repo's documented profile of v0.1.
+- Artifact retention policy: automatic cleanup of old run artifacts after
+  a configurable age, with archive-to-cold-storage option.
 
 ## How Claude Code was used to build this
 
@@ -106,8 +221,8 @@ because during the call I need to be able to explain and defend every rule
 in them, rather than point at them and say Claude wrote it.
 
 The architecture is not decoration. Pipeline stages are subagents, shared
-policy lives in skills, the quality gate is a hook, and there is no
-orchestration framework anywhere. The merger is the only agent with write
+policy lives in skills, the quality gate is a PreToolUse hook, and there is
+no orchestration framework anywhere. The merger is the only agent with write
 access to knowledge/, so every write passes through the validator.
 
 The environment was my own mess to deal with. I set up WSL fresh on Windows
