@@ -10,7 +10,7 @@ updated: 2026-08-10
 timestamp: 2026-08-10T00:00:00Z
 confidence: low
 tags: [metrics, measurement]
-related: [bidding-strategies]
+related: [bidding-strategies, sponsored-brands]
 sources:
   - id: S1
     url: https://www.ppcpractitioner.example/amazon-acos-complete-guide

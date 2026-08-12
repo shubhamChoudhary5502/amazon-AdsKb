@@ -15,11 +15,11 @@ sources:
     sample: sources/samples/official/sponsored-display.html
   - id: targeting-official
     type: official
-    url: https://advertising.amazon.com/library/guides/campaign-targeting-bidding
+    url: https://advertising.amazon.com/library/guides/targeting-with-sponsored-products
     sample: sources/samples/official/targeting-and-bidding.html
-  - id: acos-blog
+  - id: ppc-community
     type: community
-    url: https://www.ppcpractitioner.example/amazon-acos-complete-guide
+    url: https://www.junglescout.com/resources/articles/amazon-ppc/
     sample: sources/samples/blog/acos-complete-guide.md
   - id: ads-api-notes
     type: api

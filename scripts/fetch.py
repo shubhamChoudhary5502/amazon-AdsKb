@@ -15,23 +15,28 @@ Manifest state/manifest.json is the change-detection memory. The content
 hash only moves when the normalized text moves; last_checked moves every
 run (bookkeeping, deliberately outside the idempotency contract, see
 docs/DESIGN.md).
+
+CONCURRENCY: The manifest read-modify-write cycle is protected by file
+locking to prevent concurrent runs from losing updates. The lock is held
+during the entire read-modify-write sequence and released automatically
+even if an exception occurs.
 """
 import hashlib
 import json
+import os
 import re
 import sys
 import urllib.request
 from datetime import date
 from html.parser import HTMLParser
 from pathlib import Path
-import os
-
 
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "state" / "manifest.json"
 CACHE = ROOT / "state" / "cache"
 SOURCES = ROOT / "sources" / "sources.yaml"
+LIVE_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; AmazonAdsKb/1.0)"}
 
 
 class _TextExtractor(HTMLParser):
@@ -83,17 +88,76 @@ def load_sources():
     return entries
 
 
-def load_manifest():
+def acquire_lock(lock_file):
+    """Acquire an exclusive file lock using flock.
+
+    Uses fcntl.flock() on Unix and msvcrt.locking() on Windows.
+    Lock is released when the file is closed or on process exit.
+    """
+    lock_path = Path(lock_file)
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # Open/create lock file
+    if lock_path.exists():
+        fd = os.open(lock_path, os.O_RDWR)
+    else:
+        fd = os.open(lock_path, os.O_RDWR | os.O_CREAT)
+
+    try:
+        if sys.platform == "win32":
+            # Windows: use msvcrt.locking
+            import msvcrt
+            msvcrt.locking(fd, msvcrt.LK_LOCK, 1)
+        else:
+            # Unix: use fcntl.flock with exclusive lock
+            import fcntl
+            fcntl.flock(fd, fcntl.LOCK_EX)
+        return fd
+    except Exception:
+        os.close(fd)
+        raise
+
+
+def release_lock(fd):
+    """Release a file lock acquired by acquire_lock."""
+    try:
+        if sys.platform == "win32":
+            import msvcrt
+            msvcrt.locking(fd, msvcrt.LK_UNLCK, 1)
+        else:
+            import fcntl
+            fcntl.flock(fd, fcntl.LOCK_UN)
+    finally:
+        os.close(fd)
+
+
+def load_manifest_locked(lock_fd):
+    """Load manifest while holding the lock.
+
+    The lock_fd is for the lock file, but we need to read the manifest.json file.
+    The lock ensures exclusive access during the read.
+    """
     if MANIFEST.exists():
         return json.loads(MANIFEST.read_text())
     return {}
+
+
+def write_manifest_atomic(manifest):
+    """Write manifest to a temporary file, then atomically replace the original."""
+    # Write to temp file in same directory as manifest
+    temp_manifest = MANIFEST.with_suffix(".tmp")
+    temp_manifest.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
+
+    # Atomic replacement - os.replace is atomic on POSIX systems
+    temp_manifest.replace(MANIFEST)
 
 
 def process(source, manifest, live):
     sid = source["id"]
     try:
         if live:
-            with urllib.request.urlopen(source["url"], timeout=30) as resp:
+            req = urllib.request.Request(source["url"], headers=LIVE_HEADERS)
+            with urllib.request.urlopen(req, timeout=30) as resp:
                 raw = resp.read().decode("utf-8", errors="replace")
             is_html = source["url"].endswith((".html", "/")) or "<html" in raw[:2000].lower()
         else:
@@ -147,24 +211,41 @@ def main():
     except ValueError as exc:
         print(f"ERROR {exc}", file=sys.stderr)
         return 2
-    manifest = load_manifest()
-    targets = list(sources.values()) if args[0] == "--all" else []
-    if not targets:
-        if args[0] not in sources:
-            print(f"ERROR unknown source id {args[0]}", file=sys.stderr)
-            return 2
-        targets = [sources[args[0]]]
 
-    exit_code = 0
-    for source in targets:
-        status = process(source, manifest, live)
-        print(f"{status} {source['id']}")
-        if status.startswith("ERROR"):
-            exit_code = 1
+    lock_file = ROOT / "state" / "manifest.lock"
+    lock_fd = None
 
-    MANIFEST.parent.mkdir(parents=True, exist_ok=True)
-    MANIFEST.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
-    return exit_code
+    try:
+        # Acquire lock for concurrent run safety
+        lock_fd = acquire_lock(lock_file)
+
+        # Load manifest while holding lock
+        manifest = load_manifest_locked(lock_fd)
+
+        targets = list(sources.values()) if args[0] == "--all" else []
+        if not targets:
+            if args[0] not in sources:
+                print(f"ERROR unknown source id {args[0]}", file=sys.stderr)
+                return 2
+            targets = [sources[args[0]]]
+
+        exit_code = 0
+        for source in targets:
+            status = process(source, manifest, live)
+            print(f"{status} {source['id']}")
+            if status.startswith("ERROR"):
+                exit_code = 1
+
+        # Write manifest atomically while still holding lock
+        MANIFEST.parent.mkdir(parents=True, exist_ok=True)
+        write_manifest_atomic(manifest)
+
+        return exit_code
+
+    finally:
+        # Always release lock, even on exception
+        if lock_fd is not None:
+            release_lock(lock_fd)
 
 
 if __name__ == "__main__":

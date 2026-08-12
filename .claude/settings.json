@@ -1,12 +1,13 @@
 {
+  "model": "glm-4.7",
   "hooks": {
-    "PostToolUse": [
+    "PreToolUse": [
       {
         "matcher": "Write|Edit",
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/scripts/hook_validate.py\""
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/scripts/hook_validate_pre.py\""
           }
         ]
       }

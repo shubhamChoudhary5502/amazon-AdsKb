@@ -23,9 +23,10 @@ deterministic layer is stdlib only.
   `sources/samples/`. Deterministic, works with no network, used by tests
   and the demo. This is the mode reviewers should use first.
 - **Live.** `python3 scripts/fetch.py --all --live` fetches the real URLs.
-  For JavaScript-heavy pages and discovery of new sources, add MCPs:
-  `claude mcp add playwright npx @playwright/mcp@latest` plus a search MCP
-  (Tavily or Brave).
+  For JavaScript-heavy pages that need browser rendering, Claude Code can use
+  the Playwright MCP to acquire content, then pass it to the pipeline:
+  `claude mcp add playwright npx @playwright/mcp@latest`. For discovering new
+  sources, add a search MCP (Tavily or Brave).
 
 ## Repo map
 

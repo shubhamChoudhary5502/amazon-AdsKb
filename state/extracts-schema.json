@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Extraction Artifact Schema",
+  "description": "Schema for persisted extraction artifacts from extractor agents",
+  "type": "object",
+  "required": ["version", "extracted_at", "source_id", "source_type", "source_url", "cache_file", "content_hash", "facts"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "1.0",
+      "description": "Schema version for compatibility"
+    },
+    "extracted_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO timestamp when extraction was performed"
+    },
+    "source_id": {
+      "type": "string",
+      "description": "Source identifier from sources.yaml"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["official", "community", "api"],
+      "description": "Source kind from sources.yaml"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The URL that was fetched"
+    },
+    "cache_file": {
+      "type": "string",
+      "description": "Path to the cached content file"
+    },
+    "content_hash": {
+      "type": "string",
+      "description": "SHA256 hash of the fetched content"
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["fact", "concept", "quote", "extracted_at"],
+        "properties": {
+          "fact": {
+            "type": "string",
+            "description": "The extracted atomic fact"
+          },
+          "concept": {
+            "type": "string",
+            "description": "Proposed concept slug for this fact"
+          },
+          "quote": {
+            "type": "string",
+            "description": "Supporting quote from source text (under 15 words)"
+          },
+          "extracted_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO timestamp when this fact was extracted"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low"],
+            "default": "medium",
+            "description": "Extractor confidence level"
+          }
+        }
+      },
+      "description": "Array of extracted atomic facts"
+    },
+    "extraction_metadata": {
+      "type": "object",
+      "properties": {
+        "extractor_agent": {
+          "type": "string",
+          "description": "Agent ID that performed extraction"
+        },
+        "extraction_duration_ms": {
+          "type": "number",
+          "description": "Time taken for extraction in milliseconds"
+        },
+        "content_size_bytes": {
+          "type": "number",
+          "description": "Size of the source content in bytes"
+        }
+      }
+    }
+  }
+}

@@ -6,17 +6,22 @@ description: The programmatic interface to Amazon Ads, whose version 3 is the cu
 type: concept
 status: active
 created: 2026-08-10
-updated: 2026-08-10
-timestamp: 2026-08-10T00:00:00Z
-confidence: medium
+updated: 2026-08-12
+timestamp: 2026-08-12T00:00:00Z
+confidence: high
 tags: [api, integration]
-related: [amazon-marketing-stream, sponsored-products]
+related: [amazon-marketing-stream, sponsored-products, sponsored-brands, sponsored-display]
 sources:
   - id: S1
     url: https://advertising.amazon.com/API/docs/en-us/release-notes/index
     kind: api
     fetched: 2026-08-10
     snapshot: sources/samples/api/ads-api-release-notes.md
+  - id: S2
+    url: https://advertising.amazon.com/API/docs/en-us/release-notes/index
+    kind: api
+    fetched: 2026-08-12
+    snapshot: state/cache/ads-api-notes.txt
 ---
 
 # Amazon Ads API

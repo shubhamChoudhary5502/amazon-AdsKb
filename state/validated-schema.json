@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Validation Artifact Schema",
+  "description": "Schema for persisted validation artifacts from validator agents",
+  "type": "object",
+  "required": ["version", "validated_at", "extraction_files", "validation_results"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "1.0",
+      "description": "Schema version for compatibility"
+    },
+    "validated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO timestamp when validation was performed"
+    },
+    "extraction_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Paths to extraction artifact files that were validated"
+    },
+    "validation_results": {
+      "type": "object",
+      "description": "Validation results grouped by classification",
+      "properties": {
+        "new": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["fact", "concept", "source_id", "classification"],
+            "properties": {
+              "fact": {"type": "string"},
+              "concept": {"type": "string"},
+              "source_id": {"type": "string"},
+                                      "classification": {"type": "string", "const": "new"},
+              "confidence": {"type": "string"}
+            }
+          }
+        },
+        "changed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["fact", "concept", "source_id", "classification"],
+            "properties": {
+              "fact": {"type": "string"},
+              "concept": {"type": "string"},
+              "source_id": {"type": "string"},
+              "classification": {"type": "string", "const": "changed"},
+              "existing_fact": {"type": "string"},
+              "confidence": {"type": "string"}
+            }
+          }
+        },
+        "duplicate": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["fact", "concept", "source_id", "classification"],
+            "properties": {
+              "fact": {"type": "string"},
+              "concept": {"type": "string"},
+              "source_id": {"type": "string"},
+              "classification": {"type": "string", "const": "duplicate"},
+              "existing_document": {"type": "string"}
+            }
+          }
+        },
+        "conflict": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["fact", "concept", "source_id", "classification"],
+            "properties": {
+              "fact": {"type": "string"},
+              "concept": {"type": "string"},
+              "source_id": {"type": "string"},
+              "classification": {"type": "string", "const": "conflict"},
+              "conflicting_fact": {"type": "string"},
+              "conflicting_source": {"type": "string"}
+            }
+          }
+        },
+        "rejected": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["fact", "concept", "source_id", "classification", "rejection_reason"],
+            "properties": {
+              "fact": {"type": "string"},
+              "concept": {"type": "string"},
+              "source_id": {"type": "string"},
+              "classification": {"type": "string", "const": "rejected"},
+              "rejection_reason": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["total_facts", "new_count", "changed_count", "duplicate_count", "conflict_count", "rejected_count"],
+      "properties": {
+        "total_facts": {"type": "integer"},
+        "new_count": {"type": "integer"},
+        "changed_count": {"type": "integer"},
+        "duplicate_count": {"type": "integer"},
+        "conflict_count": {"type": "integer"},
+        "rejected_count": {"type": "integer"}
+      }
+    },
+    "validator_metadata": {
+      "type": "object",
+      "properties": {
+        "validator_agent": {"type": "string"},
+        "validation_duration_ms": {"type": "number"},
+        "concepts_checked": {"type": "integer"},
+        "documents_updated": {"type": "integer"}
+      }
+    }
+  }
+}

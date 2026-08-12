@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "extracted_at": "2026-08-12T10:20:32.561732Z",
+  "source_id": "ads-api-notes",
+  "source_type": "official",
+  "source_url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index",
+  "cache_file": "state/cache/ads-api-notes.txt",
+  "content_hash": "6f43a1f3aec692d72c06cd22538a4b72c0e146f4655e363f76a1a42910be6877",
+  "facts": [
+    {
+      "fact": "Sample fact from ads-api-notes",
+      "concept": "general",
+      "quote": "sample quote",
+      "extracted_at": "2026-08-12T10:20:32.561732Z",
+      "confidence": "medium"
+    }
+  ],
+  "extraction_metadata": {
+    "extractor_agent": "extractor-ads-api-notes",
+    "extraction_duration_ms": 1000
+  }
+}

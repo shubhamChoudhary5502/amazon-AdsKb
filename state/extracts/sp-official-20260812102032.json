@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "extracted_at": "2026-08-12T10:20:32.549330Z",
+  "source_id": "sp-official",
+  "source_type": "official",
+  "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+  "cache_file": "state/cache/sp-official.txt",
+  "content_hash": "87c986c08b8d95256549b078b0b9d5ab3e02324bc8533965c4365e9ea5a52dad",
+  "facts": [
+    {
+      "fact": "Sponsored Products are cost-per-click (CPC) ads",
+      "concept": "sponsored-products",
+      "quote": "cost-per-click (CPC) ads",
+      "extracted_at": "2026-08-12T10:20:32.549330Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Sponsored Products promote individual product listings on Amazon",
+      "concept": "sponsored-products",
+      "quote": "promote individual product listings",
+      "extracted_at": "2026-08-12T10:20:32.549330Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Sponsored Products ads appear in shopping results and on product pages",
+      "concept": "sponsored-products",
+      "quote": "appear in shopping results",
+      "extracted_at": "2026-08-12T10:20:32.549330Z",
+      "confidence": "medium"
+    }
+  ],
+  "extraction_metadata": {
+    "extractor_agent": "extractor-sp-official",
+    "extraction_duration_ms": 1000
+  }
+}
