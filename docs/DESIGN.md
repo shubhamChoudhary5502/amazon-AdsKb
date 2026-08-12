@@ -51,7 +51,7 @@ auditability:
 validates documents BEFORE they reach disk. Invalid Write/Edit operations are
 blocked before file creation, preventing invalid documents from ever being written.
 
-**Verified results:** 110 passing tests, live ingestion run `20260812-150401-c8da98f4`
+**Verified results:** 135 passing tests (110 original + 25 section-level), live ingestion run `20260812-150401-c8da98f4`
 with 151 facts extracted and validated.
 
 ## PREVIOUS DESIGN: Conversational handoff (SUPERSEDED)
@@ -143,9 +143,51 @@ Three levels were considered:
    a value it previously stated, and the merger replaces the line and
    dates the change in Conflicts and notes.
 3. Section-level hashing so an edit re-extracts one section, not the
-   whole source. Not built. It is the first thing to add with more time,
-   since it cuts extraction cost on large official docs by an order of
-   magnitude.
+   whole source. **NOW IMPLEMENTED.** See docs/DECISIONS.md Decision #12
+   for details.
+
+**Section-level change detection mechanism:**
+
+The fetch layer now tracks section-level changes alongside the whole-source hash:
+
+- **Section parsing:** Markdown headings define stable section boundaries with IDs like `md2_automatic-targeting`
+- **Section hashing:** Each section's content is hashed with SHA-256 and stored in manifest entries
+- **Change classification:** Sections are classified as `changed`, `added`, `removed`, or `unchanged`
+- **Partial extraction:** The extractor receives only changed/added sections via `state/cache/<source-id>-sections.json`
+- **Stable IDs:** Section IDs are deterministic and stable across runs based on heading text
+
+**Implementation details:**
+
+```python
+# In fetch.py
+sections = parse_sections(text, is_html=is_html)
+section_hashes = {section_id: hash_content(content) for section_id, content in sections.items()}
+section_changes = compare_sections(old_sections, section_hashes)
+```
+
+**Extractor integration:**
+
+The extractor agent checks for `state/cache/<source-id>-sections.json` and extracts only from sections marked as `changed` or `added`. Sections marked as `unchanged` are skipped since they were already extracted in previous runs.
+
+**Removed section handling:**
+
+When a section disappears, it's classified as `removed` but no automatic deletion occurs. The validator determines whether existing facts should disappear based on semantic validation.
+
+**Benefits:**
+
+- Large official documents (e.g., Sponsored Products guide) can be updated efficiently
+- Only changed sections require semantic extraction, saving tokens and time
+- Stable section IDs ensure consistency across runs
+- Whole-source hash still provides fallback change detection
+
+**Test coverage:**
+
+25 new tests cover section-level functionality including:
+- Stable section ID generation
+- Section comparison logic
+- Integration with manifest
+- The exact A+B+C → A unchanged, B changed, C unchanged scenario
+- Backward compatibility with whole-source hashing
 
 Normalization before hashing matters more than it looks: stripping nav,
 footers, scripts, and whitespace means a CMS re-render or a tracking

@@ -202,7 +202,7 @@ class TestConcurrencySafety(unittest.TestCase):
             self.assertIsInstance(final_manifest, dict)
 
             # Each record should have required fields
-            required_fields = {"url", "kind", "hash", "last_changed", "last_checked"}
+            required_fields = {"url", "kind", "hash", "last_changed", "last_checked", "sections"}
             for source_id, record in final_manifest.items():
                 self.assertEqual(required_fields, set(record.keys()),
                                f"{source_id} should have all required fields")

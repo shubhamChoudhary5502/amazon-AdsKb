@@ -142,3 +142,88 @@ The pipeline uses artifact-based handoff between stages instead of conversationa
 During RUN 2b, after correctly classifying all 22 restated facts as duplicates, Claude suggested stripping everything after `</html>` during normalisation so the same content wouldn't be re-extracted on every run.
 
 I declined. The churn only existed because I had edited the fixture with `printf >>`, which appends past the closing tag. A real page wouldn't change that way, so the fix would have been tuned to my test method rather than to the actual problem. That's how you end up with a system that only works on your own tests.
+
+## 12. Section-level hashing for incremental extraction (CURRENT)
+
+**CURRENT IMPLEMENTATION**
+
+Section-level hashing has been implemented to enable true partial extraction when sources change. The system now tracks changes at the section level in addition to the whole-source hash.
+
+**Why section-level hashing is now implemented:**
+
+The original design decision (#2) noted that section-level hashing would be "the first thing to add with more time" because it "cuts extraction cost on large official docs by an order of magnitude." This implementation delivers that benefit.
+
+**How it works:**
+
+1. **Section detection:** Markdown headings define section boundaries (e.g., `# Targeting`, `## Automatic Targeting`)
+2. **Stable IDs:** Headings generate deterministic section IDs like `md1_targeting`, `md2_automatic-targeting`
+3. **Section hashing:** Each section's content is hashed with SHA-256
+4. **Change classification:** Sections are classified as `changed`, `added`, `removed`, or `unchanged`
+5. **Partial extraction:** Extractor receives only changed/added sections via section changes file
+
+**Example scenario:**
+
+```
+Run 1: A + B + C (all new)
+Run 2: A unchanged, B changed, C unchanged
+Result: Only B marked for extraction
+```
+
+**Technical implementation:**
+
+- `parse_sections()`: Parses Markdown into section dict {section_id: content}
+- `slugify()`: Creates stable section IDs from heading text
+- `hash_content()`: Hashes section content with SHA-256
+- `compare_sections()`: Detects changed/added/removed/unchanged sections
+- Manifest entries now include `"sections": {section_id: hash}` field
+- Section changes persisted to `state/cache/<source-id>-sections.json`
+
+**Extractor integration:**
+
+The extractor agent checks for `state/cache/<source-id>-sections.json` and extracts only from sections marked as `changed` or `added`. Sections marked as `unchanged` are skipped since they were already extracted in previous runs.
+
+**Removed section behavior:**
+
+When a section disappears, it's classified as `removed` but no automatic deletion occurs from knowledge documents. The validator determines whether existing facts should disappear based on semantic validation - a section may have moved or been reorganized rather than truly removed.
+
+**Backward compatibility:**
+
+- Whole-source SHA-256 hash remains primary change detection
+- Section hashes are additive, not replacement
+- If no section changes file exists, extractor processes full content
+- Existing sources without section tracking work as before
+
+**Benefits:**
+
+- Large official docs can be updated efficiently (e.g., Sponsored Products guide)
+- Only changed sections require semantic extraction, saving tokens and time
+- Stable section IDs ensure consistency across runs
+- Maintains all guarantees of whole-source hashing as fallback
+
+**Test coverage:**
+
+25 new tests (135 total) cover:
+- Stable section ID generation
+- Section comparison logic (changed/added/removed/unchanged)
+- Integration with manifest storage
+- The exact A+B+C → A unchanged, B changed, C unchanged scenario
+- Backward compatibility with whole-source hashing
+- Integration tests demonstrating partial extraction
+
+**Limitations:**
+
+- Currently implemented for Markdown sources only
+- HTML sources use whole-source hashing (section tracking not implemented for HTML yet)
+- Section IDs depend on heading text stability (renaming headings creates new sections)
+- No paragraph-level semantic diff (sections are the atomic unit)
+
+**Verification:**
+
+Test `test_abc_incremental_extraction_scenario` demonstrates the complete flow and prints:
+```
+✅ SUCCESS: Section-level detection correctly identifies only B as changed
+   Unchanged: ['md1_section-a', 'md1_section-c']
+   Changed: ['md1_section-b']
+   Added: []
+   Removed: []
+```
