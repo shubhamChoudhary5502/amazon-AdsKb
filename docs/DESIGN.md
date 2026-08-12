@@ -51,8 +51,8 @@ auditability:
 validates documents BEFORE they reach disk. Invalid Write/Edit operations are
 blocked before file creation, preventing invalid documents from ever being written.
 
-**Verified results:** 135 passing tests (110 original + 25 section-level), live ingestion run `20260812-150401-c8da98f4`
-with 151 facts extracted and validated.
+**Verified results:** 139 passing tests covering all pipeline stages, live ingestion run `20260812-163904-52dd7bdf`
+with 3 source types (official, api, community) and real facts extracted and validated.
 
 ## PREVIOUS DESIGN: Conversational handoff (SUPERSEDED)
 

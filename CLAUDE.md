@@ -122,12 +122,11 @@ Live mode needs Playwright and search MCPs (see README).
 
 ## Current implementation status
 
-- **110 passing tests** covering all pipeline stages
-- **Live ingestion completed:** run ID `20260812-150401-c8da98f4`
-- **Real Amazon Ads sources:** Sponsored Products, Sponsored Brands,
-  Sponsored Display, Targeting (all fetched live)
-- **151 facts extracted:** 146 new, 5 changed, 0 duplicate, 0 conflict,
-  0 rejected
-- **16 concept documents** in knowledge bundle
+- **139 passing tests** covering all pipeline stages
+- **Live ingestion completed:** run ID `20260812-163904-52dd7bdf`
+- **Real Amazon Ads sources:** 3 source types (official, api, community)
+- **Facts extracted and validated** from live sources
+- **15 concept documents** in knowledge bundle
 - **PreToolUse write protection** via `scripts/hook_validate_pre.py`
 - **Run-specific artifact directories** prevent cross-run contamination
+- **Whole-source + section-level hashing** for incremental extraction

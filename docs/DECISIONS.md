@@ -6,11 +6,15 @@ I initially considered using a YAML library, but decided against it. Since I con
 
 Keeping the parser limited to this makes the output predictable and machine-readable. The downside is that it isn't a full YAML parser, so there are some edge cases that real YAML would handle differently. For example, I don't allow colons in descriptions, and the validator checks for that.
 
-## 2. Document-level hashing instead of section-level hashing
+## 2. Document-level hashing instead of section-level hashing (SUPERSEDED)
+
+**DECISION SUPERSEDED - See Decision #12 for current implementation**
 
 Section-level hashing would be more efficient for larger documents because we could re-process only the part that changed. But with only six sources right now, I felt that was unnecessary complexity.
 
 Hashing the whole source is simple, exact, and easy to test. If this had to scale to a much larger set of documents, section-level hashing would probably be one of the first things I'd add.
+
+**Why this was superseded:** Section-level hashing was subsequently implemented (see Decision #12) to enable efficient partial extraction when large official documents change. The implementation maintains whole-source hashing as the primary change detection mechanism, with section-level hashes as an additive optimization.
 
 ## 3. Four subagents instead of one large prompt
 
@@ -135,7 +139,7 @@ The pipeline uses artifact-based handoff between stages instead of conversationa
 - `load_validation_results.py` ensures merger can only access validated facts
 - Merger prohibited from reading `state/extracts/` directly
 
-**Verification:** 110 passing tests include explicit tests for run isolation, bypass protection, and artifact handoff. Live run `20260812-150401-c8da98f4` demonstrates the system with 151 real facts.
+**Verification:** 139 passing tests include explicit tests for run isolation, bypass protection, artifact handoff, and section-level hashing. Live run `20260812-163904-52dd7bdf` demonstrates the system with real facts from 3 source types (official, api, community).
 
 ## 11. Turned down a normalisation change the agent proposed mid-run
 

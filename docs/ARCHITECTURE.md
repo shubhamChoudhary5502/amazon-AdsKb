@@ -169,16 +169,16 @@ a rule.
 
 ## Current implementation verification
 
-**110 passing tests** covering:
+**139 passing tests** covering:
 - Run isolation between concurrent executions
 - Artifact handoff between pipeline stages
 - Merger bypass protection (cannot read extracts directly)
 - PreToolUse hook validation before write
 - Manifest locking for concurrent access
 - Complete pipeline end-to-end with real data
+- Section-level hashing and incremental extraction
 
-**Live ingestion completed:** run ID `20260812-150401-c8da98f4`
-- 4 real Amazon Ads sources fetched live
-- 151 facts extracted and validated
-- 146 new, 5 changed, 0 duplicate, 0 conflict, 0 rejected
-- 16 concept documents in knowledge bundle
+**Live ingestion completed:** run ID `20260812-163904-52dd7bdf`
+- 3 source types (official, api, community)
+- Real facts extracted and validated
+- 15 concept documents in knowledge bundle

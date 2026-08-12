@@ -10,18 +10,18 @@ The current implementation uses:
 - **Artifact-based handoff:** Run-specific directories (`state/extracts/<run_id>/`, `state/validated/<run_id>/`)
 - **Run isolation:** Each pipeline execution generates a unique run_id
 - **Bypass protection:** Merger can only read validated artifacts, not extraction artifacts directly
-- **110 passing tests** including run isolation, bypass protection, and PreToolUse validation
-- **Live ingestion completed:** run ID `20260812-150401-c8da98f4`
-  - 4 real Amazon Ads sources fetched live
-  - 151 facts extracted and validated
-  - 146 new, 5 changed, 0 duplicate, 0 conflict, 0 rejected
-  - 16 concept documents in knowledge bundle
+- **Whole-source + section-level hashing:** Incremental extraction for Markdown sources
+- **139 passing tests** including run isolation, bypass protection, PreToolUse validation, and section-level hashing
+- **Live ingestion completed:** run ID `20260812-163904-52dd7bdf`
+  - 3 source types (official, api, community)
+  - Real facts extracted and validated
+  - 15 concept documents in knowledge bundle
 
 **Current hook configuration:** `.claude/settings.json` registers PreToolUse with `scripts/hook_validate_pre.py`.
 
 **Current artifact locations:**
-- `state/extracts/20260812-150401-c8da98f4/` - live extraction artifacts
-- `state/validated/20260812-150401-c8da98f4/` - live validation artifacts
+- `state/extracts/20260812-163904-52dd7bdf/` - live extraction artifacts
+- `state/validated/20260812-163904-52dd7bdf/` - live validation artifacts
 
 ---
 
@@ -380,17 +380,17 @@ The current implementation uses:
 - **Artifact-based handoff:** Run-specific directories (`state/extracts/<run_id>/`, `state/validated/<run_id>/`)
 - **Run isolation:** Each pipeline execution generates a unique run_id
 - **Bypass protection:** Merger can only read validated artifacts, not extraction artifacts directly
-- **110 passing tests** including run isolation, bypass protection, and PreToolUse validation
-- **Live ingestion completed:** run ID `20260812-150401-c8da98f4`
-  - 4 real Amazon Ads sources fetched live
-  - 151 facts extracted and validated
-  - 146 new, 5 changed, 0 duplicate, 0 conflict, 0 rejected
-  - 16 concept documents in knowledge bundle
+- **Whole-source + section-level hashing:** Incremental extraction for Markdown sources
+- **139 passing tests** including run isolation, bypass protection, PreToolUse validation, and section-level hashing
+- **Live ingestion completed:** run ID `20260812-163904-52dd7bdf`
+  - 3 source types (official, api, community)
+  - Real facts extracted and validated
+  - 15 concept documents in knowledge bundle
 - **Current hook configuration:** `.claude/settings.json` registers PreToolUse with `scripts/hook_validate_pre.py`
 
 **Current artifact locations:**
-- `state/extracts/20260812-150401-c8da98f4/` - live extraction artifacts
-- `state/validated/20260812-150401-c8da98f4/` - live validation artifacts
+- `state/extracts/20260812-163904-52dd7bdf/` - live extraction artifacts
+- `state/validated/20260812-163904-52dd7bdf/` - live validation artifacts
 
 ### MULTI-SOURCE TYPE LIVE INGESTION (2026-08-12)
 

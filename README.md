@@ -43,7 +43,7 @@ claude
 /ingest all
 ```
 
-The repository currently contains **110 passing tests** covering the deterministic pipeline, validation, artifact-based agent handoff, run isolation, concurrency, write protection, indexing, logging, and idempotency.
+The repository currently contains **139 passing tests** covering the deterministic pipeline, validation, artifact-based agent handoff, run isolation, concurrency, write protection, indexing, logging, idempotency, and section-level incremental extraction.
 
 ---
 
@@ -427,32 +427,41 @@ The hook is also covered by automated tests.
 
 ## How Re-run Safety Works
 
-The pipeline uses source hashing and a manifest to avoid unnecessary processing.
+The pipeline uses whole-source hashing and section-level hashing to avoid unnecessary processing.
 
 ```text
 fetch.py fetches and normalizes source content
         |
         v
-Normalized content is hashed
+Whole-source content is hashed
+        +
+Section-level content is hashed
         |
         v
-state/manifest.json stores source state and last known hash
+state/manifest.json stores source state, whole-source hash, and section hashes
         |
         v
 Source classified as:
 new / changed / unchanged / error
+        |
+        v
+For changed sources:
+  - Sections classified as: changed / added / removed / unchanged
+  - changed.txt created with only changed + added sections
+  - Extractor reads changed.txt for semantic extraction
 ```
 
 The pipeline then:
 
 1. Stops unchanged sources before unnecessary downstream processing.
-2. Sends changed sources through extraction and validation.
-3. Gives every pipeline execution a unique `run_id`.
-4. Isolates extraction and validation artifacts by run.
-5. Allows only validated facts to reach the Merger.
-6. Updates only affected knowledge documents.
-7. Rebuilds the knowledge index when its content changes.
-8. Records pipeline activity in the run log.
+2. For changed sources, identifies which specific sections changed.
+3. Sends only changed/added sections through extraction (not the full document).
+4. Gives every pipeline execution a unique `run_id`.
+5. Isolates extraction and validation artifacts by run.
+6. Allows only validated facts to reach the Merger.
+7. Updates only affected knowledge documents.
+8. Rebuilds the knowledge index when its content changes.
+9. Records pipeline activity in the run log.
 
 The repository also contains:
 
@@ -569,7 +578,7 @@ Run the full suite with:
 python3 -m unittest discover tests -v
 ```
 
-The current repository has **110 passing tests**.
+The current repository has **139 passing tests**.
 
 The tests cover the deterministic pipeline as well as the artifact-based Claude Code handoff.
 
@@ -687,14 +696,14 @@ If upstream source content has not changed, rerunning the pipeline should not pr
 ## Known Limitations
 
 - Source discovery is currently registry-driven. Discovering completely new sources requires adding them to the source registry or using an external discovery mechanism in live mode.
-- Change detection is primarily source/document-level. Section-level change detection could reduce re-extraction when only a small part of a source changes.
+- Section-level change detection is implemented for Markdown sources only. HTML sources use whole-source hashing (section tracking not yet implemented for HTML).
 - Offline fixtures are synthetic snapshots used for deterministic testing. They are intentionally separate from live-ingestion evidence.
 - Alias matching in the concept registry is exact/lowercase rather than fuzzy. Semantic near-matches rely on Validator and agent reasoning.
 - `last_checked` in the manifest is runtime state and can change between runs even when the published knowledge bundle remains unchanged.
 - Live websites can change structure, content, or rendering behavior.
 - Browser-dependent pages may require browser tooling for reliable acquisition.
 - The knowledge base currently processes the sources registered in `sources/sources.yaml`. Broader coverage requires registering additional sources.
-- Section-level incremental extraction is not yet implemented. A changed source is currently considered at the source/document level rather than tracking independent sections within the document.
+- Section-level hashing operates on Markdown heading boundaries, not paragraph-level semantic diffing. Section IDs depend on heading text stability (renaming headings creates new sections).
 
 ---
 
