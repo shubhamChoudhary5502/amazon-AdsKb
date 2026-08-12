@@ -12,9 +12,40 @@ from datetime import datetime
 import re
 import glob
 
-def load_extraction_artifacts(extracts_dir="state/extracts"):
-    """Load all extraction artifacts from the extracts directory."""
-    extracts_path = Path(extracts_dir)
+def check_for_test_source_contamination(artifacts):
+    """
+    Check if any extraction artifacts are from test sources.
+
+    Test source contamination is detected by:
+    - source_id starting with or containing "test-source"
+    - source_url containing "example.com", "localhost", or "127.0.0.1"
+
+    Note: run_id is NOT checked because legitimate test runs have "test" in their run_id.
+    We only validate that the source data itself is from genuine sources.
+
+    Args:
+        artifacts: List of (artifact_file, artifact_dict) tuples
+
+    Returns: (is_contaminated, contaminated_files)
+    """
+    contaminated_files = []
+    test_source_patterns = ["test-source", "example.com", "localhost", "127.0.0.1"]
+
+    for artifact_file, artifact in artifacts:
+        source_id = artifact.get("source_id", "").lower()
+        source_url = artifact.get("source_url", "").lower()
+
+        # Check for test source indicators in source_id and source_url only
+        # NOT run_id, since test runs legitimately have "test" in their run_id
+        if any(indicator in source_id or indicator in source_url
+               for indicator in test_source_patterns):
+            contaminated_files.append(artifact_file)
+
+    return len(contaminated_files) > 0, contaminated_files
+
+def load_extraction_artifacts(run_id, extracts_dir="state/extracts"):
+    """Load extraction artifacts from a specific run's extracts directory."""
+    extracts_path = Path(extracts_dir) / run_id
     if not extracts_path.exists():
         return []
 
@@ -59,6 +90,8 @@ def normalize_fact_text(fact):
     """Normalize fact text for comparison."""
     # Remove citation markers
     fact = re.sub(r'\[S\d+\]', '', fact)
+    # Remove bullet points and list markers
+    fact = re.sub(r'^[\s]*[-*+•]\s*', '', fact)
     # Remove extra whitespace
     fact = ' '.join(fact.split())
     return fact.lower().strip()
@@ -86,22 +119,43 @@ def classify_fact(fact, concept_slug, source_id, existing_concepts):
 
             # Check for exact match
             if normalized_fact == line_text:
-                return "duplicate", {"existing_line": line.strip()}
+                return "duplicate", {
+                    "existing_line": line.strip(),
+                    "match_type": "exact"
+                }
 
             # Check for substantial word overlap (80%+)
             if fact_words and line_words:
                 overlap = len(fact_words & line_words) / max(len(fact_words), len(line_words))
                 if overlap >= 0.8:
-                    return "duplicate", {"existing_line": line.strip()}
+                    return "duplicate", {
+                        "existing_line": line.strip(),
+                        "match_type": "overlap",
+                        "overlap_ratio": overlap
+                    }
 
     # Check for conflicts (contradictory statements)
-    conflict_keywords = ["however", "but", "although", "contrast", "differs", "opposite"]
-    if any(keyword in concept_doc.lower() for keyword in conflict_keywords):
+    # A conflict occurs when the same concept is stated differently
+    conflict_keywords = ["however", "but", "although", "contrast", "differs", "opposite", "contradicts", "disagrees", "whereas", "yet"]
+    doc_lower = concept_doc.lower()
+
+    if any(keyword in doc_lower for keyword in conflict_keywords):
         # Look for statements that might contradict
         lines = concept_doc.split("\n")
         for i, line in enumerate(lines):
-            if fact_lower.split()[0] in line.lower() and "but" in line.lower():
-                return "conflict", {"conflicting_line": line.strip()}
+            line_lower = line.lower()
+            # Check if line contains conflict keywords
+            if any(keyword in line_lower for keyword in conflict_keywords):
+                # Check if our fact has substantial overlap with this line
+                line_text = normalize_fact_text(line)
+                line_words = set(line_text.split())
+                if fact_words and line_words:
+                    overlap = len(fact_words & line_words) / max(len(fact_words), len(line_words))
+                    if overlap >= 0.3:  # At least 30% word overlap with conflicting statement
+                        return "conflict", {
+                            "conflicting_line": line.strip(),
+                            "overlap_ratio": overlap
+                        }
 
     # Check for changed facts (similar but different values/numbers)
     for line in concept_doc.split("\n"):
@@ -111,29 +165,48 @@ def classify_fact(fact, concept_slug, source_id, existing_concepts):
             # If they share most words but not all, it might be a change
             overlap = len(line_words & fact_words) / max(len(line_words), len(fact_words))
             if 0.6 < overlap < 1.0:
-                return "changed", {"existing_line": line.strip()}
+                return "changed", {
+                    "existing_line": line.strip(),
+                    "overlap_ratio": overlap
+                }
 
     return "new", {"reason": "no_match_found"}
 
-def validate_extraction_artifacts(extracts_dir="state/extracts", concepts_dir="knowledge/concepts", output_dir="state/validated"):
+def validate_extraction_artifacts(run_id, extracts_dir="state/extracts", concepts_dir="knowledge/concepts", output_dir="state/validated"):
     """
-    Validate extraction artifacts against existing knowledge bundle.
+    Validate extraction artifacts from a specific run against existing knowledge bundle.
 
-    Returns: (validation_results, summary, artifact_path)
+    Args:
+        run_id: The run identifier to validate (ensures isolation)
+        extracts_dir: Base directory for extraction artifacts
+        concepts_dir: Directory containing existing concept documents
+        output_dir: Directory for validation artifacts
+
+    Returns: (validation_results, summary, artifact_path) or (None, None, None) if no artifacts found or contaminated
+
+    Raises:
+        ValueError: If extraction artifacts contain test source contamination
     """
-    extracts_path = Path(extracts_dir)
-    output_path = Path(output_dir)
+    # Load extraction artifacts for this specific run
+    extraction_artifacts = load_extraction_artifacts(run_id, extracts_dir)
+
+    if not extraction_artifacts:
+        return None, None, None
+
+    # Check for test source contamination
+    is_contaminated, contaminated_files = check_for_test_source_contamination(extraction_artifacts)
+    if is_contaminated:
+        raise ValueError(
+            f"Test source contamination detected. The following artifacts contain test sources "
+            f"and cannot be used in production validation: {contaminated_files}"
+        )
+
+    # Create output directory for this run
+    output_path = Path(output_dir) / run_id
     output_path.mkdir(parents=True, exist_ok=True)
 
-    # Load extraction artifacts
-    extraction_files = []
-    for artifact_file in extracts_path.glob("*.json"):
-        with open(artifact_file) as f:
-            artifact = json.load(f)
-            extraction_files.append(str(artifact_file))
-
-    if not extraction_files:
-        return None, {"error": "No extraction artifacts found"}, None
+    # Track extraction files
+    extraction_files = [artifact_file for artifact_file, _ in extraction_artifacts]
 
     # Load existing concepts
     existing_concepts = load_concept_documents(concepts_dir)
@@ -147,17 +220,29 @@ def validate_extraction_artifacts(extracts_dir="state/extracts", concepts_dir="k
         "rejected": []
     }
 
-    for artifact_file in extraction_files:
-        with open(artifact_file) as f:
-            artifact = json.load(f)
-
+    for artifact_file, artifact in extraction_artifacts:
         source_id = artifact["source_id"]
+        source_url = artifact.get("source_url", "unknown")
+        source_type = artifact.get("source_type", "unknown")
 
         for fact_data in artifact["facts"]:
             fact = fact_data["fact"]
             concept = fact_data["concept"]
+            quote = fact_data.get("quote", "")
+            extracted_at = fact_data.get("extracted_at", "")
 
-            # Basic validation
+            # Validate fact is not empty
+            if not fact or not fact.strip():
+                validation_results["rejected"].append({
+                    "fact": fact,
+                    "concept": concept,
+                    "source_id": source_id,
+                    "classification": "rejected",
+                    "rejection_reason": "fact_is_empty"
+                })
+                continue
+
+            # Validate fact has minimum length
             if len(fact.strip()) < 10:
                 validation_results["rejected"].append({
                     "fact": fact,
@@ -165,6 +250,28 @@ def validate_extraction_artifacts(extracts_dir="state/extracts", concepts_dir="k
                     "source_id": source_id,
                     "classification": "rejected",
                     "rejection_reason": "fact_too_short"
+                })
+                continue
+
+            # Validate concept is not empty
+            if not concept or not concept.strip():
+                validation_results["rejected"].append({
+                    "fact": fact,
+                    "concept": concept,
+                    "source_id": source_id,
+                    "classification": "rejected",
+                    "rejection_reason": "concept_is_empty"
+                })
+                continue
+
+            # Validate quote is not empty
+            if not quote or not quote.strip():
+                validation_results["rejected"].append({
+                    "fact": fact,
+                    "concept": concept,
+                    "source_id": source_id,
+                    "classification": "rejected",
+                    "rejection_reason": "quote_is_empty"
                 })
                 continue
 
@@ -177,6 +284,10 @@ def validate_extraction_artifacts(extracts_dir="state/extracts", concepts_dir="k
                 "fact": fact,
                 "concept": concept,
                 "source_id": source_id,
+                "source_url": source_url,
+                "source_type": source_type,
+                "quote": quote,
+                "extracted_at": extracted_at,
                 "classification": classification,
                 **details
             }
@@ -204,6 +315,7 @@ def validate_extraction_artifacts(extracts_dir="state/extracts", concepts_dir="k
     timestamp = datetime.utcnow().isoformat() + "Z"
     validation_artifact = {
         "version": "1.0",
+        "run_id": run_id,
         "validated_at": timestamp,
         "extraction_files": extraction_files,
         "validation_results": validation_results,
@@ -226,8 +338,14 @@ def validate_extraction_artifacts(extracts_dir="state/extracts", concepts_dir="k
     return validation_results, summary, str(artifact_path)
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: validate_extraction.py <run_id>")
+        sys.exit(1)
+
+    run_id = sys.argv[1]
+
     try:
-        results, summary, artifact_path = validate_extraction_artifacts()
+        results, summary, artifact_path = validate_extraction_artifacts(run_id)
 
         if artifact_path:
             print(f"Validation artifact created: {artifact_path}")

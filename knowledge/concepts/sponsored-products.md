@@ -10,7 +10,7 @@ updated: 2026-08-12
 timestamp: 2026-08-12T00:00:00Z
 confidence: high
 tags: [ad-product, ppc, self-service]
-related: [bidding-strategies, keyword-match-types, campaign-structure, advertising-eligibility, amazon-ads-api, amazon-marketing-stream]
+related: [bidding-strategies, keyword-match-types, campaign-structure, advertising-eligibility, amazon-ads-api, amazon-marketing-stream, product-targeting, negative-targeting, targeting]
 sources:
   - id: S1
     url: https://advertising.amazon.com/solutions/products/sponsored-products
@@ -22,6 +22,11 @@ sources:
     kind: official
     fetched: 2026-08-12
     snapshot: state/cache/sp-official.txt
+  - id: S3
+    url: https://advertising.amazon.com/library/guides/targeting-with-sponsored-products
+    kind: official
+    fetched: 2026-08-12
+    snapshot: state/cache/targeting-official.txt
 ---
 
 # Sponsored Products
@@ -47,12 +52,33 @@ usually the first ad type an advertiser runs.
 - Daily budgets are not paced throughout the day and represent a monthly calendar commitment. [S2]
 - Ads serve on desktop and mobile browsers as well as Amazon mobile app across devices. [S2]
 - Adult products, used products, refurbished products, and products in closed categories are not eligible. [S2]
+- Sponsored Products offers three targeting options: automatic, manual, and negative targeting. [S3]
+- Automatic targeting matches ads to keywords and products similar to the advertised product based on shopping queries and product information. [S3]
+- Automatic targeting uses four default strategies: close match, loose match, substitutes, and complements. [S3]
+- Close match automatic targeting shows ads to shoppers using search terms closely related to the advertised product. [S3]
+- Loose match automatic targeting shows ads to shoppers using search terms loosely related to the advertised product. [S3]
+- Substitutes automatic targeting shows ads to shoppers browsing detail pages of products similar to the advertised product. [S3]
+- Complements automatic targeting shows ads to shoppers viewing detail pages of products that complement the advertised product. [S3]
+- Manual targeting allows advertisers to manually select which keywords or products to target. [S3]
+- Amazon recommends letting automatic campaigns run for about two weeks before creating manual campaigns. [S3]
+- When customers click a Sponsored Products ad, they are directed to the advertised products detail page. [S2]
+- Sponsored Products placements include the top of, alongside, or within shopping results and on product pages on Amazon. [S2]
+- Sponsored Products ads appear beyond Amazon on Amazon-owned and operated sites and third-party destinations. [S2]
+- Sponsored Products ads only appear when advertised items are in stock. [S2]
+- New sellers can earn up to $1000 in ad credits when they launch and spend on Sponsored Products within 30 days. [S2]
+- Sponsored Products campaigns have no monthly or upfront fees, advertisers pay only when a shopper clicks an ad. [S2]
+- Sponsored Products provides tools and reports to help optimize campaign performance and measure success. [S2]
+- Sponsored Products ads appear on desktop and mobile browsers as well as the Amazon mobile app. [S2]
+- Sponsored Products with video saw an average 9% uplift in click-through rate compared to campaigns without video. [S2]
 
 ## Relationships
 
 - [Bidding strategies](/concepts/bidding-strategies.md): dynamic bidding options apply to Sponsored Products campaigns.
 - [Keyword match types](/concepts/keyword-match-types.md): manual keyword targeting uses these match types.
+- [Product targeting](/concepts/product-targeting.md): manual targeting can focus on specific products or categories.
+- [Negative targeting](/concepts/negative-targeting.md): excluding keywords or products to optimize performance.
 - [Campaign structure](/concepts/campaign-structure.md): Sponsored Products campaigns follow the standard campaign and ad group hierarchy.
+- [Targeting](/concepts/targeting.md): automatic and manual targeting options.
 - [Advertising eligibility](/concepts/advertising-eligibility.md): who can run Sponsored Products and what enrollment it needs.
 - [Amazon Ads API](/concepts/amazon-ads-api.md): campaign management is available programmatically, including a sandbox.
 - [Amazon Marketing Stream](/concepts/amazon-marketing-stream.md): provides near real time metrics and campaign events for Sponsored Products.

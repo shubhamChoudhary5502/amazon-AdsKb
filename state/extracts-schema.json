@@ -3,12 +3,16 @@
   "title": "Extraction Artifact Schema",
   "description": "Schema for persisted extraction artifacts from extractor agents",
   "type": "object",
-  "required": ["version", "extracted_at", "source_id", "source_type", "source_url", "cache_file", "content_hash", "facts"],
+  "required": ["version", "run_id", "extracted_at", "source_id", "source_type", "source_url", "cache_file", "content_hash", "facts"],
   "properties": {
     "version": {
       "type": "string",
       "const": "1.0",
       "description": "Schema version for compatibility"
+    },
+    "run_id": {
+      "type": "string",
+      "description": "Unique run identifier for pipeline execution isolation"
     },
     "extracted_at": {
       "type": "string",

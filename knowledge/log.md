@@ -1,6 +1,7 @@
 # Amazon Ads knowledge bundle update log
 
 ## 2026-08-12
+* **Update**: Live ingestion: Added 151 facts from 4 official Amazon Ads sources (sp-official, sb-official, sd-official, targeting-official). Created 10 new concept documents: targeting, brand-stores, new-to-brand-metrics, sponsored-brands-video, product-targeting, negative-targeting, keyword-match-types, bidding-strategies, advertising-eligibility, campaign-structure. Updated 2 existing concepts: sponsored-display (2 changes), sponsored-products (3 changes).
 * **Update**: Live Run 1: 27 validated facts from 6 sources processed via new persisted handoff architecture
 * **Update**: Live ingestion update: Added 22 new facts from 4 live Amazon sources (sp-official, sb-official, sd-official, ads-api-notes). Updated 5 concept documents with enhanced content including Sponsored Display platform transition, Sponsored Brands pricing models, and API documentation updates. All sources validated as official Amazon content.
 * **Update**: added dedicated test coverage for log_run.py and build_index.py (17 + 15 new tests)

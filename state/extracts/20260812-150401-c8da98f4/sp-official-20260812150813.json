@@ -1,0 +1,153 @@
+{
+  "version": "1.0",
+  "run_id": "20260812-150401-c8da98f4",
+  "extracted_at": "2026-08-12T15:08:13.397207Z",
+  "source_id": "sp-official",
+  "source_type": "official",
+  "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+  "cache_file": "/home/sk234/projects/amazon-ads-kb/state/cache/sp-official.txt",
+  "content_hash": "87c986c08b8d95256549b078b0b9d5ab3e02324bc8533965c4365e9ea5a52dad",
+  "facts": [
+    {
+      "fact": "Sponsored Products are cost-per-click (CPC) ads that promote individual product listings on Amazon and select premium apps and websites",
+      "concept": "sponsored-products",
+      "quote": "Sponsored Products are cost-per-click (CPC) ads",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products ads can be created with image or video creative formats",
+      "concept": "sponsored-products",
+      "quote": "create a campaign ... with image or video",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products ads appear on desktop and mobile browsers as well as the Amazon mobile app",
+      "concept": "sponsored-products",
+      "quote": "Ads serve both on desktop and mobile browsers",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "When customers click a Sponsored Products ad, they are directed to the advertised products detail page",
+      "concept": "sponsored-products",
+      "quote": "customers click your ad, they go to the advertised product detail page",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products allows manual keyword selection or automatic keyword targeting by Amazon systems",
+      "concept": "keyword-match-types",
+      "quote": "choose keywords to target, or let Amazon systems target relevant keywords automatically",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products placements include the top of, alongside, or within shopping results and on product pages on Amazon",
+      "concept": "sponsored-products",
+      "quote": "displayed at the top of, alongside, or within shopping results",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products ads appear beyond Amazon on Amazon-owned and operated sites and third-party destinations",
+      "concept": "sponsored-products",
+      "quote": "other Amazon-owned and operated sites as well as third-party destinations",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products ads only appear when advertised items are in stock",
+      "concept": "sponsored-products",
+      "quote": "Only appear when your advertised items are in stock",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products with video saw an average 9% uplift in click-through rate compared to campaigns without video",
+      "concept": "sponsored-products",
+      "quote": "average +9% uplift in click-through rate (CTR)",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "New sellers can earn up to $1000 in ad credits when they launch and spend on Sponsored Products within 30 days",
+      "concept": "sponsored-products",
+      "quote": "earn up to $1000 in ad credits when they launch and spend",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products is available to professional sellers, vendors, book vendors, KDP authors, and agencies",
+      "concept": "advertising-eligibility",
+      "quote": "available for professional sellers, vendors, book vendors, Kindle Direct Publishing (KDP) authors, and agencies",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Products must be eligible for the Featured Offer to be advertised with Sponsored Products",
+      "concept": "advertising-eligibility",
+      "quote": "be eligible for the Featured Offer in order to advertise",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products campaigns have no monthly or upfront fees, advertisers pay only when a shopper clicks an ad",
+      "concept": "sponsored-products",
+      "quote": "no monthly or upfront fees ... pay only for clicks",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products adult products, used products, refurbished products, and products in closed categories are not eligible for advertising",
+      "concept": "advertising-eligibility",
+      "quote": "adult products, used products, refurbished products, and products in closed categories are not eligible",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products bidding requires entering a maximum amount willing to pay when a customer clicks an ad",
+      "concept": "bidding-strategies",
+      "quote": "bid is the maximum amount you are willing to pay when a customer clicks an ad",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products uses daily budgets that are the amount willing to spend on a campaign over a calendar month",
+      "concept": "bidding-strategies",
+      "quote": "daily budget for your campaign ... amount you are willing to spend on a campaign over a calendar month",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products daily budgets are not paced throughout the day and can be spent quickly if there is high demand",
+      "concept": "bidding-strategies",
+      "quote": "Daily budgets are not paced throughout the day",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products daily budgets can be increased or decreased once ads are live",
+      "concept": "bidding-strategies",
+      "quote": "You can increase or decrease your daily budget once your ads are live",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products creation steps include registering, adding products, defining targeting and bidding, choosing settings, and launching",
+      "concept": "campaign-structure",
+      "quote": "Register ... Add the products ... Define your targeting, keyword, and bidding strategies",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products provides tools and reports to help optimize campaign performance and measure success",
+      "concept": "sponsored-products",
+      "quote": "provide a range of tools and reports to help you optimize campaign performance",
+      "extracted_at": "2026-08-12T15:08:13.397207Z",
+      "confidence": "high"
+    }
+  ],
+  "extraction_metadata": {}
+}

@@ -8,34 +8,47 @@ import json
 import sys
 from pathlib import Path
 
-def load_latest_validation_artifact(validated_dir="state/validated"):
+def load_validation_artifact(run_id, validated_dir="state/validated"):
     """
-    Load the most recent validation artifact from the validated directory.
+    Load the validation artifact for a specific run from the validated directory.
+
+    Args:
+        run_id: The run identifier to load
+        validated_dir: Base directory for validation artifacts
 
     Returns: (validation_artifact, artifact_path) or (None, None) if not found
     """
-    validated_path = Path(validated_dir)
+    validated_path = Path(validated_dir) / run_id
     if not validated_path.exists():
         return None, None
 
-    # Find the most recent validation artifact
-    artifacts = sorted(validated_path.glob("validation-*.json"), reverse=True)
+    # Find the validation artifact for this run
+    artifacts = list(validated_path.glob("validation-*.json"))
     if not artifacts:
         return None, None
 
-    latest_artifact = artifacts[0]
-    with open(latest_artifact) as f:
+    # Load the artifact
+    artifact_file = artifacts[0]
+    with open(artifact_file) as f:
         artifact = json.load(f)
 
-    return artifact, str(latest_artifact)
+    # Verify run_id matches
+    if artifact.get("run_id") != run_id:
+        return None, None
 
-def get_validated_facts_for_merge(validated_dir="state/validated"):
+    return artifact, str(artifact_file)
+
+def get_validated_facts_for_merge(run_id, validated_dir="state/validated"):
     """
-    Get facts that passed validation for merging.
+    Get facts that passed validation for merging from a specific run.
+
+    Args:
+        run_id: The run identifier to load
+        validated_dir: Base directory for validation artifacts
 
     Returns: facts suitable for merging, grouped by concept
     """
-    artifact, artifact_path = load_latest_validation_artifact(validated_dir)
+    artifact, artifact_path = load_validation_artifact(run_id, validated_dir)
     if not artifact:
         return {}
 
@@ -56,22 +69,32 @@ def get_validated_facts_for_merge(validated_dir="state/validated"):
 
     return valid_facts
 
-def check_validation_completed(validated_dir="state/validated"):
+def check_validation_completed(run_id, validated_dir="state/validated"):
     """
-    Check if validation has been completed and results are available.
+    Check if validation has been completed for a specific run and results are available.
+
+    Args:
+        run_id: The run identifier to check
+        validated_dir: Base directory for validation artifacts
 
     Returns: (bool, str) where str is the artifact path if True
     """
-    artifact, artifact_path = load_latest_validation_artifact(validated_dir)
+    artifact, artifact_path = load_validation_artifact(run_id, validated_dir)
     if artifact and artifact_path:
         return True, artifact_path
     return False, None
 
 if __name__ == "__main__":
-    completed, path = check_validation_completed()
+    if len(sys.argv) < 2:
+        print("Usage: load_validation_results.py <run_id>")
+        sys.exit(1)
+
+    run_id = sys.argv[1]
+
+    completed, path = check_validation_completed(run_id)
     if completed:
         print(f"Validation completed: {path}")
-        facts = get_validated_facts_for_merge()
+        facts = get_validated_facts_for_merge(run_id)
         print(f"Validated facts for {len(facts)} concepts ready for merge")
         sys.exit(0)
     else:

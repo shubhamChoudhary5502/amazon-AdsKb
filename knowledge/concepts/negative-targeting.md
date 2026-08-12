@@ -2,37 +2,41 @@
 okf: "0.1"
 id: negative-targeting
 title: Negative targeting
-description: The exclusion layer that stops ads from matching queries or products that waste spend.
+description: Exclusion method that prevents ads from showing on specific keywords, products, or brands to optimize spend.
 type: concept
 status: active
-created: 2026-08-10
-updated: 2026-08-10
-timestamp: 2026-08-10T00:00:00Z
-confidence: medium
-tags: [targeting, efficiency]
-related: [keyword-match-types, product-targeting]
+created: 2026-08-12
+updated: 2026-08-12
+timestamp: 2026-08-12T15:11:53Z
+confidence: high
+tags: [targeting, optimization, exclusions]
+related: [targeting, keyword-match-types, product-targeting, campaign-structure, sponsored-products]
 sources:
   - id: S1
-    url: https://advertising.amazon.com/library/guides/campaign-targeting-bidding
+    url: https://advertising.amazon.com/library/guides/targeting-with-sponsored-products
     kind: official
-    fetched: 2026-08-10
-    snapshot: sources/samples/official/targeting-and-bidding.html
+    fetched: 2026-08-12
+    snapshot: state/cache/targeting-official.txt
 ---
 
 # Negative targeting
 
 ## Overview
 
-Negative targeting is the exclusion layer: it stops ads from matching
-queries or products that waste spend, and is the main lever for cleaning
-up automatic and broad-match campaigns.
+Negative targeting helps exclude keywords, products, or brands to optimize campaign performance and spend. It prevents ads from appearing on shopping results pages that do not meet campaign objectives.
 
 ## Key facts
 
-- Negative keywords come in exact and phrase form and prevent ads from matching unwanted queries. [S1]
-- Negative product targeting excludes specific ASINs or brands. [S1]
+- Negative targeting helps exclude keywords, products, or brands to optimize campaign performance and spend. [S1]
+- Negative keywords help prevent ads appearing on shopping results pages that do not meet campaign objectives. [S1]
+- Negative keyword phrase match prevents ads from showing on shopping queries containing the complete phrase or close variations. [S1]
+- Negative keyword exact match prevents ads from showing on shopping queries containing the exact phrase or close variation. [S1]
+- Negative keywords should be evaluated after receiving at least 20 clicks before adding as negative targets. [S1]
 
 ## Relationships
 
-- [Keyword match types](/concepts/keyword-match-types.md): negative keyword forms mirror phrase and exact match.
-- [Product targeting](/concepts/product-targeting.md): the exclusion counterpart to positive ASIN and category targets.
+- [Targeting](/concepts/targeting.md): negative targeting is an optimization method.
+- [Keyword match types](/concepts/keyword-match-types.md): negative keywords use phrase and exact match types.
+- [Product targeting](/concepts/product-targeting.md): can exclude specific products or categories.
+- [Campaign structure](/concepts/campaign-structure.md): negative targeting is configured at campaign and ad group level.
+- [Sponsored Products](/concepts/sponsored-products.md): supports negative keyword and product targeting.

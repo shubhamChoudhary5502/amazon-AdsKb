@@ -1,0 +1,97 @@
+{
+  "version": "1.0",
+  "run_id": "20260812-150401-c8da98f4",
+  "extracted_at": "2026-08-12T15:08:12.266361Z",
+  "source_id": "sd-official",
+  "source_type": "official",
+  "source_url": "https://advertising.amazon.com/solutions/products/sponsored-display",
+  "cache_file": "/home/sk234/projects/amazon-ads-kb/state/cache/sd-official.txt",
+  "content_hash": "3e141a27187a93997d58f62426e0c7b68887228e158eadaf96a5017f53ee5e71",
+  "facts": [
+    {
+      "fact": "Sponsored Display is now known as display ads",
+      "concept": "sponsored-display",
+      "quote": "Sponsored Display is now known as display ads",
+      "extracted_at": "2026-08-12T15:08:12.266361Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon introduced a single ad platform that connects display campaigns with customers across Amazon properties",
+      "concept": "sponsored-display",
+      "quote": "introducing a single ad platform that connects your display campaigns with customers across Amazon properties",
+      "extracted_at": "2026-08-12T15:08:12.266361Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Display campaigns can reach audiences on Twitch, Fire TV, and Echo Show",
+      "concept": "sponsored-display",
+      "quote": "across Amazon properties including Twitch, Fire TV, and Echo Show",
+      "extracted_at": "2026-08-12T15:08:12.266361Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Display campaigns can reach audiences on premium placements across the open internet",
+      "concept": "sponsored-display",
+      "quote": "as well as premium placements across the open internet",
+      "extracted_at": "2026-08-12T15:08:12.266361Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Display is now part of Amazon's wider display ads offering",
+      "concept": "sponsored-display",
+      "quote": "Sponsored Display is now a part of Amazon's wider display ads offering",
+      "extracted_at": "2026-08-12T15:08:12.266361Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon created a centralized hub that unifies access to all Amazon Ads products",
+      "concept": "sponsored-display",
+      "quote": "within our new centralized hub that unifies access to all Amazon Ads products",
+      "extracted_at": "2026-08-12T15:08:12.266361Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "The new hub brings together sponsored ads and Amazon DSP workflows into a single workspace",
+      "concept": "sponsored-display",
+      "quote": "bringing together sponsored ads and Amazon DSP workflows into a single workspace",
+      "extracted_at": "2026-08-12T15:08:12.266361Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Existing Sponsored Display campaigns continue to run uninterrupted",
+      "concept": "sponsored-display",
+      "quote": "Existing Sponsored Display campaigns will continue to run uninterrupted",
+      "extracted_at": "2026-08-12T15:08:12.266361Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Existing Sponsored Display campaigns are accessed through Campaign Manager in the Ads Console",
+      "concept": "sponsored-display",
+      "quote": "access your existing Sponsored Display campaigns through Campaign Manager in the Ads Console",
+      "extracted_at": "2026-08-12T15:08:12.266361Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "New display campaigns are created by clicking Campaigns, Create Campaign, and Display",
+      "concept": "sponsored-display",
+      "quote": "create new display campaigns, go to Campaigns, click Create Campaign, and then click Display",
+      "extracted_at": "2026-08-12T15:08:12.266361Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Display ads are flexible ad formats that help brands reach relevant audiences",
+      "concept": "sponsored-display",
+      "quote": "Display ads are flexible ad formats that can help your brand reach relevant audiences",
+      "extracted_at": "2026-08-12T15:08:12.266361Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Display ads can use Amazon-generated creative or custom creative assets",
+      "concept": "sponsored-display",
+      "quote": "using Amazon-generated creative or your own creative assets",
+      "extracted_at": "2026-08-12T15:08:12.266361Z",
+      "confidence": "high"
+    }
+  ],
+  "extraction_metadata": {}
+}

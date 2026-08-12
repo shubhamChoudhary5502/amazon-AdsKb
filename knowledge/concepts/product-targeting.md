@@ -2,36 +2,37 @@
 okf: "0.1"
 id: product-targeting
 title: Product targeting
-description: Placing ads against specific products or whole categories instead of shopper queries.
+description: Targeting method that shows ads on specific product detail pages or in search results where targeted products appear.
 type: concept
 status: active
-created: 2026-08-10
-updated: 2026-08-10
-timestamp: 2026-08-10T00:00:00Z
-confidence: medium
-tags: [targeting]
-related: [negative-targeting]
+created: 2026-08-12
+updated: 2026-08-12
+timestamp: 2026-08-12T15:11:53Z
+confidence: high
+tags: [targeting, products, asin]
+related: [targeting, sponsored-products, negative-targeting, campaign-structure]
 sources:
   - id: S1
-    url: https://advertising.amazon.com/library/guides/campaign-targeting-bidding
+    url: https://advertising.amazon.com/library/guides/targeting-with-sponsored-products
     kind: official
-    fetched: 2026-08-10
-    snapshot: sources/samples/official/targeting-and-bidding.html
+    fetched: 2026-08-12
+    snapshot: state/cache/targeting-official.txt
 ---
 
 # Product targeting
 
 ## Overview
 
-Product targeting places ads against specific products or whole categories
-instead of shopper queries. It is the standard way to appear on competitor
-detail pages.
+Product targeting allows advertisers to show their ads on specific product detail pages or in search results where targeted products appear. This enables targeting by individual products, categories, brands, or other product attributes.
 
 ## Key facts
 
-- Targets can be specific ASINs or entire categories. [S1]
-- Category targets can be refined by brand, price range, and star rating. [S1]
+- Product targeting allows targeting specific products, categories, brands, or other product features relevant to the advertised item. [S1]
+- Product targeting ads are eligible for impressions on product detail pages and search result pages where the targeted product appears. [S1]
 
 ## Relationships
 
-- [Negative targeting](/concepts/negative-targeting.md): negative product targeting excludes ASINs or brands from these campaigns.
+- [Targeting](/concepts/targeting.md): product targeting is a targeting method.
+- [Sponsored Products](/concepts/sponsored-products.md): uses product targeting in manual campaigns.
+- [Negative targeting](/concepts/negative-targeting.md): can exclude specific products from targeting.
+- [Campaign structure](/concepts/campaign-structure.md): product targeting is configured at ad group level.

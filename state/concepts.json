@@ -10,5 +10,9 @@
   "acos-roas": {"aliases": ["acos", "roas", "tacos", "advertising cost of sales"]},
   "amazon-ads-api": {"aliases": ["ads api", "amazon advertising api", "api v3"]},
   "amazon-marketing-stream": {"aliases": ["marketing stream", "ams stream"]},
-  "advertising-eligibility": {"aliases": ["brand registry requirements", "who can advertise"]}
+  "advertising-eligibility": {"aliases": ["brand registry requirements", "who can advertise"]},
+  "targeting": {"aliases": ["keyword targeting", "product targeting", "audience targeting"]},
+  "brand-stores": {"aliases": ["amazon stores", "brand store", "stores"]},
+  "new-to-brand-metrics": {"aliases": ["ntb", "new to brand", "brand new metrics"]},
+  "sponsored-brands-video": {"aliases": ["sb video", "sponsored brands video ads", "video ads"]}
 }

@@ -1,0 +1,615 @@
+{
+  "version": "1.0",
+  "run_id": "20260812-150401-c8da98f4",
+  "extracted_at": "2026-08-12T15:11:12.823774Z",
+  "source_id": "sb-official",
+  "source_type": "official",
+  "source_url": "https://advertising.amazon.com/solutions/products/sponsored-brands",
+  "cache_file": "/home/sk234/projects/amazon-ads-kb/state/cache/sb-official.txt",
+  "content_hash": "1cfea3bc325d0275632608809f29c52d3087482bdcdadaa5c16246e9497d846a",
+  "facts": [
+    {
+      "fact": "Sponsored Brands is an advertising solution built to help customers discover brands within the Amazon store",
+      "concept": "sponsored-brands",
+      "quote": "advertising solution built to help customers discover your brand within the Amazon store",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands uses rich display and video creatives that put the brand front and center",
+      "concept": "sponsored-brands",
+      "quote": "rich display and video creatives that put your brand front and center",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands ads appear in prominent placements like top of search and product pages",
+      "concept": "sponsored-brands",
+      "quote": "prominent placements like top of search and product pages",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands drives traffic to Brand Store or detail pages",
+      "concept": "brand-stores",
+      "quote": "driving traffic to your Brand Store or detail pages",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands supports brand growth across the shopping journey",
+      "concept": "sponsored-brands",
+      "quote": "supporting brand growth across the shopping journey",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands helps shape how shoppers discover and engage with brands on Amazon",
+      "concept": "sponsored-brands",
+      "quote": "helps shape how shoppers discover and engage with your brand on Amazon",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands showcases videos, collections, and branded creatives in high-visibility placements",
+      "concept": "sponsored-brands",
+      "quote": "showcasing videos, collections, and branded creatives in high-visibility placements",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands paired with Brand Stores drives discovery, consideration, and long-term engagement with the brand",
+      "concept": "brand-stores",
+      "quote": "drives discovery, consideration, and long-term engagement with your brand",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands ads may be displayed above, alongside, or within shopping results",
+      "concept": "sponsored-brands",
+      "quote": "displayed above, alongside, or within shopping results",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands ads appear on both desktop and mobile devices",
+      "concept": "sponsored-brands",
+      "quote": "on both desktop and mobile devices",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands placements include top of search results on Amazon",
+      "concept": "sponsored-brands",
+      "quote": "Top of search results on Amazon",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands placements include top of mobile search results on Amazon",
+      "concept": "sponsored-brands",
+      "quote": "Top of mobile search results on Amazon",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands placements include top of home page on Amazon",
+      "concept": "sponsored-brands",
+      "quote": "Top of home page on Amazon",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands provides prominent placement at top of search results and product pages to capture attention at key moments in the shopper journey",
+      "concept": "sponsored-brands",
+      "quote": "Show up at the top of search results and product pages to capture attention",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands reaches shoppers who matter most through precise keyword and product targeting",
+      "concept": "targeting",
+      "quote": "Reach shoppers who matter most to your business through precise keyword and product targeting",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands uses creatives and collections to highlight catalog and build brand recognition",
+      "concept": "sponsored-brands",
+      "quote": "Use creatives and collections to highlight your catalog and build brand recognition",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands provides AI-powered image generation at no cost to produce branded creatives",
+      "concept": "sponsored-brands",
+      "quote": "Use AI-powered image generation at no cost to produce branded creatives",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands drives traffic to Brand Store or product page with engaging creatives that support product evaluation and catalog discovery",
+      "concept": "brand-stores",
+      "quote": "Drive traffic to your Brand Store or product page with engaging creatives",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands provides insights into how and which shoppers engage with ads to understand brand impact",
+      "concept": "sponsored-brands",
+      "quote": "Get insights into how and which shoppers engage with your ads to understand your brand's impact",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands supports multiple pricing models: cost-per-click (CPC), cost per 1,000 viewable impressions (vCPM), and fixed upfront pricing with reserve share of voice",
+      "concept": "bidding-strategies",
+      "quote": "supports multiple pricing models: Cost-per-click (CPC) ... vCPM ... Fixed, upfront pricing with reserve share of voice",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands uses cost-per-click (CPC) pricing model for driving page visits",
+      "concept": "bidding-strategies",
+      "quote": "Cost-per-click (CPC) for driving page visits",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands uses cost per 1,000 viewable impressions (vCPM) pricing model for growing brand impression share",
+      "concept": "bidding-strategies",
+      "quote": "Cost per 1,000 viewable impressions (vCPM) for growing brand impression share",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands uses fixed, upfront pricing with reserve share of voice to secure top-of-search placement for branded keywords",
+      "concept": "bidding-strategies",
+      "quote": "Fixed, upfront pricing with reserve share of voice to secure the top-of-search placement for branded keywords",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands has no minimum spend for CPC or vCPM campaigns",
+      "concept": "bidding-strategies",
+      "quote": "There's no minimum spend for CPC or vCPM campaigns",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands reserve share of voice requires a minimum spend commitment",
+      "concept": "bidding-strategies",
+      "quote": "reserve share of voice requires a minimum spend commitment",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands allows adjusting bids or pausing campaigns at any time",
+      "concept": "bidding-strategies",
+      "quote": "you can adjust bids or pause campaigns at any time",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands provides reporting tools to analyze campaign performance and measure success",
+      "concept": "sponsored-brands",
+      "quote": "provide a range of tools and reports that help you analyze campaign performance",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands metrics include impressions, click-through rates, sales, and other engagement dimensions",
+      "concept": "sponsored-brands",
+      "quote": "impressions, click-through rates, sales, and more",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands reporting can track how different traffic sources drive visitors to Amazon Store",
+      "concept": "brand-stores",
+      "quote": "How different traffic sources, like your Sponsored Brands campaigns, are driving visitors to your Amazon Store",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands metrics can measure how much you are reaching customers who are new to your brand",
+      "concept": "sponsored-brands",
+      "quote": "How much you're reaching customers who are new to your brand",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands performance can be measured across all stages of the funnel: awareness, consideration, purchase, and loyalty",
+      "concept": "sponsored-brands",
+      "quote": "all stages of the funnel \u2013 awareness, consideration, purchase, and loyalty",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands allows comparing performance relative to other brands like yours",
+      "concept": "sponsored-brands",
+      "quote": "how you're doing relative to other brands like yours",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "New-to-brand metrics measure orders and sales of products generated from first-time customers of the brand on Amazon",
+      "concept": "new-to-brand-metrics",
+      "quote": "measure orders and sales of your products generated from first-time customers of your brand",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "New-to-brand metrics track number of first-time orders for products within the brand within a 12-month look-back window",
+      "concept": "new-to-brand-metrics",
+      "quote": "track the number of first-time orders for products within your brand, the percentage of total orders that are new-to-brand orders",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "New-to-brand metrics track percentage of total orders that are new-to-brand orders within 12 months",
+      "concept": "new-to-brand-metrics",
+      "quote": "percentage of total orders that are new-to-brand orders",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "New-to-brand metrics track total sales of new-to-brand orders within 12 months",
+      "concept": "new-to-brand-metrics",
+      "quote": "total sales of new-to-brand orders, and the percentage of total sales that are new-to-brand sales",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "New-to-brand metrics track percentage of total sales that are new-to-brand sales within 12 months",
+      "concept": "new-to-brand-metrics",
+      "quote": "percentage of total sales that are new-to-brand sales, all within a 12-month look-back window",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "New-to-brand metrics use a 12-month look-back window for measuring first-time customer purchases",
+      "concept": "new-to-brand-metrics",
+      "quote": "all within a 12-month look-back window",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "New-to-brand metrics supplement ACOS or ROAS to measure brand growth impact",
+      "concept": "new-to-brand-metrics",
+      "quote": "supplement metrics like advertising cost of sales (ACOS) or return on ad spend (ROAS)",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands helps drive brand discovery with shoppers in the discovery stage and helps brands reach new customers",
+      "concept": "new-to-brand-metrics",
+      "quote": "Sponsored Brands ads help drive brand discovery with shoppers in the discovery stage and help brands reach new customers",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Driving first-time purchases can cost more than driving repeat purchases, so ACOS or ROAS alone would not measure brand audience growth impact",
+      "concept": "new-to-brand-metrics",
+      "quote": "Driving first-time purchases can often cost more than driving repeat purchases, so ACOS or ROAS alone would not measure the impact of Sponsored Brands in growing your brand audience",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands provides Video Generator in Creative tools tab to assist with building video creative",
+      "concept": "sponsored-brands-video",
+      "quote": "use Video Generator in the Creative tools tab",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands offers video creative production and editing services through Amazon",
+      "concept": "sponsored-brands-video",
+      "quote": "Amazon's video creative production and editing services can help you produce inspiring videos",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands provides video as added value with qualifying campaigns or as affordable at-cost fee-based services",
+      "concept": "sponsored-brands-video",
+      "quote": "Get your video as added value with qualifying campaigns or as affordable at-cost fee-based services",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands video uses rich autoplay video content to help drive brand recognition for new brands and enhance reach for existing brands",
+      "concept": "sponsored-brands-video",
+      "quote": "rich autoplay video content to help drive brand recognition for new brands and enhance reach for existing brands",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands video is a powerful storytelling tool to initiate, cultivate, and maintain relationships with shoppers",
+      "concept": "sponsored-brands-video",
+      "quote": "powerful storytelling tool for brands to initiate, cultivate, and maintain relationships with shoppers",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands video enables featuring multiple products and linking to Brand Stores",
+      "concept": "sponsored-brands-video",
+      "quote": "Link your Sponsored Brands video to your Brand Store to help shoppers discover your offerings",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands video provides exclusive access to high-visibility placements",
+      "concept": "sponsored-brands-video",
+      "quote": "enjoy exclusive access to high-visibility placements",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands video enables featuring up to three products within ads when linking to Brand Stores",
+      "concept": "sponsored-brands-video",
+      "quote": "showcasing up to three products within the ads to shoppers",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands video ads could appear above, in the middle, or at the bottom of Amazon search results",
+      "concept": "sponsored-brands-video",
+      "quote": "The ads could appear above, in the middle, or at the bottom of Amazon search results",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands video enables promoting eye-catching video with flexibility of showcasing up to three products",
+      "concept": "sponsored-brands-video",
+      "quote": "promote eye-catching video with the flexibility of showcasing up to three products",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands video enables driving traffic to Brand Store to explore full range of product offerings in dedicated brand environment",
+      "concept": "sponsored-brands-video",
+      "quote": "drive traffic to your Brand Store to explore the full range of product offerings in a dedicated brand environment",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands allows choosing from multiple goals designed to meet brand objectives",
+      "concept": "sponsored-brands",
+      "quote": "choose from multiple goals designed to meet your brand objectives",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands goals include driving page visits to increase traffic to Brand Store or product pages",
+      "concept": "sponsored-brands",
+      "quote": "drive page visits to increase traffic to your Brand Store or product pages",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands goals include growing brand impression share to boost visibility within category",
+      "concept": "sponsored-brands",
+      "quote": "grow brand impression share to boost visibility within your category",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands goals include reserve share of voice to secure predictable Top-of-Search placement for branded keywords",
+      "concept": "sponsored-brands",
+      "quote": "reserve share of voice to secure predictable Top-of-Search placement for your branded keywords",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands goals provide tailored targeting, bidding, and creative options",
+      "concept": "sponsored-brands",
+      "quote": "Each goal provides tailored targeting, bidding, and creative options",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands goals provide measurable results",
+      "concept": "sponsored-brands",
+      "quote": "Each goal provides ... measurable results",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands is available for vendors, book vendors, Kindle Direct Publishing authors, agencies, and professional sellers enrolled in Amazon Brand Registry",
+      "concept": "advertising-eligibility",
+      "quote": "available for vendors, book vendors, Kindle Direct Publishing (KDP) authors, agencies, and professional sellers enrolled in Amazon Brand Registry",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands products and features may not be available in all marketplaces",
+      "concept": "sponsored-brands",
+      "quote": "Products and features may not be available in all marketplaces",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands is not eligible for adult products, used products, refurbished products, and products in closed categories",
+      "concept": "advertising-eligibility",
+      "quote": "adult products, used products, refurbished products, and products in closed categories are not eligible for advertising",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands ads are reviewed within 72 hours after submission",
+      "concept": "sponsored-brands",
+      "quote": "It will be reviewed within 72 hours",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands allows uploading creative as static image or video that features a product or brand",
+      "concept": "sponsored-brands",
+      "quote": "Upload your creative, which can be a static image or video that features a product or brand",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands reserve share of voice enables reserving Top-of-Search placements for branded keywords at fixed upfront price",
+      "concept": "sponsored-brands",
+      "quote": "reserve Sponsored Brands Top-of-Search placements for their branded keywords at a fixed, upfront price",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands reserve share of voice ensures consistent visibility when shoppers search for your brand",
+      "concept": "sponsored-brands",
+      "quote": "ensuring consistent visibility when shoppers search for your brand",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands branded search metrics now better identify when advertising influences shoppers to search for brand names, trademarks, and common variations like abbreviations",
+      "concept": "sponsored-brands",
+      "quote": "Branded search metrics now better identify when advertising influences shoppers to search for brand names, trademarks, and common variations like abbreviations",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands adds two new audiences for bid adjustment: Purchased brand's product and Clicked or Added to cart",
+      "concept": "sponsored-brands",
+      "quote": "two new audiences\u2014Purchased brand's product and Clicked or Added to cart",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands bid adjustment audiences help re-engage high-value shoppers and drive repeat purchases",
+      "concept": "sponsored-brands",
+      "quote": "help re-engage high-value shoppers and drive repeat purchases",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands is now available for single-book authors",
+      "concept": "sponsored-brands",
+      "quote": "Sponsored Brands is now available for single-book authors",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands enables single-book authors to create video and custom image ads to showcase a single book to their audience in prominent placements",
+      "concept": "sponsored-brands",
+      "quote": "create eye-catching video and custom image ads to showcase a single book to their audience in prominent placements",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands has Partner Directory for support from partners that specialize in Sponsored Brands campaigns",
+      "concept": "sponsored-brands",
+      "quote": "Get support from a partner that specializes in Sponsored Brands campaigns",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon Ads partners are global community of technology partners and agencies offering services at different price points",
+      "concept": "sponsored-brands",
+      "quote": "Amazon Ads partners are a global community of technology partners and agencies that offer a variety of services at different price points",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon Ads partners can help launch, manage and optimize ad campaigns to save time and get most from advertising",
+      "concept": "sponsored-brands",
+      "quote": "Partners can help you launch, manage and optimize your ad campaigns, which can save you time and help you get the most from your advertising",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Creating Sponsored Brands campaign requires registering for sponsored ads",
+      "concept": "sponsored-brands",
+      "quote": "Register for sponsored ads",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Creating Sponsored Brands campaign involves signing in to account, clicking Create campaign, and choosing Sponsored Brands",
+      "concept": "sponsored-brands",
+      "quote": "Sign in to your account, click Create campaign, and choose Sponsored Brands",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Creating Sponsored Brands campaign involves giving campaign a name and choosing settings",
+      "concept": "sponsored-brands",
+      "quote": "Give your campaign a name and choose your settings",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Creating Sponsored Brands campaign involves choosing campaign goal that aligns with business objective",
+      "concept": "sponsored-brands",
+      "quote": "Choose the campaign goal that aligns with your business objective",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Creating Sponsored Brands campaign involves selecting ad format",
+      "concept": "sponsored-brands",
+      "quote": "Select your ad format",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Creating Sponsored Brands campaign involves under Landing page, selecting whether to drive shoppers to Brand Store or product detail page",
+      "concept": "sponsored-brands",
+      "quote": "select whether you want to drive shoppers directly to your Brand Store or to a product detail page",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Creating Sponsored Brands campaign involves defining targeting strategy and selecting bids or using recommendations",
+      "concept": "sponsored-brands",
+      "quote": "Define your targeting strategy and select bids for your campaign, or use our recommendations",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Creating Sponsored Brands campaign involves uploading creative",
+      "concept": "sponsored-brands",
+      "quote": "Upload your creative, which can be a static image or video that features a product or brand",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Creating Sponsored Brands campaign involves submitting ad for review",
+      "concept": "sponsored-brands",
+      "quote": "Submit your ad. It will be reviewed within 72 hours",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands provides Amazon Ads Academy with courses for Sponsored Brands",
+      "concept": "sponsored-brands",
+      "quote": "Sponsored Brands courses",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands provides guides for getting started with Sponsored Brands",
+      "concept": "sponsored-brands",
+      "quote": "Your complete guide to Sponsored Brands with Amazon Ads",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands provides guide for getting started with Sponsored Brands video ads",
+      "concept": "sponsored-brands-video",
+      "quote": "How to get started with Sponsored Brands video ads",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands provides guide for setting up Sponsored Brands reserve share of voice",
+      "concept": "sponsored-brands",
+      "quote": "guide to setting up Sponsored Brands reserve share of voice",
+      "extracted_at": "2026-08-12T15:11:12.823774Z",
+      "confidence": "high"
+    }
+  ],
+  "extraction_metadata": {}
+}

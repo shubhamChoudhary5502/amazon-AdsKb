@@ -1,0 +1,244 @@
+{
+  "version": "1.0",
+  "run_id": "20260812-150401-c8da98f4",
+  "extracted_at": "2026-08-12T15:09:13.521727Z",
+  "source_id": "targeting-official",
+  "source_type": "official",
+  "source_url": "https://advertising.amazon.com/library/guides/targeting-with-sponsored-products",
+  "cache_file": "/home/sk234/projects/amazon-ads-kb/state/cache/targeting-official.txt",
+  "content_hash": "80e0a9025442d6aa0003968eceda3208cc9ea6f785ef2ee7493b77d4859d612a",
+  "facts": [
+    {
+      "fact": "Targeting defines the context in which ads appear by matching keywords to customer shopping queries",
+      "concept": "targeting",
+      "quote": "Targeting is the way you define the context in which you want your ads to appear",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Customer shopping queries are words and phrases Amazon customers use to look for products",
+      "concept": "targeting",
+      "quote": "Customer shopping queries: words and phrases that Amazon customers use to look for products",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Keywords are word combinations bid on in manual campaigns to match customers shopping queries",
+      "concept": "keyword-match-types",
+      "quote": "Keywords: word combinations that you bid on in manual campaigns to match customers shopping queries",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products offers three targeting options: automatic, manual, and negative targeting",
+      "concept": "sponsored-products",
+      "quote": "With Sponsored Products, you have three targeting options \u2013 Automatic targeting Manual targeting Negative targeting",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Automatic targeting matches ads to keywords and products similar to the advertised product based on shopping queries and product information",
+      "concept": "sponsored-products",
+      "quote": "With automatic targeting your ad is automatically matched with keywords and products that are similar to the product you are advertising",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Automatic targeting uses four default strategies: close match, loose match, substitutes, and complements",
+      "concept": "sponsored-products",
+      "quote": "There are four automatic targeting strategies: Close match Loose match Substitutes Complements",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Close match automatic targeting shows ads to shoppers using search terms closely related to the advertised product",
+      "concept": "sponsored-products",
+      "quote": "Close match. We may show your ad to shoppers who use search terms closely related to your products",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Loose match automatic targeting shows ads to shoppers using search terms loosely related to the advertised product",
+      "concept": "sponsored-products",
+      "quote": "Loose match. We may show your ad to shoppers who use search terms loosely related to your products",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Substitutes automatic targeting shows ads to shoppers browsing detail pages of products similar to the advertised product",
+      "concept": "sponsored-products",
+      "quote": "Substitutes. We may show your ad to shoppers browsing detail pages of products similar to yours",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Complements automatic targeting shows ads to shoppers viewing detail pages of products that complement the advertised product",
+      "concept": "sponsored-products",
+      "quote": "Complements. We may show your ad to shoppers who view the detail pages of products that complement your product",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Manual targeting allows advertisers to manually select which keywords or products to target",
+      "concept": "sponsored-products",
+      "quote": "With manual targeting, you can manually select which keywords or products you want to target",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Negative targeting helps exclude keywords, products, or brands to optimize campaign performance and spend",
+      "concept": "negative-targeting",
+      "quote": "Negative targeting helps you exclude the keywords, products or brands you do not want your ads associated with",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Campaign targeting type cannot be changed once a campaign is live",
+      "concept": "campaign-structure",
+      "quote": "Once the campaign is live, you will not be able to change the campaign targeting",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Keyword targeting offers three match types: broad match, phrase match, and exact match",
+      "concept": "keyword-match-types",
+      "quote": "The three match types for keyword targeting are: Broad match Phrase match Exact match",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Broad match offers ad exposure to shopping queries containing keyword terms in any order including variations and related terms",
+      "concept": "keyword-match-types",
+      "quote": "A shopping query can contain the keyword terms in any order. It may include singulars, plurals, variations, synonyms, and related terms",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Phrase match requires search terms to contain all components of the targeted keyword in the same order",
+      "concept": "keyword-match-types",
+      "quote": "The search terms matched will contain all components of the targeted keyword in the same order",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Exact match requires search terms to match the targeted keyword word for word with the same words and order",
+      "concept": "keyword-match-types",
+      "quote": "The search terms are matched word for word (same words and in the same order) with the targeted keyword",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Keywords are not case-sensitive and must not exceed 10 words or 80 characters",
+      "concept": "keyword-match-types",
+      "quote": "Keywords are not case-sensitive. There is a maximum limit of 10 words per keyword and 80 characters",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Branded keywords are directly associated with a brand including the brand name alone or combined with other words",
+      "concept": "keyword-match-types",
+      "quote": "Branded keywords are directly associated with your brand or a brand you sell. They include just the brand name as well as any combination of the brand name and other words",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Category keywords are non-branded generic keywords that relate to any product or category",
+      "concept": "keyword-match-types",
+      "quote": "Category keywords are non-branded (generic) keywords that relate to any product or category",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Product targeting allows targeting specific products, categories, brands, or other product features relevant to the advertised item",
+      "concept": "product-targeting",
+      "quote": "Product targeting is a type of manual targeting that allows you to target specific products, categories, brands, or other product features that are relevant to your advertised item",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Product targeting ads are eligible for impressions on product detail pages and search result pages where the targeted product appears",
+      "concept": "product-targeting",
+      "quote": "When targeting a product, your ad will be eligible for impressions on its product detail page, as well as search result pages where the targeted product appears",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Negative keywords help prevent ads appearing on shopping results pages that do not meet campaign objectives",
+      "concept": "negative-targeting",
+      "quote": "Negative keywords help prevent ads appearing on shopping results pages that do not meet your campaign objectives",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Negative keyword phrase match prevents ads from showing on shopping queries containing the complete phrase or close variations",
+      "concept": "negative-targeting",
+      "quote": "Negative phrase: ads will not show on shopping queries that contain the complete phrase or close variations",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Negative keyword exact match prevents ads from showing on shopping queries containing the exact phrase or close variation",
+      "concept": "negative-targeting",
+      "quote": "Negative exact: ads will not show on shopping queries that contain the exact phrase or close variation",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Dynamic bidding up and down is recommended to help maximize automatic campaign performance",
+      "concept": "bidding-strategies",
+      "quote": "We recommend using dynamic bidding up and down to help maximize performance",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Dynamic down only bidding is recommended for optimizing based on return on ad spend",
+      "concept": "bidding-strategies",
+      "quote": "if you are looking to optimize based on return on ad spend (ROAS), then try a dynamic down only strategy",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Campaign strategies include expand, promote, protect, conquest, upsell, and cross-sell",
+      "concept": "campaign-structure",
+      "quote": "Expand: focus on high-traffic category keywords and products Promote: create a specific campaign to drive sales of products with coupons Protect: focus on branded keywords and targeting Conquest: target competitors products Upsell: use keywords geared towards higher-priced items Cross-sell: target products in adjacent categories",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Ad groups can contain a maximum of 1,000 products",
+      "concept": "campaign-structure",
+      "quote": "You can add a maximum 1,000 products per ad group",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Different targeting strategies should not be mixed within the same campaign and ad group",
+      "concept": "campaign-structure",
+      "quote": "We recommend that you avoid mixing different targeting strategies within the same campaign and ad group",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon recommends letting automatic campaigns run for about two weeks before creating manual campaigns",
+      "concept": "sponsored-products",
+      "quote": "We recommend that you let your automatic campaign run for about two weeks before creating a manual campaign",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Testing different keyword match types should continue for at least 1-2 weeks before pausing keywords",
+      "concept": "keyword-match-types",
+      "quote": "Test different match types for at least 1-2 weeks to gather enough data before pausing any keywords",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Negative keywords should be evaluated after receiving at least 20 clicks before adding as negative targets",
+      "concept": "negative-targeting",
+      "quote": "we recommend evaluating its performance after it has received at least 20 clicks",
+      "extracted_at": "2026-08-12T15:09:13.521727Z",
+      "confidence": "medium"
+    }
+  ],
+  "extraction_metadata": {}
+}

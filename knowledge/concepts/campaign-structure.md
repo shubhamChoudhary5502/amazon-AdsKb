@@ -2,40 +2,46 @@
 okf: "0.1"
 id: campaign-structure
 title: Campaign structure
-description: The fixed hierarchy Amazon Ads accounts follow, and where budgets, targets, and ads attach.
+description: Hierarchical organization of campaigns and ad groups that determines how targeting, bidding, and budgeting are configured.
 type: concept
 status: active
-created: 2026-08-10
-updated: 2026-08-11
-timestamp: 2026-08-11T00:00:00Z
-confidence: medium
-tags: [account-management, structure]
-related: [sponsored-products]
+created: 2026-08-12
+updated: 2026-08-12
+timestamp: 2026-08-12T15:11:53Z
+confidence: high
+tags: [organization, hierarchy, management]
+related: [sponsored-products, sponsored-brands, sponsored-display, targeting, bidding-strategies, keyword-match-types, product-targeting, negative-targeting]
 sources:
   - id: S1
-    url: https://advertising.amazon.com/library/guides/campaign-targeting-bidding
+    url: https://advertising.amazon.com/library/guides/targeting-with-sponsored-products
     kind: official
-    fetched: 2026-08-10
-    snapshot: sources/samples/official/targeting-and-bidding.html
+    fetched: 2026-08-12
+    snapshot: state/cache/targeting-official.txt
   - id: S2
     url: https://advertising.amazon.com/solutions/products/sponsored-products
     kind: official
-    fetched: 2026-08-10
-    snapshot: sources/samples/official/sponsored-products.html
+    fetched: 2026-08-12
+    snapshot: state/cache/sp-official.txt
 ---
 
 # Campaign structure
 
 ## Overview
 
-Amazon Ads accounts follow a fixed hierarchy. Understanding where budgets,
-targets, and ads attach is a prerequisite for every optimization decision.
+Campaign structure refers to how campaigns and ad groups are organized to manage targeting, bidding, and budgeting. Proper structure ensures that different targeting strategies are not mixed within the same campaign and ad group.
 
 ## Key facts
 
-- Campaigns contain ad groups; ad groups contain the ads and the keyword or product targets that share a common theme. [S1]
-- Daily budgets are set at the campaign level. [S1][S2]
-- Portfolios group campaigns and can carry a budget cap of their own, above the campaign-level budget. [S1]
+- Campaign targeting type cannot be changed once a campaign is live. [S1]
+- Campaign strategies include expand, promote, protect, conquest, upsell, and cross-sell. [S1]
+- Ad groups can contain a maximum of 1,000 products. [S1]
+- Different targeting strategies should not be mixed within the same campaign and ad group. [S1]
+- Sponsored Products creation steps include registering, adding products, defining targeting and bidding, choosing settings, and launching. [S2]
+
 ## Relationships
 
-- [Sponsored Products](/concepts/sponsored-products.md): the hierarchy shown here is the one Sponsored Products campaigns use.
+- [Sponsored Products](/concepts/sponsored-products.md): campaign creation and management.
+- [Sponsored Brands](/concepts/sponsored-brands.md): campaign organization and goals.
+- [Sponsored Display](/concepts/sponsored-display.md): campaign workflow through Campaign Manager.
+- [Targeting](/concepts/targeting.md): targeting strategies configured at campaign and ad group level.
+- [Bidding strategies](/concepts/bidding-strategies.md): bidding configured at campaign level.

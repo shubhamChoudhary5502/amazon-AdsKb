@@ -10,7 +10,7 @@ updated: 2026-08-10
 timestamp: 2026-08-10T00:00:00Z
 confidence: low
 tags: [metrics, measurement]
-related: [bidding-strategies, sponsored-brands]
+related: [bidding-strategies, sponsored-brands, new-to-brand-metrics]
 sources:
   - id: S1
     url: https://www.ppcpractitioner.example/amazon-acos-complete-guide
@@ -46,3 +46,4 @@ run.
 ## Relationships
 
 - [Bidding strategies](/concepts/bidding-strategies.md): advertisers move between bid strategies to hit ACOS targets.
+- [New-to-brand metrics](/concepts/new-to-brand-metrics.md): supplement ACOS/ROAS to measure brand growth impact.

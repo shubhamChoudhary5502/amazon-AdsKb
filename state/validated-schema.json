@@ -3,12 +3,16 @@
   "title": "Validation Artifact Schema",
   "description": "Schema for persisted validation artifacts from validator agents",
   "type": "object",
-  "required": ["version", "validated_at", "extraction_files", "validation_results"],
+  "required": ["version", "run_id", "validated_at", "extraction_files", "validation_results"],
   "properties": {
     "version": {
       "type": "string",
       "const": "1.0",
       "description": "Schema version for compatibility"
+    },
+    "run_id": {
+      "type": "string",
+      "description": "Run identifier matching the extraction artifacts"
     },
     "validated_at": {
       "type": "string",

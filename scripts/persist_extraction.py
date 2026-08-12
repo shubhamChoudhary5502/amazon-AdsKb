@@ -39,9 +39,9 @@ def validate_extraction_artifact(data):
             if field not in fact:
                 raise ValueError(f"Fact {i} missing required field: {field}")
 
-def persist_extraction(source_id, source_type, source_url, cache_file, facts, metadata=None):
+def persist_extraction(source_id, source_type, source_url, cache_file, facts, run_id=None, extracts_dir="state/extracts", metadata=None):
     """
-    Persist extraction results to state/extracts/<source-id>-<timestamp>.json
+    Persist extraction results to <extracts_dir>/<run-id>/<source-id>-<timestamp>.json
 
     Args:
         source_id: Source identifier from sources.yaml
@@ -49,12 +49,17 @@ def persist_extraction(source_id, source_type, source_url, cache_file, facts, me
         source_url: URL that was fetched
         cache_file: Path to cached content
         facts: List of fact dicts with keys: fact, concept, quote, [confidence]
+        run_id: Unique run identifier for this pipeline execution (required for isolation)
+        extracts_dir: Base directory for extraction artifacts (default: "state/extracts")
         metadata: Optional dict with extractor_agent, extraction_duration_ms, content_size_bytes
 
     Returns:
         Path to the persisted artifact file
     """
-    extracts_dir = Path("state/extracts")
+    if run_id is None:
+        raise ValueError("run_id is required for extraction artifact isolation")
+
+    extracts_dir = Path(extracts_dir) / run_id
     extracts_dir.mkdir(parents=True, exist_ok=True)
 
     # Calculate content hash
@@ -69,6 +74,7 @@ def persist_extraction(source_id, source_type, source_url, cache_file, facts, me
     timestamp = datetime.utcnow().isoformat() + "Z"
     artifact = {
         "version": "1.0",
+        "run_id": run_id,
         "extracted_at": timestamp,
         "source_id": source_id,
         "source_type": source_type,
@@ -103,19 +109,21 @@ def persist_extraction(source_id, source_type, source_url, cache_file, facts, me
     return str(artifact_path)
 
 if __name__ == "__main__":
-    if len(sys.argv) < 6:
-        print("Usage: persist_extraction.py <source_id> <source_type> <source_url> <cache_file> <facts_json> [metadata_json]")
+    if len(sys.argv) < 7:
+        print("Usage: persist_extraction.py <source_id> <source_type> <source_url> <cache_file> <run_id> <facts_json> [extracts_dir] [metadata_json]")
         sys.exit(1)
 
     source_id = sys.argv[1]
     source_type = sys.argv[2]
     source_url = sys.argv[3]
     cache_file = sys.argv[4]
-    facts = json.loads(sys.argv[5])
-    metadata = json.loads(sys.argv[6]) if len(sys.argv) > 6 else None
+    run_id = sys.argv[5]
+    facts = json.loads(sys.argv[6])
+    extracts_dir = sys.argv[7] if len(sys.argv) > 7 else "state/extracts"
+    metadata = json.loads(sys.argv[8]) if len(sys.argv) > 8 else None
 
     try:
-        artifact_path = persist_extraction(source_id, source_type, source_url, cache_file, facts, metadata)
+        artifact_path = persist_extraction(source_id, source_type, source_url, cache_file, facts, run_id, extracts_dir, metadata)
         print(f"Extraction persisted to: {artifact_path}")
         sys.exit(0)
     except Exception as e:
