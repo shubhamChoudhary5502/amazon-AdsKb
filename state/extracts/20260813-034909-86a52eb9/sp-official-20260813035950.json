@@ -1,0 +1,272 @@
+{
+  "version": "1.0",
+  "run_id": "20260813-034909-86a52eb9",
+  "extracted_at": "2026-08-13T03:59:50.289213Z",
+  "source_id": "sp-official",
+  "source_type": "official",
+  "source_url": "https://advertising.amazon.com/solutions/products/sponsored-products",
+  "cache_file": "/home/sk234/projects/amazon-ads-kb/state/cache/sp-official.txt",
+  "content_hash": "52ea3d993ad861a652ca8758a0f60f15659b7b812f5d753b925a62a73854d0bc",
+  "facts": [
+    {
+      "fact": "Sponsored Products are cost-per-click (CPC) ads that promote individual product listings on Amazon and select premium apps and websites.",
+      "concept": "sponsored-products",
+      "quote": "Sponsored Products are cost-per-click (CPC) ads",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "You can create a Sponsored Products campaign in just a few minutes with image or video creative.",
+      "concept": "sponsored-products",
+      "quote": "create a campaign in just a few minutes",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "New professional sellers can earn up to $1000 in ad credits when they launch and spend on Sponsored Products within 30 days.",
+      "concept": "advertising-eligibility",
+      "quote": "New sellers can earn up to $1000 in ad credits",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Ad credit offers are available in select marketplaces for Sponsored Products.",
+      "concept": "advertising-eligibility",
+      "quote": "Available in select marketplaces",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "You select products to advertise and choose keywords to target, or let Amazon systems target relevant keywords automatically.",
+      "concept": "targeting",
+      "quote": "select products to advertise and choose keywords",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "You control how much you want to spend on bids and budgets and can measure ad performance.",
+      "concept": "bidding-strategies",
+      "quote": "control how much you want to spend on bids and budgets",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products ads appear as image or as long-form interactive video.",
+      "concept": "sponsored-products",
+      "quote": "appear as an image or, with video",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products ads serve on desktop and mobile browsers as well as the Amazon mobile app.",
+      "concept": "sponsored-products",
+      "quote": "serve both on desktop and mobile browsers",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "When customers click a Sponsored Products ad, they go directly to the advertised product detail page.",
+      "concept": "sponsored-products",
+      "quote": "go to the advertised product detail page",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products ads appear at the top of, alongside, or within shopping results and on product pages.",
+      "concept": "sponsored-products",
+      "quote": "displayed at the top of, alongside, or within shopping results",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products ads appear beyond Amazon on Amazon-owned sites and third-party destinations.",
+      "concept": "sponsored-products",
+      "quote": "appear on the Amazon store and beyond",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products supports browser and app experiences across desktop, mobile, and tablet devices.",
+      "concept": "sponsored-products",
+      "quote": "support for browser and app experiences across devices",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products takes shoppers directly to the product detail page to boost sales of individual products.",
+      "concept": "sponsored-products",
+      "quote": "takes shoppers directly to the product detail page",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products ads only appear when advertised items are in stock.",
+      "concept": "sponsored-products",
+      "quote": "Only appear when your advertised items are in stock",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products ads show multiple product features using images and video to help customers make informed decisions.",
+      "concept": "sponsored-products",
+      "quote": "show multiple product features using images and video",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products offers flexible keyword and product targeting options and recommendations.",
+      "concept": "targeting",
+      "quote": "Select from flexible keyword and product targeting options",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "With Sponsored Products you pay only for clicks and can refine campaigns using reporting insights.",
+      "concept": "bidding-strategies",
+      "quote": "pay only for clicks, and refine your campaigns",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products campaigns with video saw 67% higher click-through rate compared to campaigns without video.",
+      "concept": "sponsored-products",
+      "quote": "+67% higher click-through-rate (CTR)",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products campaigns with video saw 9% higher conversion rate compared to campaigns without video.",
+      "concept": "sponsored-products",
+      "quote": "+9% higher conversion rate (CVR)",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products are available for professional sellers, vendors, book vendors, KDP authors, and agencies.",
+      "concept": "advertising-eligibility",
+      "quote": "available for professional sellers, vendors, book vendors",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Products must be in eligible categories and eligible for the Featured Offer to advertise with Sponsored Products.",
+      "concept": "advertising-eligibility",
+      "quote": "must be in one or more eligible categories",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products campaigns have no monthly or upfront fees.",
+      "concept": "bidding-strategies",
+      "quote": "have no monthly or upfront fees",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "With Sponsored Products you bid the maximum amount willing to pay when a shopper clicks your ad.",
+      "concept": "bidding-strategies",
+      "quote": "bid the maximum amount willing to pay when a shopper clicks",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "More competitive Sponsored Products bids increase likelihood of ad display when matching customer shopping queries.",
+      "concept": "bidding-strategies",
+      "quote": "more competitive your bid, the more likely your ad is to be displayed",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products provides tools and reports to help optimize campaign performance and measure success.",
+      "concept": "sponsored-products",
+      "quote": "provide a range of tools and reports to help optimize",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products reports provide insight on sales and performance of advertised products or targets.",
+      "concept": "sponsored-products",
+      "quote": "provide insight on sales and performance of advertised products",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products reports show how different ad placements are performing.",
+      "concept": "sponsored-products",
+      "quote": "how different ad placements are performing",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Adult products, used products, refurbished products, and products in closed categories are not eligible for Sponsored Products advertising.",
+      "concept": "advertising-eligibility",
+      "quote": "adult products, used products, refurbished products",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "For Sponsored Products you enter a bid for keywords you want to target.",
+      "concept": "bidding-strategies",
+      "quote": "enters a bid for the keywords that they want to target",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "A bid in Sponsored Products is the maximum amount you are willing to pay when a customer clicks your ad.",
+      "concept": "bidding-strategies",
+      "quote": "maximum amount you are willing to pay when a customer clicks",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "For Sponsored Products you set a daily budget for your campaign.",
+      "concept": "bidding-strategies",
+      "quote": "set a daily budget for your campaign",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "The Sponsored Products daily budget is a daily amount willing to spend on a campaign over a calendar month.",
+      "concept": "bidding-strategies",
+      "quote": "daily budget is a daily amount you are willing to spend",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products daily budgets are not paced throughout the day and could be spent quickly if high demand.",
+      "concept": "bidding-strategies",
+      "quote": "Daily budgets are not paced throughout the day",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "The final Sponsored Products cost will never exceed the total amount set for the campaign duration.",
+      "concept": "bidding-strategies",
+      "quote": "final cost will never be more than the amount youve set",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "You can increase or decrease your Sponsored Products daily budget once your ads are live.",
+      "concept": "bidding-strategies",
+      "quote": "increase or decrease your daily budget once your ads are live",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "To create Sponsored Products you register for sponsored ads, sign in, click Create campaign and choose Sponsored Products.",
+      "concept": "campaign-structure",
+      "quote": "Register for sponsored ads, click Create campaign",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "To create Sponsored Products you add products to advertise, define targeting and bidding strategies, and set campaign name, dates, and daily budget.",
+      "concept": "campaign-structure",
+      "quote": "Add the products, define targeting, keyword, and bidding",
+      "extracted_at": "2026-08-13T03:59:50.289213Z",
+      "confidence": "high"
+    }
+  ],
+  "extraction_metadata": {}
+}

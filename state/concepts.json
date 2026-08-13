@@ -13,5 +13,10 @@
   "advertising-eligibility": {"aliases": ["brand registry requirements", "who can advertise"]},
   "targeting": {"aliases": ["keyword targeting", "product targeting", "audience targeting"]},
   "brand-stores": {"aliases": ["amazon stores", "brand store", "stores"]},
-  "new-to-brand-metrics": {"aliases": ["ntb", "new to brand", "brand new metrics"]}
+  "new-to-brand-metrics": {"aliases": ["ntb", "new to brand", "brand new metrics"]},
+  "amazon-ads": {"aliases": ["amazon advertising", "amazon ppc", "ppc advertising"]},
+  "attributed-sales": {"aliases": ["attributed revenue", "ad sales", "dpv", "detail page sales"]},
+  "impressions": {"aliases": ["impr", "ad views", "ad displays"]},
+  "clicks": {"aliases": ["click-through", "user clicks", "ad interactions"]},
+  "display-ads": {"aliases": ["display advertising", "amazon display", "dsp"]}
 }

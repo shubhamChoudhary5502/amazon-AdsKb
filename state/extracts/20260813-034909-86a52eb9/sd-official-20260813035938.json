@@ -1,0 +1,69 @@
+{
+  "version": "1.0",
+  "run_id": "20260813-034909-86a52eb9",
+  "extracted_at": "2026-08-13T03:59:38.852582Z",
+  "source_id": "sd-official",
+  "source_type": "official",
+  "source_url": "https://advertising.amazon.com/solutions/products/sponsored-display",
+  "cache_file": "/home/sk234/projects/amazon-ads-kb/state/cache/sd-official.txt",
+  "content_hash": "3e141a27187a93997d58f62426e0c7b68887228e158eadaf96a5017f53ee5e71",
+  "facts": [
+    {
+      "fact": "Sponsored Display is now known as display ads",
+      "concept": "sponsored-display",
+      "quote": "Sponsored Display is now known as display ads",
+      "extracted_at": "2026-08-13T03:59:38.852582Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "The new platform connects display campaigns with customers across Amazon properties including Twitch, Fire TV, and Echo Show, as well as premium placements across the open internet",
+      "concept": "display-ads",
+      "quote": "connects your display campaigns with customers across Amazon properties including Twitch, Fire TV, and Echo Show, as well as premium placements across the open internet",
+      "extracted_at": "2026-08-13T03:59:38.852582Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "The new platform is a single ad platform that unifies access to all Amazon Ads products, bringing together sponsored ads and Amazon DSP workflows",
+      "concept": "amazon-ads-api",
+      "quote": "a single ad platform that unifies access to all Amazon Ads products, bringing together sponsored ads and Amazon DSP workflows",
+      "extracted_at": "2026-08-13T03:59:38.852582Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Existing Sponsored Display campaigns continue to run uninterrupted",
+      "concept": "sponsored-display",
+      "quote": "Existing Sponsored Display campaigns will continue to run uninterrupted",
+      "extracted_at": "2026-08-13T03:59:38.852582Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "You can access existing Sponsored Display campaigns through Campaign Manager in the Ads Console",
+      "concept": "sponsored-display",
+      "quote": "access your existing Sponsored Display campaigns through Campaign Manager in the Ads Console",
+      "extracted_at": "2026-08-13T03:59:38.852582Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "To create new display campaigns, go to Campaigns, click Create Campaign, and then click Display",
+      "concept": "display-ads",
+      "quote": "go to Campaigns, click Create Campaign, and then click Display",
+      "extracted_at": "2026-08-13T03:59:38.852582Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Display ads are flexible ad formats that help brands reach relevant audiences wherever they spend time",
+      "concept": "display-ads",
+      "quote": "Display ads are flexible ad formats that can help your brand reach relevant audiences wherever they spend time",
+      "extracted_at": "2026-08-13T03:59:38.852582Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Display ads support both Amazon-generated creative and custom creative assets",
+      "concept": "display-ads",
+      "quote": "using Amazon-generated creative or your own creative assets",
+      "extracted_at": "2026-08-13T03:59:38.852582Z",
+      "confidence": "high"
+    }
+  ],
+  "extraction_metadata": {}
+}

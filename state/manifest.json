@@ -7,45 +7,51 @@
     "url": "https://www.ppcpractitioner.example/amazon-acos-complete-guide"
   },
   "ads-api-notes": {
-    "hash": "eaef7e74e02fc58b1f87cdc2ce3d78393ff6781436f791a734213c69d1e0b6cb",
+    "hash": "6f43a1f3aec692d72c06cd22538a4b72c0e146f4655e363f76a1a42910be6877",
     "kind": "api",
-    "last_changed": "2026-08-12",
-    "last_checked": "2026-08-12",
+    "last_changed": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "sections": {},
     "url": "https://advertising.amazon.com/API/docs/en-us/release-notes/index"
   },
   "ppc-community": {
-    "hash": "78a16d98a2955e623519fd38afc3aaad8becb9077dd5552317515cbbabe21e30",
+    "hash": "c93408e474c375e292e2318653a4e2d6b9f600fe5a8f44dc8ccad6c987cbd59a",
     "kind": "community",
-    "last_changed": "2026-08-12",
-    "last_checked": "2026-08-12",
+    "last_changed": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "sections": {},
     "url": "https://www.junglescout.com/resources/articles/amazon-ppc/"
   },
   "sb-official": {
-    "hash": "2b6572be6591ce87d89dda8fb226f579bd328f1a7071cc305d17533bc6c20337",
+    "hash": "1cfea3bc325d0275632608809f29c52d3087482bdcdadaa5c16246e9497d846a",
     "kind": "official",
-    "last_changed": "2026-08-12",
-    "last_checked": "2026-08-12",
+    "last_changed": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "sections": {},
     "url": "https://advertising.amazon.com/solutions/products/sponsored-brands"
   },
   "sd-official": {
-    "hash": "d8199306dd1e591e3d4a12f90c674faf49b76812e58ae62dc533327596fceebe",
+    "hash": "3e141a27187a93997d58f62426e0c7b68887228e158eadaf96a5017f53ee5e71",
     "kind": "official",
-    "last_changed": "2026-08-12",
-    "last_checked": "2026-08-12",
+    "last_changed": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "sections": {},
     "url": "https://advertising.amazon.com/solutions/products/sponsored-display"
   },
   "sp-official": {
-    "hash": "1993a7afbebf22ad8fdc6a5cda1fdc1a79a63052d7c1768e2ffabd4ae8e3d314",
+    "hash": "52ea3d993ad861a652ca8758a0f60f15659b7b812f5d753b925a62a73854d0bc",
     "kind": "official",
-    "last_changed": "2026-08-12",
-    "last_checked": "2026-08-12",
+    "last_changed": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "sections": {},
     "url": "https://advertising.amazon.com/solutions/products/sponsored-products"
   },
   "targeting-official": {
-    "hash": "e5bb682c7df1ce31aaee8e02813890aa932762ce922c42c070be3626c4f60941",
+    "hash": "80e0a9025442d6aa0003968eceda3208cc9ea6f785ef2ee7493b77d4859d612a",
     "kind": "official",
-    "last_changed": "2026-08-12",
-    "last_checked": "2026-08-12",
+    "last_changed": "2026-08-13",
+    "last_checked": "2026-08-13",
+    "sections": {},
     "url": "https://advertising.amazon.com/library/guides/targeting-with-sponsored-products"
   }
 }

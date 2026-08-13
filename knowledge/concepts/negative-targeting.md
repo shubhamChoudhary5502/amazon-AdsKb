@@ -6,8 +6,8 @@ description: Exclusion method that prevents ads from showing on specific keyword
 type: concept
 status: active
 created: 2026-08-12
-updated: 2026-08-12
-timestamp: 2026-08-12T15:11:53Z
+updated: 2026-08-13
+timestamp: 2026-08-13T04:02:43Z
 confidence: high
 tags: [targeting, optimization, exclusions]
 related: [targeting, keyword-match-types, product-targeting, campaign-structure, sponsored-products]
@@ -15,7 +15,7 @@ sources:
   - id: S1
     url: https://advertising.amazon.com/library/guides/targeting-with-sponsored-products
     kind: official
-    fetched: 2026-08-12
+    fetched: 2026-08-13
     snapshot: state/cache/targeting-official.txt
 ---
 
@@ -29,9 +29,11 @@ Negative targeting helps exclude keywords, products, or brands to optimize campa
 
 - Negative targeting helps exclude keywords, products, or brands to optimize campaign performance and spend. [S1]
 - Negative keywords help prevent ads appearing on shopping results pages that do not meet campaign objectives. [S1]
+- Negative keywords can help improve CTR, ROAS, and CPC metrics. [S1]
+- Amazon recommends evaluating keyword performance after at least 20 clicks before adding as negative target. [S1]
+- Amazon recommends letting negative keywords run for two weeks or more before making strategy changes. [S1]
 - Negative keyword phrase match prevents ads from showing on shopping queries containing the complete phrase or close variations. [S1]
 - Negative keyword exact match prevents ads from showing on shopping queries containing the exact phrase or close variation. [S1]
-- Negative keywords should be evaluated after receiving at least 20 clicks before adding as negative targets. [S1]
 
 ## Relationships
 

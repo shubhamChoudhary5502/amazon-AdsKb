@@ -1,0 +1,419 @@
+{
+  "version": "1.0",
+  "run_id": "20260813-034909-86a52eb9",
+  "extracted_at": "2026-08-13T04:01:14.770125Z",
+  "source_id": "ppc-community",
+  "source_type": "community",
+  "source_url": "https://www.junglescout.com/resources/articles/amazon-ppc/",
+  "cache_file": "/home/sk234/projects/amazon-ads-kb/state/cache/ppc-community.txt",
+  "content_hash": "c93408e474c375e292e2318653a4e2d6b9f600fe5a8f44dc8ccad6c987cbd59a",
+  "facts": [
+    {
+      "fact": "Amazon PPC advertising allows brands, agencies, and third-party sellers to target specific keywords for advertisements that appear in search results and competitor product listings.",
+      "concept": "amazon-ads",
+      "quote": "target specific keywords to create advertisements for their products, which appear in Amazon's search results",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Three out of four Amazon sellers of all types and sizes utilize Amazon PPC advertising.",
+      "concept": "amazon-ads",
+      "quote": "three out of four Amazon sellers of all types and sizes utilize",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "ACoS is calculated by dividing total ad spend by attributed sales.",
+      "concept": "acos-roas",
+      "quote": "calculated by dividing total ad spend by attributed sales",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Attributed sales are the total product sales generated within one week of clicks on ads.",
+      "concept": "attributed-sales",
+      "quote": "total product sales generated within one week of clicks on your ads",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sales data can take up to 48 hours to populate and is not available in the Today date range.",
+      "concept": "attributed-sales",
+      "quote": "sales data can take up to 48 hours to populate",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Impressions represent the number of times ads were displayed and can take up to three days to remove invalid clicks.",
+      "concept": "impressions",
+      "quote": "number of times your ads were displayed",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Clicks from the last three days may be adjusted due to click invalidation.",
+      "concept": "clicks",
+      "quote": "Clicks from the last three days may be adjusted due to click invalidation",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "When starting PPC campaigns, set daily budgets and default bids 50-100% higher than Amazon recommends.",
+      "concept": "bidding-strategies",
+      "quote": "set daily budgets and default bids 50-100% higher than what Amazon recommends",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Let ad campaigns run for at least two weeks before running reports and making adjustments.",
+      "concept": "campaign-structure",
+      "quote": "Let ad campaigns run for at least two weeks before running reports",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Before adjusting or removing a keyword from a manual campaign, ensure the keyword gets at least 10 clicks.",
+      "concept": "keyword-match-types",
+      "quote": "make sure the keyword gets at least 10 clicks",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "77% of Amazon SMB sellers use Sponsored Products ads.",
+      "concept": "sponsored-products",
+      "quote": "77% use Sponsored Products ads",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "39% of Amazon SMB sellers use Sponsored Brands ads.",
+      "concept": "sponsored-brands",
+      "quote": "39% use Sponsored Brands ads",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "30% of Amazon SMB sellers use Sponsored Display ads.",
+      "concept": "sponsored-display",
+      "quote": "30% use Sponsored Display ads",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Sponsored Products ads appear in search results and product listing pages and can closely resemble organic listings.",
+      "concept": "sponsored-products",
+      "quote": "appear in search results and product listing pages, and can closely resemble organic listings",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products is the most common type of Amazon PPC ad, used by 66% of third-party sellers.",
+      "concept": "sponsored-products",
+      "quote": "most common type of Amazon PPC ad, used by 66% of third-party sellers",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Automatic targeting involves Amazon's algorithm determining keywords related to product listings and adjusting ads based on shopper data.",
+      "concept": "targeting",
+      "quote": "targeting keywords that Amazon's algorithm determines are related to your product listing",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Close match ads appear when shoppers use search terms closely related to the advertised product.",
+      "concept": "keyword-match-types",
+      "quote": "Appear when shoppers use search terms that are closely related to the product",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Loose match ads appear when shoppers search keywords loosely related to the product.",
+      "concept": "keyword-match-types",
+      "quote": "Appear when shoppers search keywords loosely related to your product",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Substitutes targeting reaches shoppers considering products similar to yours but sold by different brands.",
+      "concept": "targeting",
+      "quote": "Target shoppers who are considering products that are similar to your product but sold by a different brand",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Complements targeting targets shoppers viewing detail pages of products that complement yours.",
+      "concept": "targeting",
+      "quote": "Target shoppers viewing detail pages of products that complement yours",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Manual targeting involves hand-selecting keywords to bid on and only appears if search terms match chosen keywords.",
+      "concept": "targeting",
+      "quote": "hand-selecting the keywords you want to bid on",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands ads allow sellers to drive awareness to multiple products at once with robust visuals.",
+      "concept": "sponsored-brands",
+      "quote": "drive awareness to more than one product at a time and catch shoppers' eyes with more robust visuals",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands ads can appear at the top of search results as headline banners or as video further down the page.",
+      "concept": "sponsored-brands",
+      "quote": "appear either at the top of Amazon search results as headline banners or further down the page as a video",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands video format includes a 15-30 second-long video showcasing a single product.",
+      "concept": "sponsored-brands",
+      "quote": "includes a 15-30 second-long video showcasing a single product",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands ads navigate customers to custom landing pages or brand Amazon Storefronts.",
+      "concept": "sponsored-brands",
+      "quote": "navigate the customer to a custom landing page or a brand's Amazon Storefront",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Brands ads generate the most sales of all PPC types according to community data.",
+      "concept": "sponsored-brands",
+      "quote": "Sponsored Brand ads generates the most sales of all the PPC types",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Products in the $21-$30 price range hit a sweet spot with greater RoAS than both more and less expensive products.",
+      "concept": "acos-roas",
+      "quote": "those in the $21-$30 price range hit a sweet spot, with a greater RoAS",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "low"
+    },
+    {
+      "fact": "Sponsored Display ads allow sellers to retarget customers who visited their product detail pages on and off Amazon.",
+      "concept": "sponsored-display",
+      "quote": "retarget customers who have visited their product detail pages, on and off Amazon",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Display ads can appear on Amazon's affiliate sites including Google, Facebook, Netflix, and mobile apps.",
+      "concept": "sponsored-display",
+      "quote": "appear on Amazon's affiliate sites, including Google, Facebook, Netflix, and even mobile phone apps",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Display ads require a registered brand to utilize them.",
+      "concept": "advertising-eligibility",
+      "quote": "a seller must have a registered brand in order to utilize them",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "25% of third-party Amazon sellers use Sponsored Display PPC ads.",
+      "concept": "sponsored-display",
+      "quote": "just 25% of third-party Amazon sellers use Sponsored Display PPC ads",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Amazon offers AI-powered image generation to create lifestyle imagery that improves ad performance.",
+      "concept": "amazon-ads",
+      "quote": "making it easier for brands to create lifestyle imagery that helps improve their ads' performance with AI-powered image generation",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "AI-generated lifestyle images in Sponsored Brands ads can achieve 40% higher click-through rates compared to standard product images.",
+      "concept": "sponsored-brands",
+      "quote": "click-through rates can be 40% higher compared to ads with standard product images",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Amazon allows leftover daily budget amounts to increase ads by 10% on a later date in the same month.",
+      "concept": "campaign-structure",
+      "quote": "leftover amount can be used to increase ads by 10% on a later date in the same month",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "When starting out, set daily budget to $50 or more since most costs per click are between $0.50 to $1.50.",
+      "concept": "campaign-structure",
+      "quote": "setting your daily budget to $50 or more. Most of your costs per click will be between $0.50 to $1.50",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "low"
+    },
+    {
+      "fact": "Ad costs are charged either when reaching $500 in total ads or at the first of the month.",
+      "concept": "campaign-structure",
+      "quote": "charged either when you reach $500 in total ads or at the first of the month",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Dynamic bids down only lowers bids in real-time when less likely to make a sale.",
+      "concept": "bidding-strategies",
+      "quote": "Amazon lowers bids in real-time when you're less likely to make a sale",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Dynamic bids up and down can increase bids by 10% when ads are more likely to convert.",
+      "concept": "bidding-strategies",
+      "quote": "Amazon will increase the price of your bid by 10%",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Fixed bids mean Amazon does not change the bid amount unless the seller adjusts it.",
+      "concept": "bidding-strategies",
+      "quote": "You set your bid and Amazon does not change it",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon suggests default bids of $0.75 regardless of the product.",
+      "concept": "bidding-strategies",
+      "quote": "Amazon suggests $0.75 to start, regardless of the product",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "When starting out, bid as high as $1.50 to $2.00 to ensure early sales.",
+      "concept": "bidding-strategies",
+      "quote": "bidding as high as $1.50 to $2.00 to ensure early sales",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "low"
+    },
+    {
+      "fact": "Products must be eligible for the Buy Box to be eligible for sponsored ads.",
+      "concept": "advertising-eligibility",
+      "quote": "listing of the product must be eligible for the product listing's Buy Box",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "It usually takes 30 minutes to an hour for ads to premiere on Amazon after launch.",
+      "concept": "campaign-structure",
+      "quote": "usually takes 30 minutes to an hour for your ad to premiere on Amazon",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Poor-performing keywords are defined as those with more than 10 clicks and high ACoS or low 7-day conversion rate.",
+      "concept": "keyword-match-types",
+      "quote": "selecting keywords that have had more than 10 clicks, and a high ACoS or low 7-day conversion rate",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "If ACoS is less than profit margin, it is considered a good ACoS.",
+      "concept": "acos-roas",
+      "quote": "If your ACoS is less than the profit margin, then it is a good ACoS",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "low"
+    },
+    {
+      "fact": "Community practice aims for conversion rates of around 10% for products priced between $18-$25.",
+      "concept": "acos-roas",
+      "quote": "We aim for conversion rates of around 10% for products priced between $18-$25",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "low"
+    },
+    {
+      "fact": "High-performing keywords are defined as having at least 10 clicks and being at or below ACoS or conversion rate thresholds.",
+      "concept": "keyword-match-types",
+      "quote": "any keyword that has at least 10 clicks and is at or below your threshold for ACoS",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "High-performing keywords from automatic campaigns should be added to manual campaigns and removed from automatic targeting.",
+      "concept": "campaign-structure",
+      "quote": "add those keywords to your existing manual-targeting sponsored product ads",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Keyword research for manual targeting can be performed using related keyword searches or reverse ASIN lookups.",
+      "concept": "targeting",
+      "quote": "search using a related keyword. The second type is called a 'Reverse ASIN lookup'",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Reverse ASIN lookup reveals keywords for which a competitor's product is ranking.",
+      "concept": "targeting",
+      "quote": "Keyword Scout reveals the keywords for which your competitor's product is ranking",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "30-Day search volume exact is the number of times Amazon shoppers entered the exact term while performing searches.",
+      "concept": "keyword-match-types",
+      "quote": "number of times Amazon shoppers entered the exact term while performing a search",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "30-Day trend is the increase in searches for a term over the last 30 days compared to the previous 30-day period.",
+      "concept": "keyword-match-types",
+      "quote": "increase in searches for a particular search term over the last 30 days",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "30-Day search volume broad counts searches for terms closely related to the given search term.",
+      "concept": "keyword-match-types",
+      "quote": "number of times Amazon shoppers entered search terms closely related to the given search term",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "PPC bid exact represents the average bid current sellers use for sponsored products ads using exact keywords.",
+      "concept": "bidding-strategies",
+      "quote": "average bid current sellers are using to make their sponsored product ads appear using the exact keyword",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "PPC bid broad represents the average bid current sellers use for sponsored products ads using closely related keywords.",
+      "concept": "bidding-strategies",
+      "quote": "average bid current sellers are using to make their sponsored product ads appear using closely related keywords",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "HSA bids represent the average bid current sellers use for sponsored brand ads at the top of Amazon searches.",
+      "concept": "bidding-strategies",
+      "quote": "average bid current sellers are using to make their sponsored brand ads appear at the top of Amazon searches",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon's suggested bids tend to be somewhat conservative for new campaigns.",
+      "concept": "bidding-strategies",
+      "quote": "Amazon's suggested bids tend to be somewhat conservative",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Community best practice is to review ad reports once per week.",
+      "concept": "campaign-structure",
+      "quote": "Continue reviewing your ad reports once a week",
+      "extracted_at": "2026-08-13T04:01:14.770125Z",
+      "confidence": "low"
+    }
+  ],
+  "extraction_metadata": {}
+}

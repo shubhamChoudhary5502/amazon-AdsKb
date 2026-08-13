@@ -1,5 +1,8 @@
 # Amazon Ads knowledge bundle update log
 
+## 2026-08-13
+* **Update**: Live ingestion run 20260813-034909-86a52eb9 completed successfully. Processed 5 live sources (sp-official, sb-official, sd-official, targeting-official, ppc-community) extracted 207 facts, validated 177 new/changed/conflict facts, merged into 6 concept documents (bidding-strategies, campaign-structure, keyword-match-types, negative-targeting, product-targeting, targeting). All facts sourced from real Amazon Ads URLs and community sources with proper citations and provenance.
+
 ## 2026-08-12
 * **Merge**: Semantic merge: Integrated sponsored-brands-video concept into sponsored-brands, reducing bundle from 16 to 15 concept documents. All unique video content preserved within sponsored-brands.md including Video Generator, creative production services, and video-specific placement details. Updated state/concepts.json to include video-related aliases under sponsored-brands.
 * **Update**: Live ingestion: Added 151 facts from 4 official Amazon Ads sources (sp-official, sb-official, sd-official, targeting-official). Created 10 new concept documents: targeting, brand-stores, new-to-brand-metrics, sponsored-brands-video, product-targeting, negative-targeting, keyword-match-types, bidding-strategies, advertising-eligibility, campaign-structure. Updated 2 existing concepts: sponsored-display (2 changes), sponsored-products (3 changes).

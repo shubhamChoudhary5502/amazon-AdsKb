@@ -6,17 +6,22 @@ description: The three efficiency metrics advertisers steer by, currently restin
 type: concept
 status: active
 created: 2026-08-10
-updated: 2026-08-12
-timestamp: 2026-08-12T16:42:54Z
+updated: 2026-08-13
+timestamp: 2026-08-13T04:02:43Z
 confidence: low
 tags: [metrics, measurement]
-related: [bidding-strategies, sponsored-brands, new-to-brand-metrics]
+related: [bidding-strategies, sponsored-brands, new-to-brand-metrics, attributed-sales, clicks, impressions]
 sources:
   - id: S1
     url: https://www.ppcpractitioner.example/amazon-acos-complete-guide
     kind: community
     fetched: 2026-08-10
     snapshot: sources/samples/blog/acos-complete-guide.md
+  - id: S2
+    url: https://ppcprotect.com/blog/amazon-ppc-ultimate-guide
+    kind: community
+    fetched: 2026-08-13
+    snapshot: state/cache/ppc-community.txt
 ---
 
 # ACOS, ROAS and TACOS
@@ -42,6 +47,9 @@ run.
 - Source S1 claims a "good" ACOS for established products sits under 30%, with launch campaigns deliberately running higher. [S1]
 - TACOS is a better health metric for brands because it captures organic lift from advertising. [S1]
 - Source S1 argues TACOS is the better brand health metric because it captures organic lift from ads. [S1]
+- Products in the $21-$30 price range hit a sweet spot with greater RoAS than both more and less expensive products. [S2]
+- If ACoS is less than profit margin, it is considered a good ACoS. [S2]
+- Community practice aims for conversion rates of around 10% for products priced between $18-$25. [S2]
 
 ## Conflicts and notes
 

@@ -6,8 +6,8 @@ description: Dedicated brand destinations on Amazon that showcase product catalo
 type: concept
 status: active
 created: 2026-08-12
-updated: 2026-08-12
-timestamp: 2026-08-12T15:11:53Z
+updated: 2026-08-13
+timestamp: 2026-08-13T04:02:43Z
 confidence: high
 tags: [stores, brand, destination]
 related: [sponsored-brands, new-to-brand-metrics, advertising-eligibility]
@@ -15,7 +15,7 @@ sources:
   - id: S1
     url: https://advertising.amazon.com/solutions/products/sponsored-brands
     kind: official
-    fetched: 2026-08-12
+    fetched: 2026-08-13
     snapshot: state/cache/sb-official.txt
 ---
 
@@ -28,6 +28,7 @@ Brand Stores are dedicated multi-page destinations on Amazon that showcase a bra
 ## Key facts
 
 - Sponsored Brands drives traffic to Brand Store or detail pages. [S1]
+- Sponsored Brands is paired with Brand Stores to drive discovery, consideration, and long-term engagement. [S1]
 - Sponsored Brands paired with Brand Stores drives discovery, consideration, and long-term engagement with the brand. [S1]
 - Sponsored Brands drives traffic to Brand Store or product page with engaging creatives that support product evaluation and catalog discovery. [S1]
 - Sponsored Brands reporting can track how different traffic sources drive visitors to Amazon Store. [S1]

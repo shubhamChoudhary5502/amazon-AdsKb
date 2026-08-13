@@ -1,0 +1,377 @@
+{
+  "version": "1.0",
+  "run_id": "20260813-034909-86a52eb9",
+  "extracted_at": "2026-08-13T04:01:44.304207Z",
+  "source_id": "targeting-official",
+  "source_type": "official",
+  "source_url": "https://advertising.amazon.com/library/guides/targeting-with-sponsored-products",
+  "cache_file": "/home/sk234/projects/amazon-ads-kb/state/cache/targeting-official.txt",
+  "content_hash": "80e0a9025442d6aa0003968eceda3208cc9ea6f785ef2ee7493b77d4859d612a",
+  "facts": [
+    {
+      "fact": "Targeting defines the context in which ads appear on Amazon",
+      "concept": "targeting",
+      "quote": "Targeting is the way you define the context in which you want your ads to appear",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Customer shopping queries are words and phrases Amazon customers use to look for products",
+      "concept": "targeting",
+      "quote": "Customer shopping queries : words and phrases that Amazon customers use to look for products",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Keywords are word combinations advertisers bid on in manual campaigns to match customer shopping queries",
+      "concept": "keyword-match-types",
+      "quote": "Keywords : word combinations that you bid on in manual campaigns to match customers' shopping queries",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products offers three targeting options: Automatic, Manual, and Negative targeting",
+      "concept": "targeting",
+      "quote": "you have three targeting options \u2013 Automatic targeting Manual targeting Negative targeting",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Automatic targeting matches ads to keywords and products similar to the advertised product based on shopping queries and product information",
+      "concept": "targeting",
+      "quote": "With automatic targeting your ad is automatically matched with keywords and products that are similar to the product you're advertising",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Automatic targeting uses four default strategies: Close match, Loose match, Substitutes, and Complements",
+      "concept": "targeting",
+      "quote": "There are four automatic targeting strategies: Close match Loose match Substitutes Complements",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Close match automatic targeting shows ads to shoppers using search terms closely related to the advertised product",
+      "concept": "targeting",
+      "quote": "We may show your ad to shoppers who use search terms closely related to your products",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Loose match automatic targeting shows ads to shoppers using search terms loosely related to the advertised product",
+      "concept": "targeting",
+      "quote": "We may show your ad to shoppers who use search terms loosely related to your products",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Substitutes automatic targeting shows ads on detail pages of products similar to the advertised product",
+      "concept": "targeting",
+      "quote": "We may show your ad to shoppers browsing detail pages of products similar to yours",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Complements automatic targeting shows ads on detail pages of products that complement the advertised product",
+      "concept": "targeting",
+      "quote": "We may show your ad to shoppers who view the detail pages of products that complement your product",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Automatic targeting campaigns can set a single default bid or set bids by targeting group",
+      "concept": "bidding-strategies",
+      "quote": "You can set a single default bid in your automatic campaign, or set bids by targeting group",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon recommends using dynamic bidding up and down for automatic targeting to maximize performance",
+      "concept": "bidding-strategies",
+      "quote": "We recommend using dynamic bidding up and down to help maximize performance",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Dynamic down only bidding strategy can optimize automatic targeting based on ROAS",
+      "concept": "bidding-strategies",
+      "quote": "try a dynamic down only strategy to optimize based on return on ad spend (ROAS)",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon recommends letting automatic targeting campaigns run for about two weeks before creating manual campaigns",
+      "concept": "targeting",
+      "quote": "We recommend that you let your automatic campaign run for about two weeks before creating a manual campaign",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Manual targeting allows advertisers to manually select which keywords or products to target",
+      "concept": "targeting",
+      "quote": "With manual targeting, you can manually select which keywords or products you want to target",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Keyword targeting allows choosing specific keywords to help products appear in shopping results and on product detail pages",
+      "concept": "keyword-match-types",
+      "quote": "Keyword targeting allows you to choose specific keywords to add to your campaign",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon provides keyword recommendations and suggested bids to help with keyword selection",
+      "concept": "keyword-match-types",
+      "quote": "we provide keyword recommendations, along with suggested bids",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Keyword recommendations are based on past keyword performance and search terms that translate into sales",
+      "concept": "keyword-match-types",
+      "quote": "we assess which keywords performed well for you in the past, as well as those which performed well across Amazon more broadly",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Keyword match types control which search terms ads will be eligible to show against",
+      "concept": "keyword-match-types",
+      "quote": "Match types are used as a way to control your targeting, helping to fine-tune which search terms your ads will be eligible to show against",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Sponsored Products offers three keyword match types: Broad match, Phrase match, and Exact match",
+      "concept": "keyword-match-types",
+      "quote": "The three match types for keyword targeting are: Broad match Phrase match Exact match",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Broad match offers ads broad exposure to customer shopping queries including synonyms and related terms",
+      "concept": "keyword-match-types",
+      "quote": "This match type offers your ad broad exposure to customers' shopping queries",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Broad match can include singulars, plurals, variations, synonyms, and related terms based on keyword meaning",
+      "concept": "keyword-match-types",
+      "quote": "It may include singulars, plurals, variations, synonyms, and related terms",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Phrase match is more restrictive than broad match and requires all keyword components in the same order",
+      "concept": "keyword-match-types",
+      "quote": "This match type is more restrictive than broad match",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Phrase match includes the plural form of the keyword",
+      "concept": "keyword-match-types",
+      "quote": "Phrase match also includes the plural form of the keyword",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Exact match is the most restrictive match type and matches search terms word for word in the same order",
+      "concept": "keyword-match-types",
+      "quote": "This match is the most restrictive match type",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Exact match tends to result in the highest conversion rates",
+      "concept": "keyword-match-types",
+      "quote": "tends to result in the highest conversion rates",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Keywords are not case-sensitive and will match uppercase or lowercase letters",
+      "concept": "keyword-match-types",
+      "quote": "Keywords aren't case-sensitive, so we will match uppercase or lowercase letters in search terms",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Keywords have a maximum limit of 10 words per keyword and 80 characters",
+      "concept": "keyword-match-types",
+      "quote": "There is a maximum limit of 10 words per keyword and 80 characters",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Keywords can contain letters, numbers, or spaces but not special characters like question marks or slashes",
+      "concept": "keyword-match-types",
+      "quote": "Keywords can contain letters, numbers, or spaces. Other special characters such as a question mark, slash, double quote, ampersand or backlash are not permitted",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon recommends testing all three keyword match types with different bids to maximize performance",
+      "concept": "keyword-match-types",
+      "quote": "Test all three match types , with different bids, to help maximize your campaign performance",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Amazon recommends setting the highest bid on exact match, lower on phrase match, and lowest on broad match",
+      "concept": "bidding-strategies",
+      "quote": "setting the highest bid on the exact match, a lower on the phrase match, and the lowest bid on the broad match",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Branded keywords are directly associated with a brand or a brand being sold",
+      "concept": "targeting",
+      "quote": "Branded keywords are directly associated with your brand or a brand you sell",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Bidding on branded keywords can be used as a brand defense strategy since competitors may bid on your branded keywords",
+      "concept": "targeting",
+      "quote": "Consider bidding on your branded keyword as a brand defense strategy since your competitors may be bidding on your branded keywords, too",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Category keywords are non-branded keywords that relate to any product or category",
+      "concept": "targeting",
+      "quote": "Category keywords are non-branded (generic) keywords that relate to any product or category",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Short-tail category keywords have 1-3 words while long-tail keywords have three or more words",
+      "concept": "targeting",
+      "quote": "They can be short-tail (i.e. 1-3 words such as women's running shoes) or long-tail",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Product targeting allows targeting specific products, categories, brands, or other product features",
+      "concept": "product-targeting",
+      "quote": "Product targeting is a type of manual targeting that allows you to target specific products, categories, brands, or other product features",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Product targeting ads are eligible for impressions on product detail pages and search result pages",
+      "concept": "product-targeting",
+      "quote": "your ad will be eligible for impressions on its product detail page, as well as search result pages",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Product targeting can use metrics from auto campaigns, suggested targets, or category targeting",
+      "concept": "product-targeting",
+      "quote": "Use metrics from auto targeting campaigns Use suggested targets Start with category targeting",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "ASINs are always 10 characters long and are either entirely numeric or start with a B",
+      "concept": "product-targeting",
+      "quote": "An ASIN is always 10 characters long, and either entirely numeric (e.g. 0015366456) or starts with a B",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Negative targeting helps exclude keywords, products, or brands to optimize campaign performance and spend",
+      "concept": "negative-targeting",
+      "quote": "Negative targeting helps you exclude the keywords, products or brands you don't want your ads associated with, to help optimize your campaign's performance and spend",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Negative keywords can help improve CTR, ROAS, and CPC metrics",
+      "concept": "negative-targeting",
+      "quote": "This extra level of control can help improve your ad performance metrics, such as click-through rate (CTR), return on ad spend (ROAS) and cost per click (CPC)",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Negative phrase match prevents ads from showing on shopping queries containing the complete phrase or close variations",
+      "concept": "negative-targeting",
+      "quote": "Negative phrase : ads won't show on shopping queries that contain the complete phrase or close variations",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Negative exact match prevents ads from showing on shopping queries containing the exact phrase or close variations",
+      "concept": "negative-targeting",
+      "quote": "Negative exact : ads won't show on shopping queries that contain the exact phrase or close variation",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon recommends evaluating keyword performance after at least 20 clicks before adding as negative target",
+      "concept": "negative-targeting",
+      "quote": "we recommend evaluating its performance after it has received at least 20 clicks",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Amazon recommends letting negative keywords run for two weeks or more before making strategy changes",
+      "concept": "negative-targeting",
+      "quote": "let your negative keywords run for two weeks or more, before making any changes to your strategy",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Campaign targeting strategy cannot be changed once a campaign is live",
+      "concept": "campaign-structure",
+      "quote": "Once the campaign is live, you will not be able to change the campaign targeting",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Ad groups can contain a maximum of 1,000 products",
+      "concept": "campaign-structure",
+      "quote": "You can add a maximum 1,000 products per ad group",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "high"
+    },
+    {
+      "fact": "Amazon recommends avoiding mixing different targeting strategies within the same campaign and ad group",
+      "concept": "campaign-structure",
+      "quote": "We recommend that you avoid mixing different targeting strategies within the same campaign and ad group",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Amazon recommends establishing benchmarks based on goals and historical campaign performance",
+      "concept": "campaign-structure",
+      "quote": "You should establish benchmarks based on your goals and the historical performance of your campaigns",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Six campaign strategies include: Expand, Promote, Protect, Conquest, Upsell, and Cross-sell",
+      "concept": "targeting",
+      "quote": "Expand : focus on high-traffic category keywords and products Promote : create a specific campaign to drive sales of products with coupons",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Amazon recommends an always-on approach with evergreen campaigns",
+      "concept": "campaign-structure",
+      "quote": "Consider having evergreen campaigns to always allow your ads to have a chance to be seen by shoppers",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "medium"
+    },
+    {
+      "fact": "Amazon recommends starting small with one targeting type and testing different targeting types",
+      "concept": "targeting",
+      "quote": "consider starting with one targeting type \u2013 automatic or manual",
+      "extracted_at": "2026-08-13T04:01:44.304207Z",
+      "confidence": "medium"
+    }
+  ],
+  "extraction_metadata": {}
+}
